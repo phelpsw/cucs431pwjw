@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:atom="http://www.w3.org/2005/Atom"
     xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai="http://www.openarchives.org/OAI/2.0/"
     xmlns:nsdl="http://ns.nsdl.org/search/rest_v1.01/" xmlns:dct="http://purl.org/dc/terms/"
-    xsi:schemaLocation="http://cs431.org/mashup# file:/C:\cornell\cs431_proj\code\mashupExtension.xsd">
+    xsi:schemaLocation="http://cs431.org/mashup# mashupExtension.xsd">
     <cs431:mashupMetadata>
         <dc:title>Global Warming</dc:title>
         <dc:creator>Carl Lagoze</dc:creator>

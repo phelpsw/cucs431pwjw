@@ -2,7 +2,8 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://cs431.org/mashup#"
     xmlns:cs431="http://cs431.org/mashup#">
     <xsd:include schemaLocation="mashupBase.xsd"/>
-    <xsd:import schemaLocation="http://www.cs.cornell.edu/courses/cs431/2008sp/Projects/Project1/rss-2_0.xsd"/>
+    <xsd:import schemaLocation="rss-2_0.xsd"/>
+    <xsd:import schemaLocation="atom.xsd"/>
     <!--xsd:include schemaLocation="http://www.cs.cornell.edu/courses/cs431/2008sp/Projects/Project1/rss-2_0.xsd"/-->
     
     <xsd:complexType name="queryInfo">
@@ -21,17 +22,24 @@
             </xsd:complexContent>
     </xsd:complexType>
     
+    <xsd:complexType name="atomItemType">
+        <xsd:complexContent>
+            <xsd:extension base="atom:entry"/>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
     <xsd:complexType name="metaDataSpecifcType">
         <xsd:complexContent>
             <xsd:extension base="cs431:metadataTypeBase">
-                <xsd:sequence>
-                    <xsd:element name="rssItem" type="cs431:rssItemType">
-                    </xsd:element>
-                </xsd:sequence>
+                <xsd:choice>
+                    <xsd:element name="rssItem" type="cs431:rssItemType" form="qualified"/>
+                    <xsd:element name="atomItem" type="cs431:atomItemType" form="qualified"/>
+                </xsd:choice>
             </xsd:extension>
         </xsd:complexContent>
     </xsd:complexType>
     
     <xsd:element name="rssMetadata" substitutionGroup="cs431:metadataBase" type="cs431:metaDataSpecifcType"/>
+    <xsd:element name="atomMetadata" substitutionGroup="cs431:metadataBase" type="cs431:metaDataSpecifcType"/>
     
 </xsd:schema>
