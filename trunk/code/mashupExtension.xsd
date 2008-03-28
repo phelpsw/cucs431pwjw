@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://cs431.org/mashup#"
-    xmlns:cs431="http://cs431.org/mashup#" >
+    xmlns:cs431="http://cs431.org/mashup#">
     <xsd:include schemaLocation="mashupBase.xsd"/>
+    <xsd:import schemaLocation="http://www.cs.cornell.edu/courses/cs431/2008sp/Projects/Project1/rss-2_0.xsd"/>
+    <!--xsd:include schemaLocation="http://www.cs.cornell.edu/courses/cs431/2008sp/Projects/Project1/rss-2_0.xsd"/-->
     
     <xsd:complexType name="queryInfo">
         <xsd:complexContent>
@@ -12,10 +14,21 @@
     </xsd:complexType>
     
     <xsd:element name="querySource" substitutionGroup="cs431:source" type="cs431:queryInfo"/>
+   
+    <xsd:complexType name="rssItemType">
+            <xsd:complexContent>
+                <xsd:extension base="tRssItem"/>
+            </xsd:complexContent>
+    </xsd:complexType>
     
     <xsd:complexType name="metaDataSpecifcType">
         <xsd:complexContent>
-            <xsd:extension base="cs431:metadataTypeBase"></xsd:extension>
+            <xsd:extension base="cs431:metadataTypeBase">
+                <xsd:sequence>
+                    <xsd:element name="rssItem" type="cs431:rssItemType">
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
         </xsd:complexContent>
     </xsd:complexType>
     
