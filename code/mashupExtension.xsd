@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://cs431.org/mashup#"
-    xmlns:cs431="http://cs431.org/mashup#">
+    xmlns:cs431="http://cs431.org/mashup#" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:nsdl="http://ns.nsdl.org/search/rest_v2.00/">
     <xsd:include schemaLocation="mashupBase.xsd"/>
     <xsd:import schemaLocation="rss-2_0.xsd"/>
-    <xsd:import schemaLocation="atom.xsd"/>
-    <!--xsd:include schemaLocation="http://www.cs.cornell.edu/courses/cs431/2008sp/Projects/Project1/rss-2_0.xsd"/-->
+    <xsd:import namespace="http://www.w3.org/2005/Atom" schemaLocation="atom.xsd"/>
+    <xsd:import namespace="http://ns.nsdl.org/search/rest_v2.00/" schemaLocation="rest_v2.00.xsd"/>
     
     <xsd:complexType name="queryInfo">
         <xsd:complexContent>
@@ -24,7 +25,13 @@
     
     <xsd:complexType name="atomItemType">
         <xsd:complexContent>
-            <xsd:extension base="atom:entry"/>
+            <xsd:extension base="nsdl:"/>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="nsdlItemType">
+        <xsd:complexContent>
+            <xsd:extension base="atom:entryType"/>
         </xsd:complexContent>
     </xsd:complexType>
     
@@ -34,6 +41,7 @@
                 <xsd:choice>
                     <xsd:element name="rssItem" type="cs431:rssItemType" form="qualified"/>
                     <xsd:element name="atomItem" type="cs431:atomItemType" form="qualified"/>
+                    <xsd:element name="nsdlItem" type="cs431:nsdlItemType" form="qualified"/>
                 </xsd:choice>
             </xsd:extension>
         </xsd:complexContent>
@@ -41,5 +49,5 @@
     
     <xsd:element name="rssMetadata" substitutionGroup="cs431:metadataBase" type="cs431:metaDataSpecifcType"/>
     <xsd:element name="atomMetadata" substitutionGroup="cs431:metadataBase" type="cs431:metaDataSpecifcType"/>
-    
+    <xsd:element name="nsdlMetadata" substitutionGroup="cs431:metadataBase" type="cs431:metaDataSpecifcType"/>
 </xsd:schema>
