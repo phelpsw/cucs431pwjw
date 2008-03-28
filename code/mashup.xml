@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cs431:mashup xmlns:cs431="http://cs431.org/mashup#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai="http://www.openarchives.org/OAI/2.0/"
+    xmlns:nsdl="http://ns.nsdl.org/search/rest_v1.01/" xmlns:dct="http://purl.org/dc/terms/"
+    xsi:schemaLocation="http://cs431.org/mashup# file:/C:\cornell\cs431_proj\code\mashupExtension.xsd">
+    <cs431:mashupMetadata>
+        <dc:title>Global Warming</dc:title>
+        <dc:creator>Carl Lagoze</dc:creator>
+        <dc:description>A Mashup of information about Global Warming</dc:description>
+    </cs431:mashupMetadata>
+    <cs431:querySource query="http%3A%2F%2Fnews.search.yahoo.com%2Fnews%2Frss%3Fp%3Dglobal%2Bwarming">
+        <cs431:loc>http%3A//www.chron.com/disp/story.mpl/chronicle/5605556.html</cs431:loc>
+        <cs431:rssMetadata>
+            <cs431:rssItem>
+                <title><![CDATA[Southern Baptist leaders target global warming (Houston Chronicle)]]></title>
+                <link>http://us.rd.yahoo.com/dailynews/rss/search/global+warming/SIG=11ubm4ut0/*http%3A//www.chron.com/disp/story.mpl/chronicle/5605556.html</link>
+                <guid isPermaLink="false"
+                    >http://us.rd.yahoo.com/dailynews/rss/search/global+warming/SIG=11ubm4ut0/*http%3A//www.chron.com/disp/story.mpl/chronicle/5605556.html</guid>
+                <pubDate>Mon, 10 Mar 2008 05:51:04 GMT</pubDate>
+                <description><![CDATA[In a major shift, a group of Southern Baptist leaders said their denomination has been "too timid" on environmental issues and has a biblical duty to stop global warming.        ]]></description>
+            </cs431:rssItem>
+        </cs431:rssMetadata>
+    </cs431:querySource>
+    <cs431:querySource query="http%3A%2F%2Fnews.search.yahoo.com%2Fnews%2Frss%3Fp%3Dglobal%2Bwarming">
+        <cs431:loc>http%3A//www.pantagraph.com/articles/2008/03/10/money/doc47d23b7e06f42664130070.txt</cs431:loc>
+        <cs431:rssMetadata>
+            <cs431:rssItem>
+                <title><![CDATA[Race is on to fix global warming — and make money (The Pantagraph)]]></title>
+                <link>http://us.rd.yahoo.com/dailynews/rss/search/global+warming/SIG=12lf7b3h6/*http%3A//www.pantagraph.com/articles/2008/03/10/money/doc47d23b7e06f42664130070.txt</link>
+                <guid isPermaLink="false"
+                    >http://us.rd.yahoo.com/dailynews/rss/search/global+warming/SIG=12lf7b3h6/*http%3A//www.pantagraph.com/articles/2008/03/10/money/doc47d23b7e06f42664130070.txt</guid>
+                <pubDate>Mon, 10 Mar 2008 06:10:51 GMT</pubDate>
+                <description><![CDATA[WASHINGTON, D.C. -- Forget the arguments over whether global warming is real. Many American businesses and researchers are well past all that and are scrambling to find ways to make money in a world that must slash its use of fossil fuels.]]></description>
+            </cs431:rssItem>
+        </cs431:rssMetadata>
+    </cs431:querySource>
+    <cs431:querySource query="http%3A%2F%2Fnews.google.com%2Fnews%3Fq%3D%2522Global%2520Warming%2522%26output%3Datom">
+        <cs431:loc>http://www.nationalpost.com/opinion/columnists/story.html?id=b6301dfc-7ee1-4c9b-9a58-2ef1f3eb8443&amp;k=66577</cs431:loc>
+        <cs431:atomMetadata>
+            <cs431:atomItem>
+                <atom:title type="text/html" mode="escaped">The media snowjob on global warming -
+                    National Post</atom:title>
+                <atom:link rel="alternate" type="text/html"
+                    href="http://www.nationalpost.com/opinion/columnists/story.html?id=b6301dfc-7ee1-4c9b-9a58-2ef1f3eb8443&amp;k=66577"/>
+                <atom:id>tag:news.google.com,2005:cluster=43e37eb4</atom:id>
+                <atom:issued>2008-03-10T07:21:56Z</atom:issued>
+                <atom:modified>2008-03-10T07:21:56Z</atom:modified>
+                <atom:content type="text/html" mode="escaped">&lt;table border=0 width=
+                    valign=top cellpadding=2 cellspacing=7&gt;&lt;tr&gt;&lt;td
+                    width=80 align=center valign=top&gt;&lt;font
+                    style=&quot;font-size:85%;font-family:arial,sans-serif&quot;&gt;&lt;a
+                    href=&quot;http://news.google.com/news/url?sa=T&amp;ct=us/0i-0&amp;fd=A&amp;url=http://www.nationalpost.com/opinion/story.html%3Fid%3D364265&amp;cid=1138982580&amp;ei=tRzVR-anL4m0yQStjNGfCw&quot;&gt;&lt;img
+                    src=http://news.google.com/news?imgefp=dgkWDdsjGo4J&amp;imgurl=a123.g.akamai.net/f/123/12465/1d/www.nationalpost.com/opinion/364266.bin%3Fsize%3D404x272
+                    width=80 height=54 alt=&quot;&quot;
+                    border=1&gt;&lt;br&gt;&lt;font size=-2&gt;National
+                    Post&lt;/font&gt;&lt;/a&gt;&lt;/font&gt;&lt;/td&gt;&lt;td
+                    valign=top class=j&gt;&lt;font
+                    style=&quot;font-size:85%;font-family:arial,sans-serif&quot;&gt;&lt;br&gt;&lt;div
+                    style=&quot;padding-top:0.8em;&quot;&gt;&lt;img
+                    alt=&quot;&quot; height=&quot;1&quot;
+                    width=&quot;1&quot;&gt;&lt;/div&gt;&lt;div
+                    class=lh&gt;&lt;a
+                    href=&quot;http://news.google.com/news/url?sa=T&amp;ct=us/0-0&amp;fd=A&amp;url=http://www.nationalpost.com/opinion/columnists/story.html%3Fid%3Db6301dfc-7ee1-4c9b-9a58-2ef1f3eb8443%26k%3D66577&amp;cid=1138982580&amp;ei=tRzVR-anL4m0yQStjNGfCw&quot;&gt;The
+                    media snowjob on &lt;b&gt;global
+                    warming&lt;/b&gt;&lt;/a&gt;&lt;br&gt;&lt;font
+                    size=-1&gt;&lt;font color=#6f6f6f&gt;National
+                    Post,&amp;nbsp;Canada&amp;nbsp;-&lt;/font&gt;
+                    &lt;nobr&gt;4 hours
+                    ago&lt;/nobr&gt;&lt;/font&gt;&lt;br&gt;&lt;font
+                    size=-1&gt;&lt;b&gt;...&lt;/b&gt; etc, -- not human sources
+                    are behind &lt;b&gt;global warming&lt;/b&gt;. The Washington
+                    Post&amp;#39;s first instincts (not just on its opinion pages, but in its
+                    news coverage,
+                    &lt;b&gt;...&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font
+                    size=-1&gt;&lt;a
+                    href=&quot;http://news.google.com/news/url?sa=T&amp;ct=us/0-1&amp;fd=A&amp;url=http://www.washingtonpost.com/wp-dyn/content/article/2008/03/09/AR2008030901867.html&amp;cid=1138982580&amp;ei=tRzVR-anL4m0yQStjNGfCw&quot;&gt;Carbon
+                    Output Must Near Zero To Avert Danger, New Studies Say&lt;/a&gt;
+                    &lt;font size=-1 color=#6f6f6f&gt;&lt;nobr&gt;Washington
+                    Post&lt;/nobr&gt;&lt;/font&gt;&lt;/font&gt;&lt;br&gt;&lt;font
+                    size=-1&gt;&lt;a
+                    href=&quot;http://news.google.com/news/url?sa=T&amp;ct=us/0-2&amp;fd=A&amp;url=http://www.registerguard.com/csp/cms/sites/dt.cms.support.viewStory.cls%3Fcid%3D73887%26sid%3D5%26fid%3D1&amp;cid=1138982580&amp;ei=tRzVR-anL4m0yQStjNGfCw&quot;&gt;Global
+                    inaction We’d better get motivated now to confront climate
+                    &lt;b&gt;...&lt;/b&gt;&lt;/a&gt; &lt;font size=-1
+                    color=#6f6f6f&gt;&lt;nobr&gt;The
+                    Register-Guard&lt;/nobr&gt;&lt;/font&gt;&lt;/font&gt;&lt;br&gt;&lt;font
+                    size=-1&gt;&lt;a
+                    href=&quot;http://news.google.com/news/url?sa=T&amp;ct=us/0-3&amp;fd=A&amp;url=http://www.voiceofthetimes.net/index.php%3Foption%3Dcom_content%26task%3Dview%26id%3D1002%26Itemid%3D2&amp;cid=1138982580&amp;ei=tRzVR-anL4m0yQStjNGfCw&quot;&gt;No
+                    net &lt;b&gt;global warming&lt;/b&gt; in eight
+                    years&lt;/a&gt; &lt;font size=-1
+                    color=#6f6f6f&gt;&lt;nobr&gt;Anchorage
+                    Times&lt;/nobr&gt;&lt;/font&gt;&lt;/font&gt;&lt;br&gt;&lt;font
+                    size=-1 class=p&gt;&lt;a
+                    href=&quot;http://news.google.com/news/url?sa=T&amp;ct=us/0-4&amp;fd=A&amp;url=http://www.statesman.com/news/content/news/stories/nation/03/09/0309warming.html&amp;cid=1138982580&amp;ei=tRzVR-anL4m0yQStjNGfCw&quot;&gt;&lt;nobr&gt;Austin
+                    American-Statesman&lt;/nobr&gt;&lt;/a&gt;&amp;nbsp;-
+                    &lt;a
+                    href=&quot;http://news.google.com/news/url?sa=T&amp;ct=us/0-5&amp;fd=A&amp;url=http://www.azstarnet.com/news/228819&amp;cid=1138982580&amp;ei=tRzVR-anL4m0yQStjNGfCw&quot;&gt;&lt;nobr&gt;Arizona
+                    Daily
+                    Star&lt;/nobr&gt;&lt;/a&gt;&lt;/font&gt;&lt;br/&gt;&lt;font
+                    class=p size=-1&gt;&lt;a class=p
+                    href=http://news.google.com/news?ie=ISO-8859-1&amp;ncl=1138982580&amp;hl=en&gt;&lt;nobr&gt;all
+                    20 news
+                    articles&lt;/nobr&gt;&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</atom:content>
+            </cs431:atomItem>
+        </cs431:atomMetadata>
+    </cs431:querySource>
+    <cs431:querySource query="http%3A%2F%2Fsearch.nsdl.org%2F%3Fverb%3DSearch%26n%3D10%26q%3D'Global%2520Warming'%26s%3D0">
+        <cs431:loc>http://www.epa.gov/globalwarming/kids</cs431:loc>
+        <cs431:nsdlMetadata>
+            <cs431:nsdlItem>
+                <dc:description>EPA Global Warming Kids Page: The kids page focuses on the science
+                    and impacts of global warming or climate change, and on actions that help
+                    address global warming issues. It is designed as a resource for both kids and
+                    educators. The site also features games, events, and links to other relevant
+                    sites for kids and educators.</dc:description>
+                <dc:subject>Climate change</dc:subject>
+                <dc:subject>Educational material</dc:subject>
+                <dc:subject>Games</dc:subject>
+                <dc:subject>Kids page</dc:subject>
+                <dc:subject>Links</dc:subject>
+                <dc:subject>Kids sites</dc:subject>
+                <dc:subject>Global warming kids</dc:subject>
+                <dc:subject>Educators</dc:subject>
+                <dc:subject>Education</dc:subject>
+                <dc:title>The EPA Global Warming Kids Page</dc:title>
+                <dc:subject xsi:type="dct:LCSH">Climatic changes</dc:subject>
+                <dc:subject xsi:type="dct:LCSH">Global temperature changes</dc:subject>
+                <dc:subject xsi:type="dct:LCSH">Global warming</dc:subject>
+                <dc:subject xsi:type="dct:LCSH">Greenhouse effect, Atmospheric</dc:subject>
+                <dc:subject xsi:type="dct:LCSH">Greenhouse gases</dc:subject>
+                <dc:identifier xsi:type="dct:URI">http://www.epa.gov/globalwarming/kids</dc:identifier>
+                <nsdl:bestPassage>The EPA &lt;B&gt;Global&lt;/B&gt;
+                    &lt;B&gt;Warming&lt;/B&gt; Kids Page
+                    &lt;B&gt;Global&lt;/B&gt;
+                    &lt;B&gt;Warming&lt;/B&gt; Home || Privacy and Security Notice
+                    || Glossary || Comments &lt;B&gt;Global&lt;/B&gt;
+                    &lt;B&gt;Warming&lt;/B&gt; Search || EPA Home</nsdl:bestPassage>
+                <nsdl:primaryIdentifier>http://www.epa.gov/globalwarming/kids</nsdl:primaryIdentifier>
+                <nsdl:category>item</nsdl:category>
+                <nsdl:compoundDescription>EPA Global Warming Kids Page: The kids page focuses on the
+                    science and impacts of global warming or climate change, and on actions that
+                    help address global warming issues. It is designed as a resource for both kids
+                    and educators. The site also features games, events, and links to other relevant
+                    sites for kids and educators.</nsdl:compoundDescription>
+                <nsdl:compoundGenre>text/html</nsdl:compoundGenre>
+                <nsdl:compoundSubject>Climate change Educational material Games Kids page Links Kids
+                    sites Global warming kids Educators Education Climatic changes Global
+                    temperature changes Global warming Greenhouse effect, Atmospheric Greenhouse
+                    gases</nsdl:compoundSubject>
+                <nsdl:compoundTitle>The EPA Global Warming Kids Page</nsdl:compoundTitle>
+                <nsdl:primaryCollection>oai:nsdl.org:nsdl.nsdl:458941</nsdl:primaryCollection>
+                <nsdl:brandTitle>ActionBioscience.org</nsdl:brandTitle>
+                <nsdl:brandIconURL>http://crs.nsdl.org/brands/458941.jpg</nsdl:brandIconURL>
+                <nsdl:brandHeight>30</nsdl:brandHeight>
+            </cs431:nsdlItem>
+        </cs431:nsdlMetadata>
+    </cs431:querySource>
+
+
+</cs431:mashup>
