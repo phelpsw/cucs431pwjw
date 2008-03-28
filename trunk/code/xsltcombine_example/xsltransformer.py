@@ -6,8 +6,6 @@ import libxml2, libxslt
 import cgi, os, sys
 import urllib
 import urllib2
-#query = cgi.FieldStorage()
-
 
 readtimestart = time.time()
 
@@ -25,8 +23,6 @@ req=urllib2.Request(url="http://news.search.yahoo.com/news/rss?" + data, headers
 response = urllib2.urlopen(req)
 #print response.read()
 
-
-
 # NSDL News Lookup
 data = urllib.urlencode({'q' : queryTopic, 'n' : '10', 's' : '0'})
 req=urllib2.Request(url="http://ndrsearch.nsdl.org/search?" + data, headers={'User-Agent':'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'})
@@ -36,16 +32,6 @@ response = urllib2.urlopen(req)
 #FILE = open("test.xml","w")
 #FILE.write(response.read())
 #FILE.close()
-
-"""
-src1 = urllib.urlopen("http://news.google.com/news?%s" % data)
-print src1.read()
-src2 = urllib.urlopen("http://news.search.yahoo.com/news/rss?p="+queryTopic)
-print src2
-src3 = urllib.urlopen("http://ndrsearch.nsdl.org/search?n=10&q="+queryTopic+"&s=0")
-print src3
-"""
-
 
 
 
