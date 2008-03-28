@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://ns.nsdl.org/search/rest_v2.00/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nsdlTypes="http://ns.nsdl.org/nsdl_types_v1.00" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:this="http://ns.nsdl.org/search/rest_v2.00/" elementFormDefault="qualified" version="2.00.002">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+			XML Schema which can be used to validate responses from the National Science Digital Library (NSDL) Resource-Centric Search Service.
+			See http://search.comm.nsdl.org for more information
+
+			Validated with Xerces (sax.Counter -n -np -v -s -f -dv / dom.Counter -n -v -s -f -dv) on 2006-09-21
+			Validated with XMLSpy v.5 rel 4 on 2006-09-21
+			Validated with XSV 2.10-1 of 2005/04/22 13:10:49 on 2006-09-21
+
+			updated 2006-09-21 Naomi Dushay - version 2.00.002 - added badQuery, badIndex, noFieldValueDelimiter errors
+			updated 2006-08-29 Naomi Dushay - version 2.00.001 - added ResourceText response
+			updated 2006-07-09 Naomi Dushay - version 2.00.000 - resource-centric and collection contextualized
+			XML Schema created by Naomi Dushay 2005-01-28
+    </xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://ns.nsdl.org/nsdl_types_v1.00" schemaLocation="http://ns.nsdl.org/schemas/nsdl_types/nsdl_types_v1.00.xsd"/>
+	<xs:import namespace="http://purl.org/dc/terms/" schemaLocation="http://ns.nsdl.org/schemas/dc/dcterms_v1.01.xsd"/>
+	<xs:import namespace="http://ns.nsdl.org/nsdl_dc_v1.02/" schemaLocation="http://ns.nsdl.org/schemas/nsdl_dc/nsdl_dc_v1.02.xsd"/>
+
+	<xs:simpleType name="schemaVersionNumber">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">For exact matches of the first two parts of the schemaVersion with THIS schema's version.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nsdlTypes:schemaVersionType">
+			<xs:pattern value="2\.00\.\d{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="NSDLSearchService" type="this:NSDLSearchServiceType"/>
+	
+	<xs:complexType name="NSDLSearchServiceType">
+		<xs:sequence>
+			<xs:element name="responseTime" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="request" type="xs:anyURI"/>
+			<xs:choice>
+				<xs:element name="error" type="this:errorResponseType" maxOccurs="unbounded"/>
+				<xs:element name="IndexInfo" type="this:IndexInfoResponseType"/>
+				<xs:element name="IndexFieldInfo" type="this:indexFieldsType"/>
+				<xs:element name="SearchResults" type="this:SearchResponseType"/>
+				<xs:element name="GetDocument" type="this:GetDocumentResponseType"/>
+				<xs:element name="Histogram" type="this:HistogramResponseType"/>
+				<xs:element name="ResourceText" type="this:ResourceTextResponseType"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="schemaVersion" type="this:schemaVersionNumber" use="required"/>
+	</xs:complexType>
+	
+	<!-- error conditions -->
+	<!-- =============================== -->
+	<xs:complexType name="errorResponseType">
+		<xs:simpleContent>
+			<xs:extension base="xs:token">
+				<xs:attribute name="code" type="this:errorCodeType" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="errorCodeType">
+		<xs:restriction base="xs:NCName">
+			<xs:enumeration value="badArgument"/>
+			<xs:enumeration value="badQuery"/>
+			<xs:enumeration value="badIndex"/>
+			<xs:enumeration value="systemProblem"/>
+			<xs:enumeration value="unknownIdentifier"/>
+			<xs:enumeration value="noStemmedFieldnameString"/>
+			<xs:enumeration value="noCollContextFieldnamePrefix"/>
+			<xs:enumeration value="noIndexedFields"/>
+			<xs:enumeration value="noUnIndexedFields"/>
+			<xs:enumeration value="noDefaultFieldname"/>
+			<xs:enumeration value="noResultHeaderFields"/>
+			<xs:enumeration value="noResultMetadataFields"/>
+			<xs:enumeration value="noResultCollContextFields"/>
+			<xs:enumeration value="noOtherResultFields"/>
+			<xs:enumeration value="noFieldValueDelimiter"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- response containers -->
+	<!-- ============================== -->
+	<xs:complexType name="IndexInfoResponseType">
+		<xs:sequence>
+			<xs:element name="searchServiceName" type="xs:string"/>
+			<xs:element name="baseURL" type="xs:anyURI"/>
+			<xs:element name="adminEmail" type="nsdlTypes:emailAddressType" maxOccurs="unbounded"/>
+
+			<!-- the following three elements pertain to processing for the entire search index -->
+			<xs:element name="indexLastUpdated" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="metadataLastHarvested" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="contentLastHarvested" type="nsdlTypes:dateTimeUTCType"/>
+<!-- TODO: add number of documents in index -->
+
+			<!-- the following six elements pertain to max and min datestamps on individual records in the search index -->
+			<xs:element name="mostRecentLastIndexed" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="leastRecentLastIndexed" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="mostRecentMetadataLastModified" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="leastRecentMetadataLastModified" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="mostRecentContentLastModified" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="leastRecentContentLastModified" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="mostRecentContentLastFetched" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="leastRecentContentLastFetched" type="nsdlTypes:dateTimeUTCType"/>
+			<!-- TODO: enumerated compression types -->
+			<xs:element name="compression" type="xs:token" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="description" type="this:descriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- FIXME: add sample identifier -->
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SearchResponseType">
+		<xs:sequence>
+			<xs:element name="resultsInfo" type="this:searchResultsInfoType" />
+			<xs:element name="results">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="document" type="this:searchDocumentType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="GetDocumentResponseType">
+		<xs:sequence>
+			<xs:element name="document" type="this:getDocumentDocumentType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="HistogramResponseType">
+		<xs:sequence>
+			<xs:element name="numIndexedDocs" type="xs:unsignedInt"/>
+			<xs:element name="query" type="xs:token"/>
+			<xs:element name="fieldName" type="xs:token"/>
+			<xs:element name="numDocsMatchingQuery" type="xs:unsignedInt" minOccurs="0"/>
+			<xs:sequence minOccurs="0">
+				<xs:element name="specificNumOccursStr" type="xs:token" />
+				<xs:element name="specificNumOccursFieldName" type="xs:token" />				
+			</xs:sequence>
+			<xs:element name="fieldsPerDocMatchingQueryHistogram" type="this:histogramType" minOccurs="0"/>
+			<xs:element name="numFieldValuesInDocsMatchingQuery" type="xs:unsignedLong"/>
+			<xs:element name="numUniqueFieldValuesInDocsMatchingQuery" type="xs:unsignedLong"/>
+			<xs:element name="fieldValues" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="fieldValue" type="xs:string" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ResourceTextResponseType">
+		<xs:sequence>
+			<xs:element name="resource">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="header" type="this:headerType"/>
+						<xs:element name="parsedText" type="xs:token" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- define basic types used in replies to 
+       Search, GetDocument, IndexInfo, Histogram -->
+	<!-- ======================================= -->
+	<xs:complexType name="searchResultsInfoType">
+		<xs:sequence>
+			<xs:element name="totalNumResults" type="xs:nonNegativeInteger"/>
+			<xs:element name="numSkipped" type="xs:nonNegativeInteger"/>
+			<xs:element name="numReturned" type="xs:nonNegativeInteger"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="documentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">A document has a header and a fields part</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="position" type="xs:nonNegativeInteger" minOccurs="0"/> <!-- must: SearchResults; must not: GetDocument -->
+			<xs:element name="score" type="xs:decimal" minOccurs="0"/>  <!-- must: SearchResults; must not: GetDocument -->
+			<xs:element name="header" type="this:headerType"/>
+			<xs:element name="fields" type="this:fieldsType" minOccurs="0"/> <!-- must: SearchResults and GetDocument -->
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="searchDocumentType">
+		<xs:complexContent>
+			<xs:restriction base="this:documentType">
+				<xs:sequence>
+					<xs:element name="position" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="score" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="header" type="this:headerType"/>
+					<xs:element name="fields" type="this:fieldsType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="getDocumentDocumentType">
+		<xs:complexContent>
+			<xs:restriction base="this:documentType">
+				<xs:sequence>
+					<xs:element name="position" type="xs:nonNegativeInteger" minOccurs="0" maxOccurs="0"/>
+					<xs:element name="score" type="xs:decimal" minOccurs="0" maxOccurs="0"/>
+					<xs:element name="header" type="this:headerType"/>
+					<xs:element name="fields" type="this:fieldsType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="headerType">
+		<xs:sequence>
+			<xs:element name="resourceIdentifier" type="xs:anyURI"/>
+			<xs:element name="lastIndexed" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="metadataLastModified" type="nsdlTypes:dateTimeUTCType"/>
+			<xs:element name="contentLastModified" type="nsdlTypes:dateTimeUTCType" minOccurs="0"/>
+			<xs:element name="contentLastFetched" type="nsdlTypes:dateTimeUTCType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="fieldsType">
+		<xs:sequence>
+			<xs:group ref="dcterms:elementsAndRefinementsGroup"/>
+			<xs:element name="compoundAgent" type="xs:token" minOccurs="0"/>
+			<xs:element name="compoundAudience" type="xs:token" minOccurs="0"/>
+			<xs:element name="compoundDescription" type="xs:token" minOccurs="0"/>
+			<xs:element name="compoundGenre" type="xs:token" minOccurs="0"/>
+			<xs:element name="compoundSubject" type="xs:token" minOccurs="0"/>
+			<xs:element name="compoundTitle" type="xs:token" minOccurs="0"/>
+			<xs:element name="bestPassage" type="xs:token" minOccurs="0"/>
+			<xs:element name="collContext" type="this:collContextType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="metadataSource" type="this:OAI_IDWithURLType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+		
+	<xs:complexType name="collContextType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">collection information includes the collection record Id, brand information, and other collContext fields as determined at indexing time.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="oai-id" type="nsdlTypes:nsdl-oai-identifierType" />
+			<xs:element name="brand" type="this:brandType" />
+			<xs:group ref="dcterms:elementsAndRefinementsGroup"/>
+		</xs:sequence>
+	</xs:complexType>
+		
+	<xs:complexType name="brandType">
+		<xs:sequence>
+			<xs:element name="image">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:anyURI">
+							<xs:attribute name="width" type="xs:positiveInteger" />
+							<xs:attribute name="height" type="xs:positiveInteger" />
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="altText" type="xs:token" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="OAI_IDWithURLType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				The text value of this element is the OAI identifier of the NSDL OAI record related to the search service document.  The url attribute is the resource URL from the OAI record's metadata that normalizes to the identifier of the resource-centric search result.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="nsdlTypes:nsdl-oai-identifierType">
+				<xs:attribute name="url" type="xs:anyURI" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="descriptionType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for the description element in IndexInfo. Content must be compliant with simple or qualified DC</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:any namespace="http://ns.nsdl.org/nsdl_dc_v1.02/ http://purl.org/dc/terms/ http://purl.org/dc/elements/1.1/" processContents="strict"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="indexFieldsType">
+		<xs:sequence>
+			<xs:element name="defaultSearchField" type="xs:token" />
+			<xs:element name="stemmedFieldNameString" type="xs:token" />
+			<xs:element name="collContextFieldNamePrefix" type="xs:token" />
+			<xs:element name="searchableFields">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="searchableField" type="xs:token" minOccurs="0" maxOccurs="unbounded" />
+						<xs:element name="collContext">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="searchableField" type="xs:token" minOccurs="0" maxOccurs="unbounded" />									
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nonSearchableFields">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="nonSearchableField" type="xs:token" minOccurs="0" maxOccurs="unbounded" />
+						<xs:element name="collContext">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="nonSearchableField" type="xs:token" minOccurs="0" maxOccurs="unbounded" />									
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="resultFieldsPopulatedInIndex" >
+				<xs:complexType>
+					<xs:sequence>
+						<!-- NOTE: would like a way to use the element NAMES from this:fieldsType as the type here ... -->
+						<xs:element name="resultField" type="xs:token" minOccurs="0" maxOccurs="unbounded" />
+						<xs:element name="collContext">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="resultField" type="xs:token" minOccurs="0" maxOccurs="unbounded" />									
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="histogramType">
+		<xs:sequence>
+			<xs:element name="histogramEntry" maxOccurs="unbounded" >
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="histogramEntryType">
+		<xs:simpleContent>
+			<xs:extension base="this:emptyString">
+				<xs:attribute name="numPerDoc" type="xs:unsignedShort" use="required"/>
+				<xs:attribute name="numDocs" type="xs:unsignedInt" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="emptyString">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value=""/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>
