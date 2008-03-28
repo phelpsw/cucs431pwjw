@@ -11,6 +11,14 @@
         </xsd:complexContent>
     </xsd:complexType>
     
-    <xsd:element name="querySource" type="cs431:queryInfo"/>
+    <xsd:element name="querySource" substitutionGroup="cs431:source" type="cs431:queryInfo"/>
+    
+    <xsd:complexType name="metaDataSpecifcType">
+        <xsd:complexContent>
+            <xsd:extension base="cs431:metadataTypeBase"></xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:element name="rssMetadata" substitutionGroup="cs431:metadataBase" type="cs431:metaDataSpecifcType"/>
     
 </xsd:schema>
