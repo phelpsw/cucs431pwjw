@@ -2,14 +2,15 @@
 <cs431:mashup xmlns:cs431="http://cs431.org/mashup#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:atom="http://www.w3.org/2005/Atom"
     xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai="http://www.openarchives.org/OAI/2.0/"
-    xmlns:nsdl="http://ns.nsdl.org/search/rest_v1.01/" xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:nsdl="http://ns.nsdl.org/search/rest_v2.00/" xmlns:dct="http://purl.org/dc/terms/"
     xsi:schemaLocation="http://cs431.org/mashup# mashupExtension.xsd">
     <cs431:mashupMetadata>
         <dc:title>Global Warming</dc:title>
         <dc:creator>Carl Lagoze</dc:creator>
         <dc:description>A Mashup of information about Global Warming</dc:description>
     </cs431:mashupMetadata>
-    <cs431:querySource query="http%3A%2F%2Fnews.search.yahoo.com%2Fnews%2Frss%3Fp%3Dglobal%2Bwarming">
+    <cs431:querySource
+        query="http%3A%2F%2Fnews.search.yahoo.com%2Fnews%2Frss%3Fp%3Dglobal%2Bwarming">
         <cs431:loc>http%3A//www.chron.com/disp/story.mpl/chronicle/5605556.html</cs431:loc>
         <cs431:rssMetadata>
             <cs431:rssItem>
@@ -22,7 +23,8 @@
             </cs431:rssItem>
         </cs431:rssMetadata>
     </cs431:querySource>
-    <cs431:querySource query="http%3A%2F%2Fnews.search.yahoo.com%2Fnews%2Frss%3Fp%3Dglobal%2Bwarming">
+    <cs431:querySource
+        query="http%3A%2F%2Fnews.search.yahoo.com%2Fnews%2Frss%3Fp%3Dglobal%2Bwarming">
         <cs431:loc>http%3A//www.pantagraph.com/articles/2008/03/10/money/doc47d23b7e06f42664130070.txt</cs431:loc>
         <cs431:rssMetadata>
             <cs431:rssItem>
@@ -35,7 +37,8 @@
             </cs431:rssItem>
         </cs431:rssMetadata>
     </cs431:querySource>
-    <cs431:querySource query="http%3A%2F%2Fnews.google.com%2Fnews%3Fq%3D%2522Global%2520Warming%2522%26output%3Datom">
+    <cs431:querySource
+        query="http%3A%2F%2Fnews.google.com%2Fnews%3Fq%3D%2522Global%2520Warming%2522%26output%3Datom">
         <cs431:loc>http://www.nationalpost.com/opinion/columnists/story.html?id=b6301dfc-7ee1-4c9b-9a58-2ef1f3eb8443&amp;k=66577</cs431:loc>
         <cs431:atomMetadata>
             <cs431:atomItem>
@@ -104,7 +107,8 @@
             </cs431:atomItem>
         </cs431:atomMetadata>
     </cs431:querySource>
-    <cs431:querySource query="http%3A%2F%2Fsearch.nsdl.org%2F%3Fverb%3DSearch%26n%3D10%26q%3D'Global%2520Warming'%26s%3D0">
+    <cs431:querySource
+        query="http%3A%2F%2Fsearch.nsdl.org%2F%3Fverb%3DSearch%26n%3D10%26q%3D'Global%2520Warming'%26s%3D0">
         <cs431:loc>http://www.epa.gov/globalwarming/kids</cs431:loc>
         <cs431:nsdlMetadata>
             <cs431:nsdlItem>
@@ -113,45 +117,41 @@
                     address global warming issues. It is designed as a resource for both kids and
                     educators. The site also features games, events, and links to other relevant
                     sites for kids and educators.</dc:description>
-                <dc:subject>Climate change</dc:subject>
-                <dc:subject>Educational material</dc:subject>
-                <dc:subject>Games</dc:subject>
-                <dc:subject>Kids page</dc:subject>
-                <dc:subject>Links</dc:subject>
-                <dc:subject>Kids sites</dc:subject>
-                <dc:subject>Global warming kids</dc:subject>
-                <dc:subject>Educators</dc:subject>
-                <dc:subject>Education</dc:subject>
-                <dc:title>The EPA Global Warming Kids Page</dc:title>
                 <dc:subject xsi:type="dct:LCSH">Climatic changes</dc:subject>
                 <dc:subject xsi:type="dct:LCSH">Global temperature changes</dc:subject>
                 <dc:subject xsi:type="dct:LCSH">Global warming</dc:subject>
                 <dc:subject xsi:type="dct:LCSH">Greenhouse effect, Atmospheric</dc:subject>
                 <dc:subject xsi:type="dct:LCSH">Greenhouse gases</dc:subject>
-                <dc:identifier xsi:type="dct:URI">http://www.epa.gov/globalwarming/kids</dc:identifier>
-                <nsdl:bestPassage>The EPA &lt;B&gt;Global&lt;/B&gt;
-                    &lt;B&gt;Warming&lt;/B&gt; Kids Page
-                    &lt;B&gt;Global&lt;/B&gt;
-                    &lt;B&gt;Warming&lt;/B&gt; Home || Privacy and Security Notice
-                    || Glossary || Comments &lt;B&gt;Global&lt;/B&gt;
-                    &lt;B&gt;Warming&lt;/B&gt; Search || EPA Home</nsdl:bestPassage>
-                <nsdl:primaryIdentifier>http://www.epa.gov/globalwarming/kids</nsdl:primaryIdentifier>
-                <nsdl:category>item</nsdl:category>
+                <dc:title>The EPA Global Warming Kids Page</dc:title>
+                <dc:subject>Climate change</dc:subject>
+                <dc:subject>Education</dc:subject>
+                <dc:subject>Educational material</dc:subject>
+                <dc:subject>Educators</dc:subject>
+                <dc:subject>Games</dc:subject>
+                <dc:subject>Global warming kids</dc:subject>
+                <dc:subject>Kids page</dc:subject>
+                <dc:subject>Kids sites</dc:subject>
+                <dc:subject>Links</dc:subject>
                 <nsdl:compoundDescription>EPA Global Warming Kids Page: The kids page focuses on the
                     science and impacts of global warming or climate change, and on actions that
                     help address global warming issues. It is designed as a resource for both kids
                     and educators. The site also features games, events, and links to other relevant
                     sites for kids and educators.</nsdl:compoundDescription>
-                <nsdl:compoundGenre>text/html</nsdl:compoundGenre>
-                <nsdl:compoundSubject>Climate change Educational material Games Kids page Links Kids
-                    sites Global warming kids Educators Education Climatic changes Global
-                    temperature changes Global warming Greenhouse effect, Atmospheric Greenhouse
-                    gases</nsdl:compoundSubject>
+                <nsdl:compoundSubject>Climatic changes ~^ Global temperature changes ~^ Global
+                    warming ~^ Greenhouse effect, Atmospheric ~^ Greenhouse gases ~^ Climate change
+                    ~^ Education ~^ Educational material ~^ Educators ~^ Games ~^ Global warming
+                    kids ~^ Kids page ~^ Kids sites ~^ Links</nsdl:compoundSubject>
                 <nsdl:compoundTitle>The EPA Global Warming Kids Page</nsdl:compoundTitle>
-                <nsdl:primaryCollection>oai:nsdl.org:nsdl.nsdl:458941</nsdl:primaryCollection>
-                <nsdl:brandTitle>ActionBioscience.org</nsdl:brandTitle>
-                <nsdl:brandIconURL>http://crs.nsdl.org/brands/458941.jpg</nsdl:brandIconURL>
-                <nsdl:brandHeight>30</nsdl:brandHeight>
+                <nsdl:bestPassage/>
+                <nsdl:collContext>
+                    <nsdl:oai-id>oai:nsdl.org:crs:458941</nsdl:oai-id>
+                    <nsdl:brand>
+                        <nsdl:image height="30" width="100">http://crs.nsdl.org/brands/458941.jpg</nsdl:image>
+                        <nsdl:altText>ActionBioscience.org</nsdl:altText>
+                    </nsdl:brand>
+                </nsdl:collContext>
+                <nsdl:metadataSource url="http://www.epa.gov/globalwarming/kids"
+                    >oai:nsdl.org:2200-20061005122314296T</nsdl:metadataSource>
             </cs431:nsdlItem>
         </cs431:nsdlMetadata>
     </cs431:querySource>
