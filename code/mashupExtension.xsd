@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://cs431.org/mashup#"
-    xmlns:cs431="http://cs431.org/mashup#" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:nsdl="http://ns.nsdl.org/search/rest_v2.00/">
-    <xsd:include schemaLocation="mashupBase.xsd"/>
+    xmlns:cs431="http://cs431.org/mashup#" 
+    xmlns:atom="http://www.w3.org/2005/Atom" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:nsdl="http://ns.nsdl.org/search/rest_v2.00/"
+   >
+    <!-- xmlns:dct="http://purl.org/dc/terms/" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"--> 
     <xsd:import schemaLocation="rss-2_0.xsd"/>
     <xsd:import namespace="http://www.w3.org/2005/Atom" schemaLocation="atom.xsd"/>
     <xsd:import namespace="http://ns.nsdl.org/search/rest_v2.00/" schemaLocation="rest_v2.00.xsd"/>
+    <xsd:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="http://dublincore.org/schemas/xmls/simpledc20021212.xsd"/>
+    <xsd:include schemaLocation="mashupBase.xsd"/>
     
     <xsd:complexType name="queryInfo">
         <xsd:complexContent>
@@ -25,13 +31,13 @@
     
     <xsd:complexType name="atomItemType">
         <xsd:complexContent>
-            <xsd:extension base="nsdl:"/>
+            <xsd:extension base="atom:entryType"/>
         </xsd:complexContent>
     </xsd:complexType>
     
     <xsd:complexType name="nsdlItemType">
         <xsd:complexContent>
-            <xsd:extension base="atom:entryType"/>
+                <xsd:extension base="nsdl:fieldsType"/>
         </xsd:complexContent>
     </xsd:complexType>
     
