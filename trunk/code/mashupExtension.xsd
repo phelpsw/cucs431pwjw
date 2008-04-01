@@ -2,11 +2,8 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://cs431.org/mashup#"
     xmlns:cs431="http://cs431.org/mashup#" 
     xmlns:atom="http://www.w3.org/2005/Atom" 
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:nsdl="http://ns.nsdl.org/search/rest_v2.00/"
-   >
-    <!-- xmlns:dct="http://purl.org/dc/terms/" 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"--> 
+    xmlns:nsdl="http://ns.nsdl.org/search/rest_v2.00/">
+    
     <xsd:import schemaLocation="rss-2_0.xsd"/>
     <xsd:import namespace="http://www.w3.org/2005/Atom" schemaLocation="atom.xsd"/>
     <xsd:import namespace="http://ns.nsdl.org/search/rest_v2.00/" schemaLocation="rest_v2.00.xsd"/>
