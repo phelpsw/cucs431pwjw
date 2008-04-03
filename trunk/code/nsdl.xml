@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<NSDLSearchService schemaVersion="2.00.002" xsi:schemaLocation="http://ns.nsdl.org/search/rest_v2.00/ http://ns.nsdl.org/schemas/search/rest_v2.00.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ieee="http://www.ieee.org/xsd/LOMv1p0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:nsdl_dc="http://ns.nsdl.org/nsdl_dc_v1.02/" xmlns:dct="http://purl.org/dc/terms/" xmlns="http://ns.nsdl.org/search/rest_v2.00/">
+    <responseTime>2008-04-03T00:56:37Z</responseTime>
+    <request>http://localhost:8180/search/search?n=10&amp;q='Global%20Warming'&amp;s=0</request>
+    <SearchResults>
+        <resultsInfo>
+            <totalNumResults>4723</totalNumResults>
+            <numSkipped>0</numSkipped>
+            <numReturned>10</numReturned>
+        </resultsInfo>
+        <results>
+            <document>
+                <position>0</position>
+                <score>1.0</score>
+                <header>
+                    <resourceIdentifier>http://www.epa.gov/globalwarming/kids</resourceIdentifier>
+                    <lastIndexed>2008-03-16T06:33:15Z</lastIndexed>
+                    <metadataLastModified>2007-01-14T07:45:03Z</metadataLastModified>
+                    <contentLastModified>2006-10-19T14:17:43Z</contentLastModified>
+                    <contentLastFetched>2008-03-16T05:58:35Z</contentLastFetched>
+                </header>
+                <fields>
+                    <dc:description>EPA Global Warming Kids Page: The kids page focuses on the science and impacts of global warming or climate change, and on actions that help address global warming issues. It is designed as a resource for both kids and educators. The site also features games, events, and links to other relevant sites for kids and educators.</dc:description>
+                    <dc:subject xsi:type="dct:LCSH">Climatic changes</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Global temperature changes</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Global warming</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Greenhouse effect, Atmospheric</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Greenhouse gases</dc:subject>
+                    <dc:title>The EPA Global Warming Kids Page</dc:title>
+                    <dc:subject>Climate change</dc:subject>
+                    <dc:subject>Education</dc:subject>
+                    <dc:subject>Educational material</dc:subject>
+                    <dc:subject>Educators</dc:subject>
+                    <dc:subject>Games</dc:subject>
+                    <dc:subject>Global warming kids</dc:subject>
+                    <dc:subject>Kids page</dc:subject>
+                    <dc:subject>Kids sites</dc:subject>
+                    <dc:subject>Links</dc:subject>
+                    <compoundDescription>EPA Global Warming Kids Page: The kids page focuses on the science and impacts of global warming or climate change, and on actions that help address global warming issues. It is designed as a resource for both kids and educators. The site also features games, events, and links to other relevant sites for kids and educators.</compoundDescription>
+                    <compoundSubject>Climatic changes ~^ Global temperature changes ~^ Global warming ~^ Greenhouse effect, Atmospheric ~^ Greenhouse gases ~^ Climate change ~^ Education ~^ Educational material ~^ Educators ~^ Games ~^ Global warming kids ~^ Kids page ~^ Kids sites ~^ Links</compoundSubject>
+                    <compoundTitle>The EPA Global Warming Kids Page</compoundTitle>
+                    <bestPassage></bestPassage>
+                    <collContext>
+                        <oai-id>oai:nsdl.org:crs:458941</oai-id>
+                        <brand>
+                            <image height="30" width="100">http://crs.nsdl.org/brands/458941.jpg</image>
+                            <altText>ActionBioscience.org</altText>
+                        </brand>
+                    </collContext>
+                    <metadataSource url="http://www.epa.gov/globalwarming/kids">oai:nsdl.org:2200-20061005122314296T</metadataSource>
+                </fields>
+            </document>
+            <document>
+                <position>1</position>
+                <score>0.943813</score>
+                <header>
+                    <resourceIdentifier>http://yosemite.epa.gov/oar/globalwarming.nsf/content/impacts.html</resourceIdentifier>
+                    <lastIndexed>2008-03-09T09:12:26Z</lastIndexed>
+                    <metadataLastModified>2007-01-14T07:43:18Z</metadataLastModified>
+                    <contentLastModified>2008-03-09T08:35:06Z</contentLastModified>
+                    <contentLastFetched>2008-03-09T08:35:08Z</contentLastFetched>
+                </header>
+                <fields>
+                    <dc:description>The EPA Global Warming Site: Impacts section focuses on the potential impacts of global warming or climate change</dc:description>
+                    <dc:subject xsi:type="dct:LCSH">Climatic changes</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Global temperature changes</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Global warming</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Greenhouse effect, Atmospheric</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Greenhouse gases</dc:subject>
+                    <dc:title>Impacts</dc:title>
+                    <dc:subject>Agriculture</dc:subject>
+                    <dc:subject>Climate change</dc:subject>
+                    <dc:subject>Climate impacts</dc:subject>
+                    <dc:subject>Global warming impacts</dc:subject>
+                    <dc:subject>Human health</dc:subject>
+                    <dc:subject>National parks</dc:subject>
+                    <dc:subject>Rangelands</dc:subject>
+                    <dc:subject>Water impacts</dc:subject>
+                    <dc:subject>Watersupply</dc:subject>
+                    <compoundDescription>The EPA Global Warming Site: Impacts section focuses on the potential impacts of global warming or climate change</compoundDescription>
+                    <compoundSubject>Climatic changes ~^ Global temperature changes ~^ Global warming ~^ Greenhouse effect, Atmospheric ~^ Greenhouse gases ~^ Agriculture ~^ Climate change ~^ Climate impacts ~^ Global warming impacts ~^ Human health ~^ National parks ~^ Rangelands ~^ Water impacts ~^ Watersupply</compoundSubject>
+                    <compoundTitle>Impacts</compoundTitle>
+                    <bestPassage></bestPassage>
+                    <collContext>
+                        <oai-id>oai:nsdl.org:crs:458941</oai-id>
+                        <brand>
+                            <image height="30" width="100">http://crs.nsdl.org/brands/458941.jpg</image>
+                            <altText>ActionBioscience.org</altText>
+                        </brand>
+                    </collContext>
+                    <metadataSource url="http://yosemite.epa.gov/oar/globalwarming.nsf/content/impacts.html">oai:nsdl.org:2200-20061005121745286T</metadataSource>
+                </fields>
+            </document>
+            <document>
+                <position>2</position>
+                <score>0.943813</score>
+                <header>
+                    <resourceIdentifier>http://yosemite.epa.gov/oar/globalwarming.nsf/content/climate.html</resourceIdentifier>
+                    <lastIndexed>2008-03-15T05:55:09Z</lastIndexed>
+                    <metadataLastModified>2007-01-14T07:37:37Z</metadataLastModified>
+                    <contentLastModified>2008-03-15T05:39:32Z</contentLastModified>
+                    <contentLastFetched>2008-03-15T05:39:34Z</contentLastFetched>
+                </header>
+                <fields>
+                    <dc:description>The EPA Global Warming Site: Climate section focuses on the science of global warming or climate change. The section relies heavily on the work of the Intergovernmental Panel on Climate Change.</dc:description>
+                    <dc:subject xsi:type="dct:LCSH">Climatic changes</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Global temperature changes</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Global warming</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Greenhouse effect, Atmospheric</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Greenhouse gases</dc:subject>
+                    <dc:title>Climate</dc:title>
+                    <dc:subject>Carbon dioxide</dc:subject>
+                    <dc:subject>Climate change</dc:subject>
+                    <dc:subject>Climate science</dc:subject>
+                    <dc:subject>Climate system</dc:subject>
+                    <dc:subject>Epa global warming</dc:subject>
+                    <dc:subject>Greenhouse effect</dc:subject>
+                    <dc:subject>Greenhouse gas emissions</dc:subject>
+                    <dc:subject>Human activities</dc:subject>
+                    <compoundDescription>The EPA Global Warming Site: Climate section focuses on the science of global warming or climate change. The section relies heavily on the work of the Intergovernmental Panel on Climate Change.</compoundDescription>
+                    <compoundSubject>Climatic changes ~^ Global temperature changes ~^ Global warming ~^ Greenhouse effect, Atmospheric ~^ Greenhouse gases ~^ Carbon dioxide ~^ Climate change ~^ Climate science ~^ Climate system ~^ Epa global warming ~^ Greenhouse effect ~^ Greenhouse gas emissions ~^ Human activities</compoundSubject>
+                    <compoundTitle>Climate</compoundTitle>
+                    <bestPassage></bestPassage>
+                    <collContext>
+                        <oai-id>oai:nsdl.org:crs:458941</oai-id>
+                        <brand>
+                            <image height="30" width="100">http://crs.nsdl.org/brands/458941.jpg</image>
+                            <altText>ActionBioscience.org</altText>
+                        </brand>
+                    </collContext>
+                    <metadataSource url="http://yosemite.epa.gov/oar/globalwarming.nsf/content/climate.html">oai:nsdl.org:2200-20061005115916583T</metadataSource>
+                </fields>
+            </document>
+            <document>
+                <position>3</position>
+                <score>0.910579</score>
+                <header>
+                    <resourceIdentifier>http://www.ncdc.noaa.gov/paleo/globalwarming/paleostory.html</resourceIdentifier>
+                    <lastIndexed>2008-03-11T17:37:32Z</lastIndexed>
+                    <metadataLastModified>2007-01-14T07:37:16Z</metadataLastModified>
+                    <contentLastModified>2008-03-11T16:32:13Z</contentLastModified>
+                    <contentLastFetched>2008-03-11T16:32:13Z</contentLastFetched>
+                </header>
+                <fields>
+                    <dc:description>Site developed to help educate, inform and highlight the importance of paleoclimate research and to show how paleoclimate research relates to global warming.</dc:description>
+                    <dc:subject xsi:type="dct:LCSH">Climatic changes</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Global temperature changes</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Global warming</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Greenhouse effect, Atmospheric</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">Greenhouse gases</dc:subject>
+                    <dc:title>NOAA Paleoclimatology Global Warming - The Story</dc:title>
+                    <dc:subject>Climate change</dc:subject>
+                    <dc:subject>Climate variability</dc:subject>
+                    <dc:subject>Earth science</dc:subject>
+                    <dc:subject>Foraminifera</dc:subject>
+                    <dc:subject>Greenhouse effect</dc:subject>
+                    <dc:subject>Greenhouse warming</dc:subject>
+                    <dc:subject>Laminated sediments</dc:subject>
+                    <dc:subject>Oxygen isotopes</dc:subject>
+                    <dc:subject>Paleoclimatology</dc:subject>
+                    <compoundDescription>Site developed to help educate, inform and highlight the importance of paleoclimate research and to show how paleoclimate research relates to global warming.</compoundDescription>
+                    <compoundSubject>Climatic changes ~^ Global temperature changes ~^ Global warming ~^ Greenhouse effect, Atmospheric ~^ Greenhouse gases ~^ Climate change ~^ Climate variability ~^ Earth science ~^ Foraminifera ~^ Greenhouse effect ~^ Greenhouse warming ~^ Laminated sediments ~^ Oxygen isotopes ~^ Paleoclimatology</compoundSubject>
+                    <compoundTitle>NOAA Paleoclimatology Global Warming - The Story</compoundTitle>
+                    <bestPassage></bestPassage>
+                    <collContext>
+                        <oai-id>oai:nsdl.org:crs:458941</oai-id>
+                        <brand>
+                            <image height="30" width="100">http://crs.nsdl.org/brands/458941.jpg</image>
+                            <altText>ActionBioscience.org</altText>
+                        </brand>
+                    </collContext>
+                    <metadataSource url="http://www.ncdc.noaa.gov/paleo/globalwarming/paleostory.html">oai:nsdl.org:2200-20061005115815777T</metadataSource>
+                </fields>
+            </document>
+            <document>
+                <position>4</position>
+                <score>0.763544</score>
+                <header>
+                    <resourceIdentifier>http://www.nwf.org/climate/statemigratorybirds.html</resourceIdentifier>
+                    <lastIndexed>2008-03-15T05:52:45Z</lastIndexed>
+                    <metadataLastModified>2007-01-15T12:42:52Z</metadataLastModified>
+                    <contentLastModified>2008-03-15T05:21:23Z</contentLastModified>
+                    <contentLastFetched>2008-03-15T05:21:13Z</contentLastFetched>
+                </header>
+                <fields>
+                    <dc:description>The National Wildlife Federation's Climate Change &amp; Wildlife Web site is currently featuring the topic of state birds that are likely to be impacted by global warming. Visitors can download a fact sheet for each state that focuses on the threats to bird species in that state. The site also contains the downloadable Birdwatcher's Guide to Global Warming, a report put out by the National Wildlife Federation and American Bird Conservancy. The research "shows that global warming is already shifting songbird ranges, altering their migration behavior and habitat, and perhaps diminishing some species' ability to survive."</dc:description>
+                    <dc:language xsi:type="dct:RFC3066">en</dc:language>
+                    <dct:dateSubmitted xsi:type="dct:W3CDTF">2002-06-28</dct:dateSubmitted>
+                    <dct:isPartOf xsi:type="dct:URI">http://scout.cs.wisc.edu/nsdl-reports/life-sci/2002/ls-020628-general.html#1</dct:isPartOf>
+                    <dc:title>State Birds Forced to Take Flight? Global Warming Likely to Displace Nation's Migratory Birds</dc:title>
+                    <dc:subject>Global warming</dc:subject>
+                    <dc:subject>Birds, Protection of -- United States.</dc:subject>
+                    <dc:subject>Birds -- Migration</dc:subject>
+                    <dc:subject>Birds -- Habitat -- United States</dc:subject>
+                    <dc:subject>Birds -- Effect of habitat modification on.</dc:subject>
+                    <dc:publisher>National Wildlife Federation.</dc:publisher>
+                    <dc:date>1996-</dc:date>
+                    <compoundAgent>National Wildlife Federation.</compoundAgent>
+                    <compoundDescription>The National Wildlife Federation's Climate Change &amp; Wildlife Web site is currently featuring the topic of state birds that are likely to be impacted by global warming. Visitors can download a fact sheet for each state that focuses on the threats to bird species in that state. The site also contains the downloadable Birdwatcher's Guide to Global Warming, a report put out by the National Wildlife Federation and American Bird Conservancy. The research "shows that global warming is already shifting songbird ranges, altering their migration behavior and habitat, and perhaps diminishing some species' ability to survive."</compoundDescription>
+                    <compoundSubject>Global warming ~^ Birds, Protection of -- United States. ~^ Birds -- Migration ~^ Birds -- Habitat -- United States ~^ Birds -- Effect of habitat modification on.</compoundSubject>
+                    <compoundTitle>State Birds Forced to Take Flight? Global Warming Likely to Displace Nation's Migratory Birds</compoundTitle>
+                    <bestPassage></bestPassage>
+                    <collContext>
+                        <oai-id>oai:nsdl.org:crs:4721</oai-id>
+                        <brand>
+                            <image height="35" width="100">http://crs.nsdl.org/brands/internetscout.jpg</image>
+                            <altText>Internet Scout Project</altText>
+                        </brand>
+                    </collContext>
+                    <metadataSource url="http://www.nwf.org/climate/statemigratorybirds.html">oai:nsdl.org:2200-test.20061004110753508T</metadataSource>
+                </fields>
+            </document>
+            <document>
+                <position>5</position>
+                <score>0.763544</score>
+                <header>
+                    <resourceIdentifier>http://iri.columbia.edu/outreach/climatesociety</resourceIdentifier>
+                    <lastIndexed>2008-03-25T06:13:39Z</lastIndexed>
+                    <metadataLastModified>2007-01-15T12:40:24Z</metadataLastModified>
+                    <contentLastModified>2008-03-25T05:36:03Z</contentLastModified>
+                    <contentLastFetched>2008-03-25T05:36:03Z</contentLastFetched>
+                </header>
+                <fields>
+                    <dc:description>The International Research Institute for Climate Prediction offers a comprehensive and growing database of publications and projects associated with "the interactions of climate, human society and the environment, with an emphasis on societal vulnerabilities or opportunities [related] to variations in climate over one or several seasons." Educators, researchers, and practitioners can search the materials by key words or by browsing topics, sector, or regions. The website provides a temporary folder where users can collect their search results. Everyone is encouraged to submit their suggestions for new materials at the website.</dc:description>
+                    <dc:language xsi:type="dct:RFC3066">en</dc:language>
+                    <dct:dateSubmitted xsi:type="dct:W3CDTF">2004-10-29</dct:dateSubmitted>
+                    <dct:isPartOf xsi:type="dct:URI">http://scout.wisc.edu/Reports/NSDL/PhysSci/2004/ps-041029-general.php#5</dct:isPartOf>
+                    <dc:title>Climate-Society Reference Tool</dc:title>
+                    <dc:subject>Global warming</dc:subject>
+                    <dc:subject>Global warming -- Computer network resources</dc:subject>
+                    <dc:subject>Global warming -- Periodicals.</dc:subject>
+                    <dc:subject>Climate</dc:subject>
+                    <dc:subject>Climate -- Computer network resources.</dc:subject>
+                    <dc:subject>Global warming -- Information services.</dc:subject>
+                    <dc:subject>Global warming -- Environmental aspects</dc:subject>
+                    <dc:subject>Science</dc:subject>
+                    <dc:subject>Science -- Earth science</dc:subject>
+                    <dc:subject>Science -- Meteorology</dc:subject>
+                    <dc:publisher>International Research Institute for Climate Prediction</dc:publisher>
+                    <compoundAgent>International Research Institute for Climate Prediction</compoundAgent>
+                    <compoundDescription>The International Research Institute for Climate Prediction offers a comprehensive and growing database of publications and projects associated with "the interactions of climate, human society and the environment, with an emphasis on societal vulnerabilities or opportunities [related] to variations in climate over one or several seasons." Educators, researchers, and practitioners can search the materials by key words or by browsing topics, sector, or regions. The website provides a temporary folder where users can collect their search results. Everyone is encouraged to submit their suggestions for new materials at the website.</compoundDescription>
+                    <compoundSubject>Global warming ~^ Global warming -- Computer network resources ~^ Global warming -- Periodicals. ~^ Climate ~^ Climate -- Computer network resources. ~^ Global warming -- Information services. ~^ Global warming -- Environmental aspects ~^ Science ~^ Science -- Earth science ~^ Science -- Meteorology</compoundSubject>
+                    <compoundTitle>Climate-Society Reference Tool</compoundTitle>
+                    <bestPassage></bestPassage>
+                    <collContext>
+                        <oai-id>oai:nsdl.org:crs:4721</oai-id>
+                        <brand>
+                            <image height="35" width="100">http://crs.nsdl.org/brands/internetscout.jpg</image>
+                            <altText>Internet Scout Project</altText>
+                        </brand>
+                    </collContext>
+                    <metadataSource url="http://iri.columbia.edu/outreach/climatesociety">oai:nsdl.org:2200-test.20061004105408122T</metadataSource>
+                </fields>
+            </document>
+            <document>
+                <position>6</position>
+                <score>0.759734</score>
+                <header>
+                    <resourceIdentifier>http://www.ngdc.noaa.gov/paleo/globalwarming/home.html</resourceIdentifier>
+                    <lastIndexed>2008-03-11T17:37:32Z</lastIndexed>
+                    <metadataLastModified>2007-01-13T18:53:18Z</metadataLastModified>
+                    <contentLastModified>2008-03-11T16:32:18Z</contentLastModified>
+                    <contentLastFetched>2008-03-11T16:32:18Z</contentLastFetched>
+                </header>
+                <fields>
+                    <dc:description>A Paleo Perspective on Global Background offers an introduction to how the study of paleoclimatology relates to an understanding of global warming. It gives an introduction to global warming, the greenhouse effect, the Anarctic ozone hole, paleoclimatology, and the measurement of the paleoclimate. Of note are: ---animations and graphs showing thermometer-based global temperature trends for 1850 to present ---graphs showing summer temperatures for 1400 to 2000 for North America, Northern hemisphere, and Southern hemisphere ---graphs showing Arctic temperatures for 1600 to 2000 ---graphs showing global temperature for 1500-2000 ---data on warm periods (medieval warm period, 9th to 14th centuries; mid-Holocene, 6000 years ago; penultimate interglacial period, 125,000 years ago; and mid-Cretaceous, 120,000,000 to 90,000,000 years ago).</dc:description>
+                    <dc:subject xsi:type="dct:LCSH">CLIMATIC CHANGES</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">GLOBAL TEMPERATURE CHANGES</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">GLOBAL WARMING</dc:subject>
+                    <dc:subject xsi:type="dct:LCSH">PALEOCLIMATOLOGY</dc:subject>
+                    <dc:title>A Paleo Perspective on Global Warming</dc:title>
+                    <dc:subject>Animations</dc:subject>
+                    <dc:subject>Charts</dc:subject>
+                    <dc:subject>Climate</dc:subject>
+                    <dc:subject>Climate change</dc:subject>
+                    <dc:subject>Climate changes</dc:subject>
+                    <dc:subject>Global climate change</dc:subject>
+                    <dc:subject>Global climate changes</dc:subject>
+                    <dc:subject>Graphs</dc:subject>
+                    <dc:subject>GREENHOUSE EFFECT</dc:subject>
+                    <dc:subject>Images</dc:subject>
+                    <dc:subject>K-12</dc:subject>
+                    <dc:subject>North America</dc:subject>
+                    <dc:subject>NORTHERN HEMISPHERE</dc:subject>
+                    <dc:subject>Photographs</dc:subject>
+                    <dc:subject>Photos</dc:subject>
+                    <dc:subject>Pictorial works</dc:subject>
+                    <dc:subject>Slide shows</dc:subject>
+                    <dc:subject>SOUTHERN HEMISPHERE</dc:subject>
+                    <dc:subject>Temperature</dc:subject>
+                    <dc:subject>Web</dc:subject>
+                    <compoundDescription>A Paleo Perspective on Global Background offers an introduction to how the study of paleoclimatology relates to an understanding of global warming. It gives an introduction to global warming, the greenhouse effect, the Anarctic ozone hole, paleoclimatology, and the measurement of the paleoclimate. Of note are: ---animations and graphs showing thermometer-based global temperature trends for 1850 to present ---graphs showing summer temperatures for 1400 to 2000 for North America, Northern hemisphere, and Southern hemisphere ---graphs showing Arctic temperatures for 1600 to 2000 ---graphs showing global temperature for 1500-2000 ---data on warm periods (medieval warm period, 9th to 14th centuries; mid-Holocene, 6000 years ago; penultimate interglacial period, 125,000 years ago; and mid-Cretaceous, 120,000,000 to 90,000,000 years ago).</compoundDescription>
+                    <compoundSubject>CLIMATIC CHANGES ~^ GLOBAL TEMPERATURE CHANGES ~^ GLOBAL WARMING ~^ PALEOCLIMATOLOGY ~^ Animations ~^ Charts ~^ Climate ~^ Climate change ~^ Climate changes ~^ Global climate change ~^ Global climate changes ~^ Graphs ~^ GREENHOUSE EFFECT ~^ Images ~^ K-12 ~^ North America ~^ NORTHERN HEMISPHERE ~^ Photographs ~^ Photos ~^ Pictorial works ~^ Slide shows ~^ SOUTHERN HEMISPHERE ~^ Temperature ~^ Web</compoundSubject>
+                    <compoundTitle>A Paleo Perspective on Global Warming</compoundTitle>
+                    <bestPassage></bestPassage>
+                    <collContext>
+                        <oai-id>oai:nsdl.org:crs:367822</oai-id>
+                        <brand>
+                            <image height="20" width="100">http://crs.nsdl.org/brands/367822.jpg</image>
+                            <altText>INFOMINE: Scholarly Internet Resource Collections</altText>
+                        </brand>
+                    </collContext>
+                    <metadataSource url="http://www.ngdc.noaa.gov/paleo/globalwarming/home.html">oai:nsdl.org:2200-20061002172918376T</metadataSource>
+                </fields>
+            </document>
+            <document>
+                <position>7</position>
+                <score>0.735596</score>
+                <header>
+                    <resourceIdentifier>http://oaspub.epa.gov/eims/eimsapi.dispdetail?deid=57495</resourceIdentifier>
+                    <lastIndexed>2008-03-19T05:44:45Z</lastIndexed>
+                    <metadataLastModified>2007-08-01T00:24:07Z</metadataLastModified>
+                    <contentLastModified>2008-03-19T05:33:27Z</contentLastModified>
+                    <contentLastFetched>2008-03-19T05:33:27Z</contentLastFetched>
+                </header>
+                <fields>
+                    <dc:source>NATIONAL CENTER FOR ENVIRONMENTAL RESEARCH</dc:source>
+                    <dc:description>&lt;P&gt;The proposed research will investigate how likely it is that populations of fish will successfully adapt to temperature changes associated with global warming. A major factor determining the long-term ecological effects of global warming will be whether organisms will be able to adapt to global warming. Successful adaptation would mean that global warming does not displace species from their current habitats. Distribution shifts and extinctions would occur if the organisms would fail to adapt to deleterious effects of global warming. At present there is insufficient information to predict almost any species' evolutionary response to climate change. The question is of special importance to the southeastern U.S., as organisms in warm waters may already be living close to their temperature tolerance limit, and because of the importance of fishery resources to the region's economy.</dc:description>
+                    <dc:relation xsi:type="dct:URI">http://cfpub.epa.gov/ncer_abstracts/index.cfm/fuseaction/display.abstractDetail/abstract/5384/report/F</dc:relation>
+                    <dc:relation xsi:type="dct:URI">http://cfpub.epa.gov/ncer_abstracts/index.cfm/fuseaction/display.abstractDetail/abstract/5384/report/2002</dc:relation>
+                    <dc:relation xsi:type="dct:URI">http://cfpub.epa.gov/ncer_abstracts/index.cfm/fuseaction/display.abstractDetail/abstract/5384/report/2003</dc:relation>
+                    <dc:relation xsi:type="dct:URI">http://cfpub.epa.gov/ncer_abstracts/index.cfm/fuseaction/display.abstractDetail/abstract/5384/report/2004</dc:relation>
+                    <dc:title>HOW LIKELY IS IT THAT FISH POPULATIONS WILL SUCCESSFULLY ADAPT TO GLOBAL WARMING? (R829420E02)</dc:title>
+                    <dc:date>2007-05-03T05:35:23Z</dc:date>
+                    <dc:type xsi:type="dct:DCMIType">Text</dc:type>
+                    <compoundDescription>&lt;P&gt;The proposed research will investigate how likely it is that populations of fish will successfully adapt to temperature changes associated with global warming. A major factor determining the long-term ecological effects of global warming will be whether organisms will be able to adapt to global warming. Successful adaptation would mean that global warming does not displace species from their current habitats. Distribution shifts and extinctions would occur if the organisms would fail to adapt to deleterious effects of global warming. At present there is insufficient information to predict almost any species' evolutionary response to climate change. The question is of special importance to the southeastern U.S., as organisms in warm waters may already be living close to their temperature tolerance limit, and because of the importance of fishery resources to the region's economy.</compoundDescription>
+                    <compoundGenre>Text</compoundGenre>
+                    <compoundTitle>HOW LIKELY IS IT THAT FISH POPULATIONS WILL SUCCESSFULLY ADAPT TO GLOBAL WARMING? (R829420E02)</compoundTitle>
+                    <bestPassage>EPA: EIMS Environmental Information Management System Recent Additions | Contact Us | Search EPA Home  &gt;  Research &amp; Development  &gt;  EIMS Home  &gt; EIMS NAVIGATION  EIMS Home  EIMS Search    Portal:  EPA-GENERAL     |    Username:  PUBLIC  The metadata record you requested is not available for display.</bestPassage>
+                    <collContext>
+                        <oai-id>oai:nsdl.org:crs:498820</oai-id>
+                        <brand>
+                            <image height="35" width="35">http://crs.nsdl.org/brands/498820.jpg</image>
+                            <altText></altText>
+                        </brand>
+                    </collContext>
+                    <metadataSource url="http://oaspub.epa.gov/eims/eimsapi.dispdetail?deid=57495">oai:nsdl.org:2200-20061123160615834T</metadataSource>
+                </fields>
+            </document>
+            <document>
+                <position>8</position>
+                <score>0.730669</score>
+                <header>
+                    <resourceIdentifier>http://earthobservatory.nasa.gov/Library/GlobalWarming/</resourceIdentifier>
+                    <lastIndexed>2008-01-21T07:28:13Z</lastIndexed>
+                    <metadataLastModified>2007-11-28T08:46:59Z</metadataLastModified>
+                    <contentLastModified>2008-01-21T06:23:40Z</contentLastModified>
+                    <contentLastFetched>2008-01-21T06:23:39Z</contentLastFetched>
+                </header>
+                <fields>
+                    <dc:relation xsi:type="dct:URI">http://teachingboxes.org/seaLevel/lessons/lesson1.jsp</dc:relation>
+                    <dc:description>This article provides a brief discussion of the issues surrounding global warming. Topics include greenhouse gas emissions, the possible consequences of global warming, and debates among proponents and opponents about whether global warming is indeed happening and whether it represents a danger to the planet.</dc:description>
+                    <dc:description>This article provides a brief discussion of the issues surrounding global warming. Topics include greenhouse gas emissions, the possible consequences of global warming, and debates among proponents and opponents about whether global warming is indeed happening and whether it represents a danger to the planet.</dc:description>
+                    <dc:rights>NASA still images, audio files and video generally are not copyrighted. You may use NASA imagery, video and audio material for educational or informational purposes, including photo collections, textbooks, public exhibits and Internet Web pages. This general permission extends to personal Web pages. This general permission does not extend to use of the NASA insignia logo (the blue "meatball" insignia), the retired NASA logotype (the red "worm" logo) and the NASA seal. These images may not be used by persons who are not NASA employees or on products (including Web pages) that are not NASA sponsored.</dc:rights>
+                    <dc:language xsi:type="dct:RFC3066">en-US</dc:language>
+                    <dc:relation>This resource is used in the Global Ups &amp; Downs: Changing Sea Level Teaching Box, Lesson 1: "Consequences of Global Warming". It is used as supplemental reading material for students.</dc:relation>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Science</dc:subject>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Earth science</dc:subject>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Physical sciences</dc:subject>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Meteorology</dc:subject>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Astronomy</dc:subject>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Space sciences</dc:subject>
+                    <dct:educationLevel xsi:type="nsdl_dc:NSDLEdLevel">Middle School</dct:educationLevel>
+                    <dct:educationLevel xsi:type="nsdl_dc:NSDLEdLevel">High School</dct:educationLevel>
+                    <dct:educationLevel xsi:type="nsdl_dc:NSDLEdLevel">Middle School</dct:educationLevel>
+                    <dct:educationLevel xsi:type="nsdl_dc:NSDLEdLevel">High School</dct:educationLevel>
+                    <dc:format xsi:type="dct:IMT">text/html</dc:format>
+                    <dc:title>Global Warming</dc:title>
+                    <dc:title>Global Warming</dc:title>
+                    <dc:subject>Atmospheric science</dc:subject>
+                    <dc:subject>Climatology</dc:subject>
+                    <dc:publisher>Earth Observatory, National Aeronautics and Space Administration</dc:publisher>
+                    <dc:type xsi:type="dct:DCMIType">Text</dc:type>
+                    <compoundAgent>Earth Observatory, National Aeronautics and Space Administration</compoundAgent>
+                    <compoundAudience>Middle School ~^ High School ~^ Middle School ~^ High School</compoundAudience>
+                    <compoundDescription>This article provides a brief discussion of the issues surrounding global warming. Topics include greenhouse gas emissions, the possible consequences of global warming, and debates among proponents and opponents about whether global warming is indeed happening and whether it represents a danger to the planet. ~^ This article provides a brief discussion of the issues surrounding global warming. Topics include greenhouse gas emissions, the possible consequences of global warming, and debates among proponents and opponents about whether global warming is indeed happening and whether it represents a danger to the planet.</compoundDescription>
+                    <compoundGenre>text/html ~^ Text</compoundGenre>
+                    <compoundSubject>Atmospheric science ~^ Climatology ~^ Science ~^ Earth science ~^ Physical sciences ~^ Meteorology ~^ Astronomy ~^ Space sciences</compoundSubject>
+                    <compoundTitle>Global Warming ~^ Global Warming</compoundTitle>
+                    <bestPassage>Earth Observatory Reference: &lt;B&gt;Global&lt;/B&gt; &lt;B&gt;Warming&lt;/B&gt;     by Holli Riebeek • design by Robert Simmon • May 11...  Change sifted through thousands of studies about &lt;B&gt;global&lt;/B&gt; &lt;B&gt;warming&lt;/B&gt; published in forums ranging from...  into this conclusion: “&lt;B&gt;Warming&lt;/B&gt; of the climate system is unequivocal.”   &lt;B&gt;Global&lt;/B&gt; &lt;B&gt;Warming&lt;/B&gt; Introduction What</bestPassage>
+                    <collContext>
+                        <oai-id>oai:nsdl.org:crs:2954992</oai-id>
+                        <brand>
+                            <image height="30" width="100">http://crs.nsdl.org/brands/2954992.jpg</image>
+                            <altText>Choosing and Using DLESE</altText>
+                        </brand>
+                    </collContext>
+                    <collContext>
+                        <oai-id>oai:nsdl.org:crs:4743</oai-id>
+                        <brand>
+                            <image height="30" width="100">http://crs.nsdl.org/brands/dlese.org.jpg</image>
+                            <altText>DLESE: Digital Library for Earth System Education</altText>
+                        </brand>
+                    </collContext>
+                    <metadataSource url="http://earthobservatory.nasa.gov/Library/GlobalWarming/">oai:nsdl.org:2200-20071113184951957T</metadataSource>
+                    <metadataSource url="http://earthobservatory.nasa.gov/Library/GlobalWarming/">oai:nsdl.org:2200-20061003225045316T</metadataSource>
+                </fields>
+            </document>
+            <document>
+                <position>9</position>
+                <score>0.724361</score>
+                <header>
+                    <resourceIdentifier>http://www.sierraclub.org/globalwarming/</resourceIdentifier>
+                    <lastIndexed>2008-03-16T06:34:58Z</lastIndexed>
+                    <metadataLastModified>2007-08-31T02:36:09Z</metadataLastModified>
+                    <contentLastModified>2008-03-16T06:15:21Z</contentLastModified>
+                    <contentLastFetched>2008-03-16T06:15:25Z</contentLastFetched>
+                </header>
+                <fields>
+                    <dc:description>The global warming page of the Sierra Club is a portal to information about greenhouse gases and global warming. It starts with an overview on global warming and energy and has links to timely features and news and more permanent pages such as "What is global warming?" In addition, fact sheets and reports including information on our current energy plan and clean and efficient energy solutions are available. Other links lead to results of current government policy, a newsletter, and information about what the public can do about the problems.</dc:description>
+                    <dct:conformsTo xsi:type="dct:URI">http://purl.org/ASN/resources/S101AF46</dct:conformsTo>
+                    <dct:conformsTo xsi:type="dct:URI">http://purl.org/ASN/resources/S100C461</dct:conformsTo>
+                    <dct:conformsTo xsi:type="dct:URI">http://purl.org/ASN/resources/S101582F</dct:conformsTo>
+                    <dct:conformsTo xsi:type="dct:URI">http://purl.org/ASN/resources/S1007085</dct:conformsTo>
+                    <dc:rights>Unless particular materials are specifically restricted as noted on the web page, it is the Sierra Club's policy to allow limited reproduction and distribution of the materials posted provided that: (1) the particular article or section is reproduced in its entirety in its original form; (2) all copies include a statement that the material was reproduced from sierraclub.org with permission of the Sierra Club; (3) all copies include the following notice "Copyright 2001 Sierra Club. All Rights Reserved."; (4) the copies are distributed only for the non-commercial educational or public policy purposes of promoting conservation of the natural environment; and (5) the copies are distributed at no charge, or at most, at actual cost. Under these conditions, the Sierra Club grants users a non- exclusive, nontransferable license to use the materials on our site.</dc:rights>
+                    <dc:language xsi:type="dct:RFC3066">en</dc:language>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Science</dc:subject>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Earth science</dc:subject>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Physical sciences</dc:subject>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Meteorology</dc:subject>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Astronomy</dc:subject>
+                    <dc:subject xsi:type="nsdl_dc:GEM">Space sciences</dc:subject>
+                    <dct:educationLevel xsi:type="nsdl_dc:NSDLEdLevel">Middle School</dct:educationLevel>
+                    <dct:educationLevel xsi:type="nsdl_dc:NSDLEdLevel">High School</dct:educationLevel>
+                    <dct:educationLevel xsi:type="nsdl_dc:NSDLEdLevel">Undergraduate (Lower Division)</dct:educationLevel>
+                    <dct:educationLevel xsi:type="nsdl_dc:NSDLEdLevel">Higher Education</dct:educationLevel>
+                    <dct:educationLevel xsi:type="nsdl_dc:NSDLEdLevel">Graduate/Professional</dct:educationLevel>
+                    <dc:format xsi:type="dct:IMT">text/html</dc:format>
+                    <dc:title>Global Warming and Energy</dc:title>
+                    <dc:subject>Atmospheric science</dc:subject>
+                    <dc:subject>Climatology</dc:subject>
+                    <dc:subject>Policy issues</dc:subject>
+                    <dc:publisher>Sierra Club</dc:publisher>
+                    <dc:type xsi:type="dct:DCMIType">Collection</dc:type>
+                    <compoundAgent>Sierra Club</compoundAgent>
+                    <compoundAudience>Middle School ~^ High School ~^ Undergraduate (Lower Division) ~^ Higher Education ~^ Graduate/Professional</compoundAudience>
+                    <compoundDescription>The global warming page of the Sierra Club is a portal to information about greenhouse gases and global warming. It starts with an overview on global warming and energy and has links to timely features and news and more permanent pages such as "What is global warming?" In addition, fact sheets and reports including information on our current energy plan and clean and efficient energy solutions are available. Other links lead to results of current government policy, a newsletter, and information about what the public can do about the problems.</compoundDescription>
+                    <compoundGenre>text/html ~^ Collection</compoundGenre>
+                    <compoundSubject>Atmospheric science ~^ Climatology ~^ Policy issues ~^ Science ~^ Earth science ~^ Physical sciences ~^ Meteorology ~^ Astronomy ~^ Space sciences</compoundSubject>
+                    <compoundTitle>Global Warming and Energy</compoundTitle>
+                    <bestPassage>&lt;B&gt;Global&lt;/B&gt; &lt;B&gt;Warming&lt;/B&gt; and Clean Energy Main - Sierra Club     Our Conservation Initiatives 1. Smart Energy Solutions          &lt;B&gt;Global&lt;/B&gt; &lt;B&gt;Warming&lt;/B&gt; 2. Safe &amp; Healthy Communities 3. America's Wild Legacy...  is &lt;B&gt;Global&lt;/B&gt; &lt;B&gt;Warming&lt;/B&gt;? Clean Car Solutions Clean Energy Solutions Cool Cities: Local Action on &lt;B&gt;Global&lt;/B&gt; &lt;B&gt;Warming&lt;/B&gt;</bestPassage>
+                    <collContext>
+                        <oai-id>oai:nsdl.org:crs:4743</oai-id>
+                        <brand>
+                            <image height="30" width="100">http://crs.nsdl.org/brands/dlese.org.jpg</image>
+                            <altText>DLESE: Digital Library for Earth System Education</altText>
+                        </brand>
+                    </collContext>
+                    <metadataSource url="http://www.sierraclub.org/globalwarming/">oai:nsdl.org:2200-20061003231740513T</metadataSource>
+                </fields>
+            </document>
+        </results>
+    </SearchResults>
+</NSDLSearchService>
