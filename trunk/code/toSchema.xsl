@@ -17,24 +17,13 @@
             <xsl:attribute name="xsi:schemaLocation">http://cs431.org/mashup# mashupExtension.xsd</xsl:attribute>
             <xsl:element name="cs431:mashupMetadata">
                 <xsl:element name="dc:title">
-                    <xsl:variable name="queryString"
-                        select=" substring-before(substring-after(/atom2:feed/atom2:link/@href,'%22'),'%22')"/>
-                    <xsl:if test="contains($queryString,'+')">
-                        <xsl:call-template name="removePlus">
-                            <xsl:with-param name="query">
-                                <xsl:value-of select="$queryString"/>
-                            </xsl:with-param>
-                        </xsl:call-template>
-                    </xsl:if>
-                    <xsl:if test="not(contains($queryString,'+'))">
-                        <xsl:value-of select="$queryString"/>
-                    </xsl:if>
+                    <xsl:value-of select="document('xsltcombine_example/queryholder.xml')/queryinfo/queryTarget"/>
                 </xsl:element>
                 <xsl:element name="dc:creator">Justin and Phelps</xsl:element>
                 <xsl:element name="dc:description">A Mashup</xsl:element>
             </xsl:element>
-            <!--<xsl:apply-templates select="document('google.xml')" mode="google"/>
-                <xsl:apply-templates select="document('yahoo.xml')" mode="yahoo" /> -->            
+            <xsl:apply-templates select="document('google.xml')" mode="google"/>
+                <xsl:apply-templates select="document('yahoo.xml')" mode="yahoo" />        
              <xsl:apply-templates select="document('nsdl.xml')" mode="nsdl"/>
 
         </xsl:element>
@@ -43,7 +32,7 @@
     <xsl:template match="/nsdl:NSDLSearchService" mode="nsdl">
         <xsl:for-each select="nsdl:SearchResults/nsdl:results/nsdl:document">
             <xsl:element name="cs431:querySource">
-                <!-- Get query URI -->
+                <xsl:attribute name="query"><xsl:value-of select="document('xsltcombine_example/queryholder.xml')/queryinfo/query[@src='nsdl']/@query"/></xsl:attribute>
                 <xsl:element name="cs431:loc">
                     <xsl:value-of select="nsdl:header/nsdl:resourceIdentifier"/>
                 </xsl:element>
@@ -72,7 +61,7 @@
     <xsl:template match="/rss" mode="yahoo">
         <xsl:for-each select="/rss/channel/item">
             <xsl:element name="cs431:querySource">
-                <xsl:attribute name="query"><!-- Get query URI --></xsl:attribute>
+                <xsl:attribute name="query"><xsl:value-of select="document('xsltcombine_example/queryholder.xml')/queryinfo/query[@src='yahoo']/@query"/></xsl:attribute>
                 <xsl:element name="cs431:loc">
                     <xsl:value-of select="/rss/channel/link"/>
                 </xsl:element>
@@ -88,7 +77,7 @@
     <xsl:template match="/atom2:feed" mode="google">
         <xsl:for-each select="atom2:entry">
             <xsl:element name="cs431:querySource">
-                <xsl:attribute name="query"><!-- Get query URI --></xsl:attribute>
+                <xsl:attribute name="query"><xsl:value-of select="document('xsltcombine_example/queryholder.xml')/queryinfo/query[@src='google']/@query"/></xsl:attribute>
                 <xsl:element name="cs431:loc">
                     <xsl:value-of select="atom2:link/@href"/>
                 </xsl:element>
