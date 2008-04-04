@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<queryinfo>
+    <query src="yahoo" query="http%3A%2F%2Fnews.search.yahoo.com%2Fnews%2Frss%3Fp%3Dglobal%2Bwarming"/>
+    <query src="google" query="http%3A%2F%2Fnews.google.com%2Fnews%3Fq%3D%2522Global%2520Warming%2522%26output%3Datom"/>
+    <query src="nsdl" query="http%3A%2F%2Fsearch.nsdl.org%2F%3Fverb%3DSearch%26n%3D10%26q%3D'Global%2520Warming'%26s%3D0"/>
+</queryinfo>
