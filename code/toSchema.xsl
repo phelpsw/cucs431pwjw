@@ -87,11 +87,11 @@
     </xsl:template>
 
     <xsl:template match="/atom2:feed" mode="google">
-        <xsl:for-each select="entry">
+        <xsl:for-each select="atom2:entry">
             <xsl:element name="cs431:querySource">
                 <xsl:attribute name="query"><!-- Get query URI --></xsl:attribute>
                 <xsl:element name="cs431:loc">
-                    <xsl:value-of select="atom2:entry/atom2:link/@href"/>
+                    <xsl:value-of select="atom2:link/@href"/>
                 </xsl:element>
                 <xsl:element name="cs431:atomMetadata">
                     <xsl:call-template name="copyAtom"/>
@@ -101,11 +101,14 @@
     </xsl:template>
 
     <xsl:template name="copyAtom">
-        <!-- <xsl:for-each select="child::*">
-            <xsl:element name="atomItem">
-                <xsl:variable name="eleName" select="local-name(.)" />
-            </xsl:element>
-        </xsl:for-each>-->
+        <xsl:element name="cs431:atomItem">
+        <xsl:for-each select="child::*">
+                <xsl:element name="{concat('atom:',local-name(.))}">
+                    <xsl:copy-of select="@* | node()" />
+                </xsl:element>
+
+        </xsl:for-each>
+        </xsl:element>
     </xsl:template>
 
     <xsl:template name="removePlus">
