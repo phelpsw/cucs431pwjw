@@ -33,10 +33,10 @@
                 <xsl:element name="dc:creator">Justin and Phelps</xsl:element>
                 <xsl:element name="dc:description">A Mashup</xsl:element>
             </xsl:element>
-            <xsl:apply-templates select="document('google.xml')" mode="google"/>
-            <!--
+            <!--<xsl:apply-templates select="document('google.xml')" mode="google"/>
+                <xsl:apply-templates select="document('yahoo.xml')" mode="yahoo" /> -->            
              <xsl:apply-templates select="document('nsdl.xml')" mode="nsdl"/>
-             <xsl:apply-templates select="document('yahoo.xml')" mode="yahoo" /> -->
+
         </xsl:element>
     </xsl:template>
 
@@ -51,9 +51,8 @@
                     <xsl:element name="cs431:nsdlItem">
                         <xsl:for-each select="nsdl:fields/child::*">
                             <xsl:if test="namespace-uri(.)='http://purl.org/dc/elements/1.1/'">
-                                <!-- xsi:type="dct:LCSH" not captured properly -->
                                 <xsl:copy>
-                                    <xsl:apply-templates select="@* | node()"/>
+                                    <xsl:copy-of select="* | node()"/>
                                 </xsl:copy>
                             </xsl:if>
                             <xsl:if test="namespace-uri(.)='http://ns.nsdl.org/search/rest_v2.00/'">
