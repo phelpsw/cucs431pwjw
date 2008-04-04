@@ -13,27 +13,41 @@ queryTopic = "Global Warming"
 
 # Google News lookup
 data = urllib.urlencode({'q' : queryTopic, 'output' : 'atom'})
-req=urllib2.Request(url="http://news.google.com/news?" + data, headers={'User-Agent':'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'})
+urigoogle = "http://news.google.com/news?" + data
+req=urllib2.Request(url=urigoogle, headers={'User-Agent':'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'})
 response = urllib2.urlopen(req)
 #print response.read()
+FILE = open("google.xml","w")
+FILE.write(response.read())
+FILE.close()
 
 # Yahoo News lookup
 data = urllib.urlencode({'p' : queryTopic})
-req=urllib2.Request(url="http://news.search.yahoo.com/news/rss?" + data, headers={'User-Agent':'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'})
+uriyahoo = "http://news.search.yahoo.com/news/rss?" + data
+req=urllib2.Request(url=uriyahoo, headers={'User-Agent':'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'})
 response = urllib2.urlopen(req)
 #print response.read()
+FILE = open("yahoo.xml","w")
+FILE.write(response.read())
+FILE.close()
 
 # NSDL News Lookup
 data = urllib.urlencode({'q' : queryTopic, 'n' : '10', 's' : '0'})
-req=urllib2.Request(url="http://ndrsearch.nsdl.org/search?" + data, headers={'User-Agent':'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'})
+urinsdl = "http://ndrsearch.nsdl.org/search?" + data
+req=urllib2.Request(url=urinsdl, headers={'User-Agent':'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'})
 response = urllib2.urlopen(req)
 #print response.read()
+FILE = open("nsdl.xml","w")
+FILE.write(response.read())
+FILE.close()
 
-#FILE = open("test.xml","w")
-#FILE.write(response.read())
-#FILE.close()
-
-
+FILE = open("queryholder.xml","w")
+FILE.write("<?xml version=\"1.0\" encoding=\"utf-8\"?><queryinfo>")
+FILE.write("<query src=\"yahoo\" query=\""+urllib.quote_plus(uriyahoo)+"\"/>")
+FILE.write("<query src=\"google\" query=\""+urllib.quote_plus(urigoogle)+"\"/>")
+FILE.write("<query src=\"nsdl\" query=\""+urllib.quote_plus(urinsdl)+"\"/>")
+FILE.write("</queryinfo>")
+FILE.close()
 
 styledoc = libxml2.parseFile("shirtColors.xsl")
 style = libxslt.parseStylesheetDoc(styledoc)
