@@ -33,9 +33,10 @@
                 <xsl:element name="dc:creator">Justin and Phelps</xsl:element>
                 <xsl:element name="dc:description">A Mashup</xsl:element>
             </xsl:element>
-            <!-- <xsl:apply-templates select="document('google.xml')" mode="google" />
-                <xsl:apply-templates select="document('yahoo.xml')" mode="yahoo" />-->
-            <xsl:apply-templates select="document('nsdl.xml')" mode="nsdl"/>
+            <xsl:apply-templates select="document('google.xml')" mode="google"/>
+            <!--
+             <xsl:apply-templates select="document('nsdl.xml')" mode="nsdl"/>
+             <xsl:apply-templates select="document('yahoo.xml')" mode="yahoo" /> -->
         </xsl:element>
     </xsl:template>
 
@@ -48,7 +49,6 @@
                 </xsl:element>
                 <xsl:element name="cs431:nsdlMetadata">
                     <xsl:element name="cs431:nsdlItem">
-
                         <xsl:for-each select="nsdl:fields/child::*">
                             <xsl:if test="namespace-uri(.)='http://purl.org/dc/elements/1.1/'">
                                 <!-- xsi:type="dct:LCSH" not captured properly -->
@@ -71,31 +71,33 @@
     </xsl:template>
 
     <xsl:template match="/rss" mode="yahoo">
-        <xsl:element name="cs431:querySource">
-            <xsl:attribute name="query"><!-- Get query URI --></xsl:attribute>
-            <xsl:element name="cs431:loc">
-                <xsl:value-of select="channel/link"/>
-            </xsl:element>
-            <xsl:for-each select="/rss/channel/item">
+        <xsl:for-each select="/rss/channel/item">
+            <xsl:element name="cs431:querySource">
+                <xsl:attribute name="query"><!-- Get query URI --></xsl:attribute>
+                <xsl:element name="cs431:loc">
+                    <xsl:value-of select="/rss/channel/link"/>
+                </xsl:element>
                 <xsl:element name="cs431:rssMetadata">
                     <xsl:element name="cs431:rssItem">
                         <xsl:copy-of select="node()"/>
                     </xsl:element>
                 </xsl:element>
-            </xsl:for-each>
-        </xsl:element>
+            </xsl:element>
+        </xsl:for-each>
     </xsl:template>
 
     <xsl:template match="/atom2:feed" mode="google">
-        <xsl:element name="cs431:querySource">
-            <xsl:attribute name="query"><!-- Get query URI --></xsl:attribute>
-            <xsl:element name="cs431:loc">
-                <xsl:value-of select="atom2:entry/atom2:link/@href"/>
+        <xsl:for-each select="entry">
+            <xsl:element name="cs431:querySource">
+                <xsl:attribute name="query"><!-- Get query URI --></xsl:attribute>
+                <xsl:element name="cs431:loc">
+                    <xsl:value-of select="atom2:entry/atom2:link/@href"/>
+                </xsl:element>
+                <xsl:element name="cs431:atomMetadata">
+                    <xsl:call-template name="copyAtom"/>
+                </xsl:element>
             </xsl:element>
-            <xsl:element name="cs431:atomMetadata">
-                <xsl:call-template name="copyAtom"/>
-            </xsl:element>
-        </xsl:element>
+        </xsl:for-each>
     </xsl:template>
 
     <xsl:template name="copyAtom">
