@@ -63,7 +63,7 @@
             <xsl:element name="cs431:querySource">
                 <xsl:attribute name="query"><xsl:value-of select="document('xsltcombine_example/queryholder.xml')/queryinfo/query[@src='yahoo']/@query"/></xsl:attribute>
                 <xsl:element name="cs431:loc">
-                    <xsl:value-of select="/rss/channel/link"/>
+                    <xsl:value-of select="link"/>
                 </xsl:element>
                 <xsl:element name="cs431:rssMetadata">
                     <xsl:element name="cs431:rssItem">
