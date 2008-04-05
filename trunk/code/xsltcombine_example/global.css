@@ -1,0 +1,50 @@
+body
+{
+ width: 800px;
+ font-family: "trebuchet ms";
+}
+#nav
+{
+ padding: 5px 10px 5px 10px;
+ background-color: #8AE673;
+}
+h1
+{
+ background-color: #478040;
+ color: #D1E6CF;
+ margin-bottom: 0px;
+ padding: 10px;
+}
+
+.feed
+{
+ padding: 10px 10px 10px 20px;
+}
+
+.feed h2
+{
+ margin-bottom: 0px;
+ background-color: #BFE4FF;
+ padding: 5px;
+}
+
+.article
+{
+ margin-top: 15px;
+ margin-left: 20px;
+ border: 1px dotted;
+ border-color: #4D8040;
+ padding: 5px 10px 5px 10px;
+}
+
+.article p
+{
+ margin: 5px 0px 5px 10px;
+ font-size: 90%;
+}
+
+a:hover
+{
+ color: #4DBF30;
+ text-decoration: none;
+}

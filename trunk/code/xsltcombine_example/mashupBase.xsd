@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://cs431.org/mashup#"
+    xmlns:cs431="http://cs431.org/mashup#" xmlns:dc="http://purl.org/dc/elements/1.1/" >
+
+    <xsd:import namespace="http://purl.org/dc/elements/1.1/"
+        schemaLocation="http://dublincore.org/schemas/xmls/simpledc20021212.xsd"/>
+
+    <xsd:annotation>
+        <xsd:documentation> Note that elements and typese are all external (can be referenced in
+            importing and including documents. </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:element name="mashup">
+        <xsd:annotation>
+            <xsd:documentation> Container to describe a multi-source mashup. A package of multiple
+                sources. This is the root element of the XML file. </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="cs431:mashupMetadata" minOccurs="1" maxOccurs="1"/>
+                <xsd:element ref="cs431:source" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="mashupMetadata">
+        <xsd:annotation>
+            <xsd:documentation>A small amount of DC metadata to describe the
+            mashup</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="dc:title"/>
+                <xsd:element ref="dc:creator"/>
+                <xsd:element ref="dc:description"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:annotation>
+        <xsd:documentation>The URI at which the source item is located</xsd:documentation>
+    </xsd:annotation>
+    <xsd:element name="source" type="cs431:sourceType"/>
+
+    <xsd:annotation>
+        <xsd:documentation>Each source must contain a location URI and some metadata in extensible
+            formats. </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType name="sourceType">
+        <xsd:sequence>
+            <xsd:element ref="cs431:loc" minOccurs="1" maxOccurs="1"/>
+            <xsd:element ref="cs431:metadataBase" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="loc">
+        <xsd:annotation>
+            <xsd:documentation> REQUIRED: The location URI of a source document. The URI must
+                conform to RFC 2396 (http://www.ietf.org/rfc/rfc2396.txt). </xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:anyURI">
+                <xsd:minLength value="12"/>
+                <xsd:maxLength value="2048"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="metadataBase" type="cs431:metadataTypeBase" abstract="true"/>
+    <xsd:complexType name="metadataTypeBase"/>
+
+
+</xsd:schema>
