@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <NSDLSearchService schemaVersion="2.00.002" xsi:schemaLocation="http://ns.nsdl.org/search/rest_v2.00/ http://ns.nsdl.org/schemas/search/rest_v2.00.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ieee="http://www.ieee.org/xsd/LOMv1p0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:nsdl_dc="http://ns.nsdl.org/nsdl_dc_v1.02/" xmlns:dct="http://purl.org/dc/terms/" xmlns="http://ns.nsdl.org/search/rest_v2.00/">
-    <responseTime>2008-04-07T19:10:04Z</responseTime>
+    <responseTime>2008-04-07T19:14:21Z</responseTime>
     <request>http://localhost:8180/search/search?q=Baseball&amp;s=0&amp;n=10</request>
     <SearchResults>
         <resultsInfo>
