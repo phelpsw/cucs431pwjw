@@ -81,7 +81,7 @@
                     <xsl:attribute name="href">
                         <xsl:value-of select="cs431:loc"/>
                     </xsl:attribute>
-                    <xsl:value-of select="cs431:rssMetadata/cs431:rssItem/title"/>
+                    <xsl:value-of select="cs431:rssMetadata/cs431:rssItem/title" disable-output-escaping="yes" />
                 </xsl:element>                
             </xsl:element>
             <xsl:element name="p">
@@ -98,7 +98,7 @@
                     <xsl:attribute name="href">
                         <xsl:value-of select="cs431:loc"/>
                     </xsl:attribute>
-                    <xsl:value-of select="cs431:atomMetadata/cs431:atomItem/atom:title" />
+                    <xsl:value-of select="cs431:atomMetadata/cs431:atomItem/atom:title" disable-output-escaping="yes" />
                 </xsl:element>                
             </xsl:element>
             <xsl:element name="p">
@@ -116,7 +116,7 @@
                     <xsl:attribute name="href">
                         <xsl:value-of select="cs431:loc"/>
                     </xsl:attribute>
-                    <xsl:value-of select="cs431:nsdlMetadata/cs431:nsdlItem/nsdl:compoundTitle"/>
+                    <xsl:value-of select="cs431:nsdlMetadata/cs431:nsdlItem/nsdl:compoundTitle" disable-output-escaping="yes" />
                 </xsl:element>                
             </xsl:element>
             <xsl:element name="p">
