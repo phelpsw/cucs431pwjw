@@ -16,11 +16,15 @@ def http_main():
 			# perform transformation
 			performTransformationXML()
 			performTransformationHTML()
+			performHTMLTidy()
 			# redirect to data
 			print_redirect("results.html")
 			
 	else:
 		generate_form()
+
+def performHTMLTidy():
+	os.system("tidy.exe --clean y --doctype \"strict\" --output-xhtml y --indent \"auto\" --wrap \"90\" results.html results.html")
 
 def performTransformationXML():
 	styledoc = libxml2.parseFile("toSchema.xsl")
