@@ -51,7 +51,11 @@
             <xsl:element name="h2">Yahoo!</xsl:element>
             <xsl:for-each select="/cs431:mashup/cs431:querySource[contains(@query,'yahoo')]">
                 <xsl:call-template name="yahoo" />
-        </xsl:for-each>
+            </xsl:for-each>
+            <xsl:element name="a">
+                <xsl:attribute name="href">#nav</xsl:attribute>
+                Top
+            </xsl:element>
         </xsl:element>
 
         <xsl:element name="div">
@@ -60,7 +64,11 @@
             <xsl:element name="h2">Google</xsl:element>
             <xsl:for-each select="/cs431:mashup/cs431:querySource[contains(@query,'google')]">
                 <xsl:call-template name="google" />
-        </xsl:for-each>
+            </xsl:for-each>
+            <xsl:element name="a">
+                <xsl:attribute name="href">#nav</xsl:attribute>
+                Top
+            </xsl:element>
         </xsl:element>
         
         <xsl:element name="div">
@@ -70,6 +78,10 @@
         <xsl:for-each select="/cs431:mashup/cs431:querySource[contains(@query,'nsdl')]">
                 <xsl:call-template name="nsdl" />
         </xsl:for-each>
+            <xsl:element name="a">
+                <xsl:attribute name="href">#nav</xsl:attribute>
+                Top
+            </xsl:element>
         </xsl:element>
     </xsl:template>
     
