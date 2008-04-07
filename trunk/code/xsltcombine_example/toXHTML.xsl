@@ -7,7 +7,7 @@
     <xsl:output  method="xml" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" indent="yes" />
     <xsl:template match="/">
         <!-- get xmlns attribute to display only on <html> tag -->
-        <xsl:element name="html" namespace="http://www.w3.org/1999/xhtml">
+        <xsl:element name="html">
             <xsl:attribute name="xml:lang">en</xsl:attribute>
             <xsl:attribute name="lang">en</xsl:attribute>
             <xsl:element name="head">
@@ -91,8 +91,7 @@
     </xsl:template>
     
     <xsl:template name="google">
-        
-        <!--<xsl:element name="div">
+        <xsl:element name="div">
             <xsl:attribute name="class">article</xsl:attribute>
             <xsl:element name="div">
                 <xsl:element name="a">
@@ -103,10 +102,10 @@
                 </xsl:element>                
             </xsl:element>
             <xsl:element name="p">
-                <xsl:value-of select="cs431:atomMetadata/cs431:atomItem/atom:content"/>
+                <xsl:value-of select="cs431:atomMetadata/cs431:atomItem/atom:issued"/>
             </xsl:element>
-            </xsl:element>-->
-         <xsl:value-of select="cs431:atomMetadata/cs431:atomItem/atom:content" disable-output-escaping="yes"/>
+            </xsl:element>
+        <!--<xsl:value-of select="cs431:atomMetadata/cs431:atomItem/atom:content" disable-output-escaping="yes"/>-->
     </xsl:template>
     
     <xsl:template name="nsdl">
