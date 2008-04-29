@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://www.owl-ontologies.com/Ontology1209425965.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://www.owl-ontologies.com/Ontology1209425965.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Book">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Product"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CD">
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Artist">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Agent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="List"/>
+  <owl:Class rdf:ID="Author">
+    <rdfs:subClassOf rdf:resource="#Agent"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DVD">
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Actor">
+    <rdfs:subClassOf rdf:resource="#Agent"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="isProducerOf">
+    <rdfs:range rdf:resource="#Product"/>
+    <rdfs:domain rdf:resource="#Agent"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasProduct">
+    <rdfs:domain rdf:resource="#List"/>
+    <rdfs:range rdf:resource="#Product"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isPerformerIn">
+    <rdfs:subPropertyOf rdf:resource="#isProducerOf"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#CD"/>
+          <owl:Class rdf:about="#DVD"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Artist"/>
+          <owl:Class rdf:about="#Actor"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isAuthorOf">
+    <rdfs:subPropertyOf rdf:resource="#isProducerOf"/>
+    <rdfs:range rdf:resource="#Book"/>
+    <rdfs:domain rdf:resource="#Author"/>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:ID="hasAppearedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Actor"/>
+    <rdfs:range rdf:resource="#Actor"/>
+    <owl:inverseOf rdf:resource="#hasAppearedWith"/>
+  </owl:TransitiveProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->
