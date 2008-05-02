@@ -1,0 +1,13 @@
+<Nu:tone> <isSubClass> <#Artist> .
+
+<Back of Beyond> <isSubClass> <#CD> .
+<Brave Nu World> <isSubClass> <#CD> .
+<Back of Beyond> <isSubClass> <#CD> .
+<Positive Pain> <isSubClass> <#CD> .
+<Back of Beyond> <isSubClass> <#CD> .
+
+<Nu:tone> <isPerformerIn> <Back of Beyond> .
+<Nu:tone> <isPerformerIn> <Brave Nu World> .
+<Nu:tone> <isPerformerIn> <Back of Beyond> .
+<Nu:tone> <isPerformerIn> <Positive Pain> .
+<Nu:tone> <isPerformerIn> <Back of Beyond> .
