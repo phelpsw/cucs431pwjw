@@ -1,10 +1,15 @@
-<Nu:tone> <isSubClass> <#Artist> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix aws: <http://www.owl-ontologies.com/Ontology1209425965.owl#> .
+        
+<Nu:tone> <rdfs:subClassOf> <aws:Artist> .
 
-<Back of Beyond> <isSubClass> <#CD> .
-<Brave Nu World> <isSubClass> <#CD> .
-<Back of Beyond> <isSubClass> <#CD> .
-<Positive Pain> <isSubClass> <#CD> .
-<Back of Beyond> <isSubClass> <#CD> .
+<Back of Beyond> <rdfs:subClassOf> <http://www.owl-ontologies.com/Ontology1209425965.owl#CD> .
+<Brave Nu World> <rdfs:subClassOf> <http://www.owl-ontologies.com/Ontology1209425965.owl#CD> .
+<Back of Beyond> <rdfs:subClassOf> <http://www.owl-ontologies.com/Ontology1209425965.owl#CD> .
+<Positive Pain> <rdfs:subClassOf> <http://www.owl-ontologies.com/Ontology1209425965.owl#CD> .
+<Back of Beyond> <rdfs:subClassOf> <http://www.owl-ontologies.com/Ontology1209425965.owl#CD> .
 
 <Nu:tone> <isPerformerIn> <Back of Beyond> .
 <Nu:tone> <isPerformerIn> <Brave Nu World> .
