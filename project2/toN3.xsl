@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Useful info:
+    http://www.w3.org/2000/10/swap/Primer.html
+    http://www.w3.org/DesignIssues/Notation3
+    http://getsemantic.com/wiki/Get_Started_with_the_Semantic_Web
+    http://www.ibm.com/developerworks/library/w-rdf/
+    http://www.xml.com/pub/a/2001/01/24/rdf.html
+    http://kill.devc.at/node/84
+    http://jena.sourceforge.net/javadoc/jena/rdfcat.html
+    http://www.ibm.com/developerworks/xml/library/j-jena/index.html
+    http://www.iandickinson.me.uk/articles/jena-tip-db-import/
+    http://www.w3.org/TR/rdf-testcases/#ntriples
+    http://www.ibm.com/developerworks/xml/library/x-think17/index.html
+    -->
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
     xmlns:aws="http://webservices.amazon.com/AWSECommerceService/2005-10-05" 
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
@@ -8,7 +23,7 @@
     <xsl:variable name="startBrack"><![CDATA[<]]></xsl:variable>
     <xsl:variable name="endBrack"><![CDATA[>]]></xsl:variable>
     <xsl:variable name="pound"><![CDATA[#]]></xsl:variable>
-    
+    <xsl:variable name="quote"><![CDATA["]]></xsl:variable>
     
     <xsl:template match="/">
         
@@ -29,34 +44,34 @@
     <xsl:template name="Music">
         
         <xsl:value-of disable-output-escaping="yes" select="'&#xA;'"/> <!-- Newline for readibility-->
-        <xsl:variable name="subclass" select="'rdfs:subClassOf'"/>
+        <xsl:variable name="subclass" select="'rdfs:subClassOf'"/> <!-- maybe should be rdf:type or even 'a' -->
         <xsl:variable name="owlBase" select="'http://www.owl-ontologies.com/Ontology1209425965.owl'"/>
         
         <xsl:variable name="artist_subject" select="/aws:ItemSearchResponse/aws:Items/aws:Request/aws:ItemSearchRequest/aws:Artist"/>
-        <xsl:variable name="artist_object" select="concat('aws:','Artist')"/>
-        <xsl:value-of disable-output-escaping="yes" select="concat($startBrack,$artist_subject,$endBrack,' ')"/>
-        <xsl:value-of disable-output-escaping="yes" select="concat($startBrack,$subclass,$endBrack,' ')"/>
-        <xsl:value-of disable-output-escaping="yes" select="concat($startBrack,$artist_object,$endBrack,' .','&#xA;')"/>
+        <xsl:variable name="artist_object" select="'aws:Artist'"/>
+        <xsl:value-of disable-output-escaping="yes" select="concat($quote,$artist_subject,$quote,' ')"/>
+        <xsl:value-of disable-output-escaping="yes" select="concat($subclass,' ')"/>
+        <xsl:value-of disable-output-escaping="yes" select="concat($artist_object,' .','&#xA;')"/>
         
         <xsl:value-of disable-output-escaping="yes" select="'&#xA;'"/> <!-- Newline for readibility-->
         
         <xsl:for-each select="/aws:ItemSearchResponse/aws:Items/aws:Item">
             <xsl:variable name="title_subject" select="child::aws:ItemAttributes/aws:Title"/>
-            <xsl:variable name="title_object" select="concat($owlBase, $pound,'CD')"/>
-            <xsl:value-of disable-output-escaping="yes" select="concat($startBrack,$title_subject,$endBrack,' ')"/>
-            <xsl:value-of disable-output-escaping="yes" select="concat($startBrack,$subclass,$endBrack,' ')"/>
-            <xsl:value-of disable-output-escaping="yes" select="concat($startBrack,$title_object,$endBrack,' .','&#xA;')"/>
+            <xsl:variable name="title_object" select="'aws:CD'"/>
+            <xsl:value-of disable-output-escaping="yes" select="concat($quote,$title_subject,$quote,' ')"/>
+            <xsl:value-of disable-output-escaping="yes" select="concat($subclass,' ')"/>
+            <xsl:value-of disable-output-escaping="yes" select="concat($title_object,' .','&#xA;')"/>
         </xsl:for-each>
         
         <xsl:value-of disable-output-escaping="yes" select="'&#xA;'"/> <!-- Newline for readibility-->
         
         <xsl:for-each select="/aws:ItemSearchResponse/aws:Items/aws:Item">
             <xsl:variable name="subject" select="$artist_subject"/>
-            <xsl:variable name="property" select="'isPerformerIn'"/>
+            <xsl:variable name="property" select="'aws:isPerformerIn'"/>
             <xsl:variable name="object" select="child::aws:ItemAttributes/aws:Title"/>
-            <xsl:value-of disable-output-escaping="yes" select="concat($startBrack,$subject,$endBrack,' ')"/>
-            <xsl:value-of disable-output-escaping="yes" select="concat($startBrack,$property,$endBrack,' ')"/>
-            <xsl:value-of disable-output-escaping="yes" select="concat($startBrack,$object,$endBrack,' .','&#xA;')"/>
+            <xsl:value-of disable-output-escaping="yes" select="concat($quote,$subject,$quote,' ')"/>
+            <xsl:value-of disable-output-escaping="yes" select="concat($property,' ')"/>
+            <xsl:value-of disable-output-escaping="yes" select="concat($quote,$object,$quote,' .','&#xA;')"/>
         </xsl:for-each>
     </xsl:template>
     
