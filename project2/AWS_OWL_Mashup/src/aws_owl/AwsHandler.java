@@ -21,18 +21,18 @@ public class AwsHandler {
 	{
 		String url;
 		if(type == BOOK) {
-			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&SearchIndex=Books&Author="+forURL(agent);
+			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&ResponseGroup=Large&SearchIndex=Books&Author="+forURL(agent);
 		} else if (type == DVD) { 
-			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&SearchIndex=DVD&Actor="+forURL(agent);
+			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&ResponseGroup=Large&SearchIndex=DVD&Actor="+forURL(agent);
 		} else if (type == MUSIC) {
-			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&SearchIndex=Music&Artist="+forURL(agent);
+			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&ResponseGroup=Large&SearchIndex=Music&Artist="+forURL(agent);
 		} else {
 			// unknown
 			return;
 		}
 		
 		try {
-			
+			System.out.println(url);
 			URL datafile = new URL(url);
 			URLConnection conn = datafile.openConnection();
 			
