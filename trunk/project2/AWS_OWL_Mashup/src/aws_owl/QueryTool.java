@@ -1,4 +1,5 @@
 package aws_owl;
+import org.w3c.dom.*;
 
 public class QueryTool {
 
@@ -11,7 +12,8 @@ public class QueryTool {
 
 		AwsHandler ah = new AwsHandler();
 		
-		ah.query("Nu:tone", AwsHandler.MUSIC);
+		TripleLoader t = new TripleLoader(ah.query("mariah carey", AwsHandler.MUSIC), AwsHandler.MUSIC);
+		t.Load();
 		
 	}
 

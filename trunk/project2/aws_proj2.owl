@@ -12,10 +12,16 @@
       <owl:Class rdf:ID="Product"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class>
+    <owl:unionOf rdf:parseType="Collection">
+      <owl:Class rdf:ID="Actor"/>
+      <owl:Class rdf:ID="Artist"/>
+    </owl:unionOf>
+  </owl:Class>
   <owl:Class rdf:ID="CD">
     <rdfs:subClassOf rdf:resource="#Product"/>
   </owl:Class>
-  <owl:Class rdf:ID="Artist">
+  <owl:Class rdf:about="#Artist">
     <rdfs:subClassOf>
       <owl:Class rdf:ID="Agent"/>
     </rdfs:subClassOf>
@@ -27,27 +33,44 @@
   <owl:Class rdf:ID="DVD">
     <rdfs:subClassOf rdf:resource="#Product"/>
   </owl:Class>
-  <owl:Class rdf:ID="Actor">
+  <owl:Class rdf:about="#Actor">
     <rdfs:subClassOf rdf:resource="#Agent"/>
   </owl:Class>
+  <owl:ObjectProperty rdf:ID="isWrittenBy">
+    <rdfs:range rdf:resource="#Author"/>
+    <rdfs:domain rdf:resource="#Book"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="isProducedBy"/>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isAuthorOf"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="isProducerOf">
     <rdfs:range rdf:resource="#Product"/>
     <rdfs:domain rdf:resource="#Agent"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isProducedBy">
+    <rdfs:domain rdf:resource="#Product"/>
+    <rdfs:range rdf:resource="#Agent"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="hasProduct">
-    <rdfs:domain rdf:resource="#List"/>
     <rdfs:range rdf:resource="#Product"/>
+    <rdfs:domain rdf:resource="#List"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="isPerformerIn">
-    <rdfs:subPropertyOf rdf:resource="#isProducerOf"/>
     <rdfs:range>
       <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="#CD"/>
-          <owl:Class rdf:about="#DVD"/>
+          <owl:Class rdf:about="#Artist"/>
+          <owl:Class rdf:about="#Actor"/>
         </owl:unionOf>
       </owl:Class>
     </rdfs:range>
+    <rdfs:subPropertyOf rdf:resource="#isProducerOf"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isPerformedBy"/>
+    </owl:inverseOf>
     <rdfs:domain>
       <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
@@ -57,10 +80,31 @@
       </owl:Class>
     </rdfs:domain>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="isAuthorOf">
+  <owl:ObjectProperty rdf:about="#isPerformedBy">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Artist"/>
+          <owl:Class rdf:about="#Actor"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <owl:inverseOf rdf:resource="#isPerformerIn"/>
+    <rdfs:subPropertyOf rdf:resource="#isProducedBy"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Actor"/>
+          <owl:Class rdf:about="#Artist"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isAuthorOf">
+    <rdfs:domain rdf:resource="#Author"/>
+    <owl:inverseOf rdf:resource="#isWrittenBy"/>
     <rdfs:subPropertyOf rdf:resource="#isProducerOf"/>
     <rdfs:range rdf:resource="#Book"/>
-    <rdfs:domain rdf:resource="#Author"/>
   </owl:ObjectProperty>
   <owl:TransitiveProperty rdf:ID="hasAppearedWith">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
@@ -71,4 +115,4 @@
   </owl:TransitiveProperty>
 </rdf:RDF>
 
-<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->
+<!-- Created with Protege (with OWL Plugin 3.3.1, Build 430)  http://protege.stanford.edu -->
