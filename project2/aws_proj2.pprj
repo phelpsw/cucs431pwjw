@@ -1,48 +1,48 @@
-; Thu May 01 19:52:15 EDT 2008
+; Sat May 03 17:39:47 EDT 2008
 ; 
 ;+ (version "3.3.1")
 ;+ (build "Build 430")
 
-([aws_proj2_ProjectKB_Instance_10529] of  String
+([aws_proj2_ProjectKB_Instance_0] of  String
 
 	(name "owl:Class")
 	(string_value "%3ANAME"))
 
-([aws_proj2_ProjectKB_Instance_10530] of  String
+([aws_proj2_ProjectKB_Instance_1] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([aws_proj2_ProjectKB_Instance_10531] of  String
+([aws_proj2_ProjectKB_Instance_2] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([aws_proj2_ProjectKB_Instance_10532] of  String
+([aws_proj2_ProjectKB_Instance_3] of  String
 
 	(name "owl:Thing")
 	(string_value "%3ANAME"))
 
-([aws_proj2_ProjectKB_Instance_10533] of  String
+([aws_proj2_ProjectKB_Instance_4] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([aws_proj2_ProjectKB_Instance_10534] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_5] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([aws_proj2_ProjectKB_Instance_10535] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_6] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([aws_proj2_ProjectKB_Instance_10536] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_7] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
@@ -52,11 +52,11 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[aws_proj2_ProjectKB_Instance_10529]
-		[aws_proj2_ProjectKB_Instance_10530]
-		[aws_proj2_ProjectKB_Instance_10531]
-		[aws_proj2_ProjectKB_Instance_10532]
-		[aws_proj2_ProjectKB_Instance_10533]))
+		[aws_proj2_ProjectKB_Instance_0]
+		[aws_proj2_ProjectKB_Instance_1]
+		[aws_proj2_ProjectKB_Instance_2]
+		[aws_proj2_ProjectKB_Instance_3]
+		[aws_proj2_ProjectKB_Instance_4]))
 
 ([CLSES_TAB] of  Widget
 
@@ -784,9 +784,9 @@
 ([KB_435622_Instance_0] of  Map
 
 	(entries
-		[aws_proj2_ProjectKB_Instance_10534]
-		[aws_proj2_ProjectKB_Instance_10535]
-		[aws_proj2_ProjectKB_Instance_10536]))
+		[aws_proj2_ProjectKB_Instance_5]
+		[aws_proj2_ProjectKB_Instance_6]
+		[aws_proj2_ProjectKB_Instance_7]))
 
 ([KB_435622_Instance_10] of  Widget
 
@@ -5612,12 +5612,12 @@
 		[STANDARD_SLOT_FORM_WIDGET]
 		[KB_713803_Instance_693]
 		[KB_313796_Instance_943]
-		[STANDARD_CLASS_FORM_WIDGET]
 		[KB_713803_Instance_303]
+		[STANDARD_CLASS_FORM_WIDGET]
 		[KB_313796_Instance_852]
 		[Instance_1005]
-		[KB_301165_Instance_1013]
 		[Instance_581]
+		[KB_301165_Instance_1013]
 		[KB_764103_Instance_545]
 		[KB_713803_Instance_390]
 		[KB_938545_Instance_329]
@@ -5660,9 +5660,9 @@
 		"owl:Class"
 		"rdfs:Container"
 		"owl:Ontology"
-		":TO"
-		"xsd:gMonthDay"
 		"owl:DataRange"
+		"xsd:gMonthDay"
+		":TO"
 		"xsd:NMTOKEN"
 		"xsd:QName"
 		"xsd:unsignedInt"
@@ -5690,45 +5690,45 @@
 		"rdf:List"
 		"rdf:predicate"
 		"owl:hasValue"
-		"xsd:double"
 		"rdf:rest"
+		"xsd:double"
 		"xsd:decimal"
 		"rdf:subject"
-		"xsd:Name"
-		"rdf:value"
-		"owl:sameAs"
 		"owl:SymmetricProperty"
+		"owl:sameAs"
+		"rdf:value"
+		"xsd:Name"
 		"xsd:byte"
-		"owl:differentFrom"
 		"owl:AllDifferent"
-		"rdf:Property"
+		"owl:differentFrom"
 		"owl:Nothing"
-		"owl:cardinality"
+		"rdf:Property"
 		"owl:InverseFunctionalProperty"
+		"owl:cardinality"
 		"xsd:nonNegativeInteger"
 		"rdf:Statement"
-		":FROM"
 		"rdfs:Literal"
-		"owl:disjointWith"
+		":FROM"
 		"xsd:anySimpleType"
+		"owl:disjointWith"
 		"owl:minCardinality"
 		"xsd:ID"
 		"xsd:gDay"
 		"xsd:gYearMonth"
-		"xsd:NCName"
 		"owl:distinctMembers"
+		"xsd:NCName"
 		"xsd:nonPositiveInteger"
 		"rdfs:Datatype"
-		":DIRECTED-BINARY-RELATION"
-		"xsd:token"
 		"owl:TransitiveProperty"
-		"xsd:IDREF"
-		"xsd:ENTITY"
+		"xsd:token"
+		":DIRECTED-BINARY-RELATION"
 		"xsd:normalizedString"
+		"xsd:ENTITY"
+		"xsd:IDREF"
 		"xsd:gMonth"
-		"rdf:type"
-		"owl:oneOf"
 		"owl:maxCardinality"
+		"owl:oneOf"
+		"rdf:type"
 		"rdf:object")
 	(journaling_enabled FALSE)
 	(next_frame_number 0)

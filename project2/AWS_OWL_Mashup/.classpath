@@ -19,5 +19,8 @@
 	<classpathentry kind="lib" path="Z:/cucs431pwjw/project2/AWS_OWL_Mashup/lib/stax-api-1.0.jar"/>
 	<classpathentry kind="lib" path="Z:/cucs431pwjw/project2/AWS_OWL_Mashup/lib/wstx-asl-3.0.0.jar"/>
 	<classpathentry kind="lib" path="Z:/cucs431pwjw/project2/AWS_OWL_Mashup/lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="Z:/pellet-1.5.2/lib/aterm-java-1.6.jar"/>
+	<classpathentry kind="lib" path="Z:/pellet-1.5.2/lib/pellet.jar"/>
+	<classpathentry kind="lib" path="Z:/pellet-1.5.2/lib/servlet.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
