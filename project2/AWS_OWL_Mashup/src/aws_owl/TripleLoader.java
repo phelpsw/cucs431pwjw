@@ -147,27 +147,28 @@ public class TripleLoader {
 		File owl = new File("../aws_proj2.owl");
 		FileReader fr = null;
 		OntModel ontmodel;
+		
 		try{
-		fr = new FileReader(owl);
-		ontmodel = ModelFactory.createOntologyModel( PelletReasonerFactory.THE_SPEC );
-		
-		
-		ontmodel.read(fr, null);
-		ValidityReport report = ontmodel.validate();
-        printIterator( report.getReports(), "Validation Results" );
-		
-        
-        
-        
-        /*
-		OutputStream out = new FileOutputStream("ontout.xml");
-		RDFWriter writer = ontmodel.getWriter("N-TRIPLES");
-		writer.setProperty("showXmlDeclaration","true");
-	    writer.setProperty("tab","8");
-	    writer.setProperty("relativeURIs","same-document,relative");
-		writer.write(ontmodel, out, null);
-		out.close();
-		*/
+			fr = new FileReader(owl);
+			ontmodel = ModelFactory.createOntologyModel( PelletReasonerFactory.THE_SPEC );
+			
+			
+			ontmodel.read(fr, null);
+			ValidityReport report = ontmodel.validate();
+	        printIterator( report.getReports(), "Validation Results" );
+			
+	        
+	        
+	        
+	        /*
+			OutputStream out = new FileOutputStream("ontout.xml");
+			RDFWriter writer = ontmodel.getWriter("N-TRIPLES");
+			writer.setProperty("showXmlDeclaration","true");
+		    writer.setProperty("tab","8");
+		    writer.setProperty("relativeURIs","same-document,relative");
+			writer.write(ontmodel, out, null);
+			out.close();
+			*/
 		}
 		catch(Exception e){}
 		
