@@ -12,8 +12,9 @@ public class QueryTool {
 
 		AwsHandler ah = new AwsHandler();
 		
-		TripleLoader t = new TripleLoader(ah.query("mariah carey", AwsHandler.DVD));
-		t.Load();
+		TripleLoader t = new TripleLoader();
+		Document doc = ah.query("mariah carey", AwsHandler.DVD);
+		t.Load(doc);
 		
 	}
 
