@@ -40,10 +40,8 @@ public class TripleLoader {
 	Property hasTitle;
 	Model model;
 	
-	public TripleLoader(Document xml)
+	public TripleLoader()
 	{
-		this.xml = xml;
-		this.type = AwsHandler.type;
 		model = ModelFactory.createDefaultModel();
 		isWrittenBy = model.createProperty(aws, "isWrittenBy");
 		isPerformedBy = model.createProperty(aws, "isPerformedBy");
@@ -52,9 +50,10 @@ public class TripleLoader {
 		hasTitle = model.createProperty(aws,"hasTitle");
 	}
 	
-	public void Load()
+	public void Load(Document xml)
 	{
-
+		this.type = AwsHandler.type;
+		this.xml = xml;
 		Node items = xml.getElementsByTagName("Items").item(0);
 		if(items.getFirstChild().getFirstChild().getTextContent().equals("True"))
 		{
@@ -156,14 +155,14 @@ public class TripleLoader {
 		ontmodel.read(fr, null);
 		ValidityReport report = ontmodel.validate();
         printIterator( report.getReports(), "Validation Results" );
-		/*
+		
 		OutputStream out = new FileOutputStream("ontout.xml");
-		RDFWriter writer = ontmodel.getWriter("RDF/XML");
+		RDFWriter writer = ontmodel.getWriter("N-TRIPLES");
 		writer.setProperty("showXmlDeclaration","true");
 	    writer.setProperty("tab","8");
 	    writer.setProperty("relativeURIs","same-document,relative");
 		writer.write(ontmodel, out, null);
-		out.close();*/
+		out.close();
 		}
 		catch(Exception e){}
 		
