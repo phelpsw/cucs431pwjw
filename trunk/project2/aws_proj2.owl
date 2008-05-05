@@ -24,20 +24,10 @@
   <owl:Class rdf:ID="Author">
     <rdfs:subClassOf rdf:resource="#Agent"/>
   </owl:Class>
-  <owl:Class rdf:ID="Axiom_1">
-    <owl:equivalentClass>
-      <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-          <owl:Class rdf:ID="Actor"/>
-          <owl:Class rdf:about="#Artist"/>
-        </owl:unionOf>
-      </owl:Class>
-    </owl:equivalentClass>
-  </owl:Class>
   <owl:Class rdf:ID="DVD">
     <rdfs:subClassOf rdf:resource="#Product"/>
   </owl:Class>
-  <owl:Class rdf:about="#Actor">
+  <owl:Class rdf:ID="Actor">
     <rdfs:subClassOf rdf:resource="#Agent"/>
   </owl:Class>
   <owl:ObjectProperty rdf:ID="isWrittenBy">
@@ -104,9 +94,7 @@
       </owl:Class>
     </rdfs:range>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="hasTitle">
-    <rdfs:domain rdf:resource="#Product"/>
-  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasTitle"/>
   <owl:ObjectProperty rdf:about="#isAuthorOf">
     <rdfs:range rdf:resource="#Book"/>
     <rdfs:domain rdf:resource="#Author"/>
@@ -114,12 +102,12 @@
     <owl:inverseOf rdf:resource="#isWrittenBy"/>
   </owl:ObjectProperty>
   <owl:TransitiveProperty rdf:ID="hasAppearedWith">
-    <rdfs:range rdf:resource="#Actor"/>
-    <owl:inverseOf rdf:resource="#hasAppearedWith"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="#hasAppearedWith"/>
+    <rdfs:range rdf:resource="#Actor"/>
     <rdfs:domain rdf:resource="#Actor"/>
   </owl:TransitiveProperty>
 </rdf:RDF>
 
-<!-- Created with Protege (with OWL Plugin 3.3.1, Build 430)  http://protege.stanford.edu -->
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->
