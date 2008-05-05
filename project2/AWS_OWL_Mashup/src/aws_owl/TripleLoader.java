@@ -16,7 +16,7 @@ import org.mindswap.pellet.jena.PelletReasonerFactory;
 import org.w3c.dom.*;
 
 import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.OntModelSpec;
+import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.ProfileRegistry;
 import com.hp.hpl.jena.rdf.model.*;
 import com.hp.hpl.jena.reasoner.Reasoner;
@@ -65,7 +65,7 @@ public class TripleLoader {
 		else (new Exception("Invalid search query")).printStackTrace();
 		
 		writeToFile();
-		//Inferencer();
+		Inferencer();
 	}
 	
 	private void nodeToTriple(Element item, Element itemAttributes, Element Title)
@@ -150,10 +150,16 @@ public class TripleLoader {
 		try{
 		fr = new FileReader(owl);
 		ontmodel = ModelFactory.createOntologyModel( PelletReasonerFactory.THE_SPEC );
+		
+		
 		ontmodel.read(fr, null);
 		ValidityReport report = ontmodel.validate();
         printIterator( report.getReports(), "Validation Results" );
 		
+        
+        
+        
+        /*
 		OutputStream out = new FileOutputStream("ontout.xml");
 		RDFWriter writer = ontmodel.getWriter("N-TRIPLES");
 		writer.setProperty("showXmlDeclaration","true");
@@ -161,6 +167,7 @@ public class TripleLoader {
 	    writer.setProperty("relativeURIs","same-document,relative");
 		writer.write(ontmodel, out, null);
 		out.close();
+		*/
 		}
 		catch(Exception e){}
 		
