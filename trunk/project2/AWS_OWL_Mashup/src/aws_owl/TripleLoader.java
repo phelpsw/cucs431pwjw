@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.Iterator;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -101,13 +103,14 @@ public class TripleLoader {
 			break;
 		}
 		
-		model.add(product, RDF.type, aws+productCategory);
-		model.add(product, hasTitle, model.createLiteral(title));
-		for(int i=0; i<subjects.length; i++)
-		{
-			model.add(subjects[i], p, product);
-			model.add(subjects[i], RDF.type, aws+agentCategory);
-		}
+		model.add(product, RDF.type, model.createResource(aws+productCategory));
+        model.add(product, hasTitle, model.createLiteral(aws+Utility.forURL(title)));
+        //model.add(product, hasTitle, model.createResource(aws+Utility.forURL(title)));
+        for(int i=0; i<subjects.length; i++)
+        {
+                model.add(subjects[i], p, product);
+                model.add(subjects[i], RDF.type, model.createResource(aws+agentCategory));
+        }
 	}
 	
 	private Resource[] addAgents(Element itemAttributes, String ASIN, int type)
@@ -148,8 +151,6 @@ public class TripleLoader {
 	
 	private void Inferencer()
 	{
-		OntModel ontmodel;
-		InfModel infmodel;
 		Model schema = FileManager.get().loadModel("file:../aws_proj2.owl");
 	    Model data = FileManager.get().loadModel("file:out.n3");
 
@@ -159,8 +160,8 @@ public class TripleLoader {
         model.add(schema);
         model.add(data);
         
-	    ValidityReport report1 = model.validate();
-        printIterator( report1.getReports(), "Validation Results" );	
+	    ValidityReport report = model.validate();
+        printIterator( report.getReports(), "Validation Results" );	
 	}
 	
 	public static void printIterator(Iterator i, String header) {
@@ -178,4 +179,5 @@ public class TripleLoader {
         
         System.out.println();
     }
+	
 }
