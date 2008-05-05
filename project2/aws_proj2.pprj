@@ -1,48 +1,48 @@
-; Sat May 03 17:39:47 EDT 2008
+; Mon May 05 13:53:57 EDT 2008
 ; 
-;+ (version "3.3.1")
-;+ (build "Build 430")
+;+ (version "3.4")
+;+ (build "Build 130")
 
-([aws_proj2_ProjectKB_Instance_0] of  String
+([aws_proj2_ProjectKB_Instance_20] of  String
 
 	(name "owl:Class")
 	(string_value "%3ANAME"))
 
-([aws_proj2_ProjectKB_Instance_1] of  String
+([aws_proj2_ProjectKB_Instance_21] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([aws_proj2_ProjectKB_Instance_2] of  String
+([aws_proj2_ProjectKB_Instance_22] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([aws_proj2_ProjectKB_Instance_3] of  String
+([aws_proj2_ProjectKB_Instance_23] of  String
 
 	(name "owl:Thing")
 	(string_value "%3ANAME"))
 
-([aws_proj2_ProjectKB_Instance_4] of  String
+([aws_proj2_ProjectKB_Instance_24] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([aws_proj2_ProjectKB_Instance_5] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_25] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([aws_proj2_ProjectKB_Instance_6] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_26] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([aws_proj2_ProjectKB_Instance_7] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_27] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
@@ -52,11 +52,11 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[aws_proj2_ProjectKB_Instance_0]
-		[aws_proj2_ProjectKB_Instance_1]
-		[aws_proj2_ProjectKB_Instance_2]
-		[aws_proj2_ProjectKB_Instance_3]
-		[aws_proj2_ProjectKB_Instance_4]))
+		[aws_proj2_ProjectKB_Instance_20]
+		[aws_proj2_ProjectKB_Instance_21]
+		[aws_proj2_ProjectKB_Instance_22]
+		[aws_proj2_ProjectKB_Instance_23]
+		[aws_proj2_ProjectKB_Instance_24]))
 
 ([CLSES_TAB] of  Widget
 
@@ -290,6 +290,9 @@
 	(label "Instances")
 	(property_list [Instance_88])
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
+
+([KB_010824_Instance_3] of  Map
+)
 
 ([KB_024013_Instance_4] of  Widget
 
@@ -784,9 +787,9 @@
 ([KB_435622_Instance_0] of  Map
 
 	(entries
-		[aws_proj2_ProjectKB_Instance_5]
-		[aws_proj2_ProjectKB_Instance_6]
-		[aws_proj2_ProjectKB_Instance_7]))
+		[aws_proj2_ProjectKB_Instance_25]
+		[aws_proj2_ProjectKB_Instance_26]
+		[aws_proj2_ProjectKB_Instance_27]))
 
 ([KB_435622_Instance_10] of  Widget
 
@@ -5591,7 +5594,7 @@
 
 ([OWL_ProjectKB_Instance_3] of  Integer
 
-	(integer_value 430)
+	(integer_value 130)
 	(name "owl_build"))
 
 ([PAL_FORM_WIDGET] of  Widget
@@ -5612,12 +5615,12 @@
 		[STANDARD_SLOT_FORM_WIDGET]
 		[KB_713803_Instance_693]
 		[KB_313796_Instance_943]
-		[KB_713803_Instance_303]
 		[STANDARD_CLASS_FORM_WIDGET]
+		[KB_713803_Instance_303]
 		[KB_313796_Instance_852]
 		[Instance_1005]
-		[Instance_581]
 		[KB_301165_Instance_1013]
+		[Instance_581]
 		[KB_764103_Instance_545]
 		[KB_713803_Instance_390]
 		[KB_938545_Instance_329]
@@ -5660,9 +5663,9 @@
 		"owl:Class"
 		"rdfs:Container"
 		"owl:Ontology"
-		"owl:DataRange"
-		"xsd:gMonthDay"
 		":TO"
+		"xsd:gMonthDay"
+		"owl:DataRange"
 		"xsd:NMTOKEN"
 		"xsd:QName"
 		"xsd:unsignedInt"
@@ -5690,45 +5693,45 @@
 		"rdf:List"
 		"rdf:predicate"
 		"owl:hasValue"
-		"rdf:rest"
 		"xsd:double"
+		"rdf:rest"
 		"xsd:decimal"
 		"rdf:subject"
-		"owl:SymmetricProperty"
-		"owl:sameAs"
-		"rdf:value"
 		"xsd:Name"
+		"rdf:value"
+		"owl:sameAs"
+		"owl:SymmetricProperty"
 		"xsd:byte"
-		"owl:AllDifferent"
 		"owl:differentFrom"
-		"owl:Nothing"
+		"owl:AllDifferent"
 		"rdf:Property"
-		"owl:InverseFunctionalProperty"
+		"owl:Nothing"
 		"owl:cardinality"
+		"owl:InverseFunctionalProperty"
 		"xsd:nonNegativeInteger"
 		"rdf:Statement"
-		"rdfs:Literal"
 		":FROM"
-		"xsd:anySimpleType"
+		"rdfs:Literal"
 		"owl:disjointWith"
+		"xsd:anySimpleType"
 		"owl:minCardinality"
 		"xsd:ID"
 		"xsd:gDay"
 		"xsd:gYearMonth"
-		"owl:distinctMembers"
 		"xsd:NCName"
+		"owl:distinctMembers"
 		"xsd:nonPositiveInteger"
 		"rdfs:Datatype"
-		"owl:TransitiveProperty"
-		"xsd:token"
 		":DIRECTED-BINARY-RELATION"
-		"xsd:normalizedString"
-		"xsd:ENTITY"
+		"xsd:token"
+		"owl:TransitiveProperty"
 		"xsd:IDREF"
+		"xsd:ENTITY"
+		"xsd:normalizedString"
 		"xsd:gMonth"
-		"owl:maxCardinality"
-		"owl:oneOf"
 		"rdf:type"
+		"owl:oneOf"
+		"owl:maxCardinality"
 		"rdf:object")
 	(journaling_enabled FALSE)
 	(next_frame_number 0)

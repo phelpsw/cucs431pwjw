@@ -12,6 +12,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.mindswap.pellet.jena.PelletReasoner;
 import org.mindswap.pellet.jena.PelletReasonerFactory;
 import org.w3c.dom.*;
 
@@ -19,8 +20,11 @@ import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.ProfileRegistry;
 import com.hp.hpl.jena.rdf.model.*;
-import com.hp.hpl.jena.reasoner.Reasoner;
+//import com.hp.hpl.jena.reasoner.Reasoner;
+import org.mindswap.pellet.owlapi.Reasoner;
+import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.reasoner.ValidityReport;
+import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.vocabulary.*;
 
 import org.xml.sax.SAXException;
@@ -131,7 +135,7 @@ public class TripleLoader {
 	private void writeToFile()
 	{
 		try{
-			OutputStream out = new FileOutputStream("out.xml");
+			OutputStream out = new FileOutputStream("out.n3");
 			RDFWriter writer = model.getWriter("N3");
 			writer.setProperty("showXmlDeclaration","true");
 		    writer.setProperty("tab","8");
@@ -144,35 +148,21 @@ public class TripleLoader {
 	
 	private void Inferencer()
 	{
-		File owl = new File("../aws_proj2.owl");
-		FileReader fr = null;
 		OntModel ontmodel;
-		
-		try{
-			fr = new FileReader(owl);
-			ontmodel = ModelFactory.createOntologyModel( PelletReasonerFactory.THE_SPEC );
-			
-			
-			ontmodel.read(fr, null);
-			ValidityReport report = ontmodel.validate();
-	        printIterator( report.getReports(), "Validation Results" );
-			
-	        
-	        
-	        
-	        /*
-			OutputStream out = new FileOutputStream("ontout.xml");
-			RDFWriter writer = ontmodel.getWriter("N-TRIPLES");
-			writer.setProperty("showXmlDeclaration","true");
-		    writer.setProperty("tab","8");
-		    writer.setProperty("relativeURIs","same-document,relative");
-			writer.write(ontmodel, out, null);
-			out.close();
-			*/
-		}
-		catch(Exception e){}
-		
+		InfModel infmodel;
+		Model schema = FileManager.get().loadModel("file:../aws_proj2.owl");
+	    Model data = FileManager.get().loadModel("file:out.n3");
+
+	    // create an empty ontology model using Pellet spec
+        OntModel model = ModelFactory.createOntologyModel( PelletReasonerFactory.THE_SPEC );
+	    
+        model.add(schema);
+        model.add(data);
+        
+	    ValidityReport report1 = model.validate();
+        printIterator( report1.getReports(), "Validation Results" );	
 	}
+	
 	public static void printIterator(Iterator i, String header) {
         System.out.println(header);
         for(int c = 0; c < header.length(); c++)
