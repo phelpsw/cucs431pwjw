@@ -41,11 +41,11 @@ public class AwsHandler {
 		this.type = type;
 		String url;
 		if(type == BOOK) {
-			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&ResponseGroup=Large&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&SearchIndex=Books&Author="+forURL(agent);
+			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&ResponseGroup=Large&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&SearchIndex=Books&Author="+Utility.forURL(agent);
 		} else if (type == DVD) { 
-			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&ResponseGroup=Large&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&SearchIndex=DVD&Actor="+forURL(agent);
+			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&ResponseGroup=Large&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&SearchIndex=DVD&Actor="+Utility.forURL(agent);
 		} else if (type == MUSIC) {
-			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&ResponseGroup=Large&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&SearchIndex=Music&Artist="+forURL(agent);
+			url = "http://ecs.amazonaws.com/onca/xml?Service=AWSECommerceService&ResponseGroup=Large&Operation=ItemSearch&AWSAccessKeyId=0RBFG1JEYFQRVTPWYQ02&SearchIndex=Music&Artist="+Utility.forURL(agent);
 		} else {
 			// unknown
 			return null;
@@ -63,20 +63,6 @@ public class AwsHandler {
 			return null;
 		}
 	}
-	
-	
 
-	
-	private String forURL(String frag)
-	{
-		String result = null;
-		try 
-		{
-			result = URLEncoder.encode(frag, "UTF-8");
-	    } catch (UnsupportedEncodingException ex) {
-	    	throw new RuntimeException("UTF-8 not supported", ex);
-	    }
-		return result;
-	}
 }
 

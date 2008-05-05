@@ -1,159 +1,159 @@
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Patricia Arquette>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301051> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#0780630122>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#DVD" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#DVD> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle>
-              "Live in Las Vegas" .
+              "http://www.owl-ontologies.com/Ontology1209425965.owl#Live+in+Las+Vegas" .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Max Beesley>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#B00005TNER> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#B0000714DU>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#DVD" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#DVD> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle>
-              "Mariah Carey/Adventures of Mimi" .
+              "http://www.owl-ontologies.com/Ontology1209425965.owl#Mariah+Carey%2FAdventures+of+Mimi" .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Saul Stein>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#B0000714DU> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Arthur J. Nascarella>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#B0000714DU> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Mariah Carey>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#B000H7JCIC> , <http://www.owl-ontologies.com/Ontology1209425965.owl#B000H7JCI2> , <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301051> , <http://www.owl-ontologies.com/Ontology1209425965.owl#B0013POLS8> , <http://www.owl-ontologies.com/Ontology1209425965.owl#B0000714DU> , <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301507> , <http://www.owl-ontologies.com/Ontology1209425965.owl#B0006A9GTA> , <http://www.owl-ontologies.com/Ontology1209425965.owl#B0013NAP2G> , <http://www.owl-ontologies.com/Ontology1209425965.owl#B00005TNER> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Da Brat>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#B00005TNER> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#B000H7JCI2>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#DVD" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#DVD> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle>
-              "Destiny's Child: Live in Atlanta [Blu-ray]" .
+              "http://www.owl-ontologies.com/Ontology1209425965.owl#Destiny%27s+Child%3A+Live+in+Atlanta+%5BBlu-ray%5D" .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301051>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#DVD" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#DVD> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle>
-              "I Am Legend (Widescreen Two-Disc Special Edition with Digital Copy)" .
+              "http://www.owl-ontologies.com/Ontology1209425965.owl#I+Am+Legend+%28Widescreen+Two-Disc+Special+Edition+with+Digital+Copy%29" .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#B0013POLS8>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#DVD" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#DVD> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle>
-              "Mariah Carey: The Adventures of Mimi [Blu-ray]" .
+              "http://www.owl-ontologies.com/Ontology1209425965.owl#Mariah+Carey%3A+The+Adventures+of+Mimi+%5BBlu-ray%5D" .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Jennifer Aniston>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301051> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Artie Lange>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#0780630122> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Edward Asner>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#0780630122> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Chris O'Donnell>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#0780630122> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Melora Walters>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#B0000714DU> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Trey Lorenz>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301507> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Olivia Newton-John>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301507> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Hillary Rodham Clinton>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301051> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Brenda Starr>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301507> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301507>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#DVD" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#DVD> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle>
-              "Oral Fixation Tour (DVD/CD)" .
+              "http://www.owl-ontologies.com/Ontology1209425965.owl#Oral+Fixation+Tour+%28DVD%2FCD%29" .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#B0006A9GTA>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#DVD" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#DVD> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle>
-              "Elton John: Elton 60 - Live At Madison Square Garden [Blu-ray]" .
+              "http://www.owl-ontologies.com/Ontology1209425965.owl#Elton+John%3A+Elton+60+-+Live+At+Madison+Square+Garden+%5BBlu-ray%5D" .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#B00005TNER>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#DVD" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#DVD> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle>
-              "Shakira: Oral Fixation Tour [Blu-ray]" .
+              "http://www.owl-ontologies.com/Ontology1209425965.owl#Shakira%3A+Oral+Fixation+Tour+%5BBlu-ray%5D" .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Tia Texada>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#B00005TNER> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Bill Clinton>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301051> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#B000H7JCIC>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#DVD" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#DVD> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle>
-              "I Am Legend [Blu-ray]" .
+              "http://www.owl-ontologies.com/Ontology1209425965.owl#I+Am+Legend+%5BBlu-ray%5D" .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Valarie Pettiford>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#B00005TNER> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Renée Zellweger>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#0780630122> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Mira Sorvino>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#B0000714DU> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Brian McKnight>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#1573301507> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#Agent:Hal Holbrook>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#Actor" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#Actor> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn>
               <http://www.owl-ontologies.com/Ontology1209425965.owl#0780630122> .
 
 <http://www.owl-ontologies.com/Ontology1209425965.owl#B0013NAP2G>
-      a       "http://www.owl-ontologies.com/Ontology1209425965.owl#DVD" ;
+      a       <http://www.owl-ontologies.com/Ontology1209425965.owl#DVD> ;
       <http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle>
-              "Celine Dion: Live in Las Vegas - A New Day [Blu-ray]" .
+              "http://www.owl-ontologies.com/Ontology1209425965.owl#Celine+Dion%3A+Live+in+Las+Vegas+-+A+New+Day+%5BBlu-ray%5D" .

@@ -28,6 +28,8 @@
     <rdfs:subClassOf rdf:resource="#Product"/>
   </owl:Class>
   <owl:Class rdf:ID="Actor">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:label>
     <rdfs:subClassOf rdf:resource="#Agent"/>
   </owl:Class>
   <owl:ObjectProperty rdf:ID="isWrittenBy">
