@@ -8,8 +8,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.util.Iterator;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -67,7 +65,7 @@ public class TripleLoader {
 		else (new Exception("Invalid search query")).printStackTrace();
 		
 		writeToFile();
-		Inferencer();
+		//Inferencer();
 	}
 	
 	private void nodeToTriple(Element item, Element itemAttributes, Element Title)

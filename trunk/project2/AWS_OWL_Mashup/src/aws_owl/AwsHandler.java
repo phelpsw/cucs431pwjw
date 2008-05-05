@@ -11,8 +11,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -54,37 +52,12 @@ public class AwsHandler {
 		}
 		
 		try {
-			
 			URL datafile = new URL(url);
-			
 			URLConnection conn = datafile.openConnection();
-			InputStreamReader isr = new InputStreamReader(conn.getInputStream());
-			BufferedReader reader = new BufferedReader(isr);
-			String str;
-			while ((str = reader.readLine()) != null) {
-				//System.out.println(str+"\n");
-			}
-			
-			File n3 = new File("../pathway.n3");
-			FileReader fr = new FileReader(n3);
-			
-			Model model = ModelFactory.createDefaultModel();
-			model.read(fr, null, "N3");
-			Resource guy = model.createResource("NSguy");
-			Property likes = model.createProperty("propURI","likes");
-			Resource girl = model.createResource("NSgirl");
-			//guy.addProperty(likes, model.createLiteral("girl"));
-			StmtIterator iter = model.listStatements();
-			Statement stmt;
-			while (iter.hasNext())
-		    {
-		    stmt = (Statement)iter.next();
-		    //System.out.println(stmt.getString());
-		    }
-			
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = factory.newDocumentBuilder();
-			return builder.parse(url);
+			
+			return builder.parse(conn.getInputStream());
 		} catch (Exception e){
 			e.printStackTrace();
 			return null;
