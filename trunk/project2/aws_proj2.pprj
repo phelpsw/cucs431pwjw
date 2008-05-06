@@ -1,7 +1,63 @@
-; Mon May 05 14:57:01 EDT 2008
+; Mon May 05 20:10:12 EDT 2008
 ; 
-;+ (version "3.4")
-;+ (build "Build 130")
+;+ (version "3.3.1")
+;+ (build "Build 430")
+
+([aws_proj2_ProjectKB_Instance_10070] of  String
+
+	(name "Actor")
+	(string_value "rdfs%3Alabel"))
+
+([aws_proj2_ProjectKB_Instance_10071] of  String
+
+	(name "Artist")
+	(string_value "isPerformedBy"))
+
+([aws_proj2_ProjectKB_Instance_10072] of  String
+
+	(name "owl:Class")
+	(string_value "%3ANAME"))
+
+([aws_proj2_ProjectKB_Instance_10073] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([aws_proj2_ProjectKB_Instance_10074] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([aws_proj2_ProjectKB_Instance_10075] of  String
+
+	(name "owl:Thing")
+	(string_value "%3ANAME"))
+
+([aws_proj2_ProjectKB_Instance_10076] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([aws_proj2_ProjectKB_Instance_10077] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([aws_proj2_ProjectKB_Instance_10078] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([aws_proj2_ProjectKB_Instance_10079] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
 
 ([aws_proj2_ProjectKB_Instance_59] of  Widget
 
@@ -169,72 +225,16 @@
 ([aws_proj2_ProjectKB_Instance_87] of  Property_List
 )
 
-([aws_proj2_ProjectKB_Instance_88] of  String
-
-	(name "owl:Class")
-	(string_value "%3ANAME"))
-
-([aws_proj2_ProjectKB_Instance_89] of  String
-
-	(name "Artist")
-	(string_value "isPerformedBy"))
-
-([aws_proj2_ProjectKB_Instance_90] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([aws_proj2_ProjectKB_Instance_91] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([aws_proj2_ProjectKB_Instance_92] of  String
-
-	(name "owl:Thing")
-	(string_value "%3ANAME"))
-
-([aws_proj2_ProjectKB_Instance_93] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([aws_proj2_ProjectKB_Instance_94] of  String
-
-	(name "Actor")
-	(string_value "rdfs%3Alabel"))
-
-([aws_proj2_ProjectKB_Instance_95] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([aws_proj2_ProjectKB_Instance_96] of  Map_Entry
-
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([aws_proj2_ProjectKB_Instance_97] of  Map_Entry
-
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[aws_proj2_ProjectKB_Instance_88]
-		[aws_proj2_ProjectKB_Instance_89]
-		[aws_proj2_ProjectKB_Instance_90]
-		[aws_proj2_ProjectKB_Instance_91]
-		[aws_proj2_ProjectKB_Instance_92]
-		[aws_proj2_ProjectKB_Instance_93]
-		[aws_proj2_ProjectKB_Instance_94]))
+		[aws_proj2_ProjectKB_Instance_10070]
+		[aws_proj2_ProjectKB_Instance_10071]
+		[aws_proj2_ProjectKB_Instance_10072]
+		[aws_proj2_ProjectKB_Instance_10073]
+		[aws_proj2_ProjectKB_Instance_10074]
+		[aws_proj2_ProjectKB_Instance_10075]
+		[aws_proj2_ProjectKB_Instance_10076]))
 
 ([CLSES_TAB] of  Widget
 
@@ -468,9 +468,6 @@
 	(label "Instances")
 	(property_list [Instance_88])
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
-
-([KB_010824_Instance_3] of  Map
-)
 
 ([KB_024013_Instance_4] of  Widget
 
@@ -965,9 +962,9 @@
 ([KB_435622_Instance_0] of  Map
 
 	(entries
-		[aws_proj2_ProjectKB_Instance_95]
-		[aws_proj2_ProjectKB_Instance_96]
-		[aws_proj2_ProjectKB_Instance_97]))
+		[aws_proj2_ProjectKB_Instance_10077]
+		[aws_proj2_ProjectKB_Instance_10078]
+		[aws_proj2_ProjectKB_Instance_10079]))
 
 ([KB_435622_Instance_10] of  Widget
 
@@ -5772,7 +5769,7 @@
 
 ([OWL_ProjectKB_Instance_3] of  Integer
 
-	(integer_value 130)
+	(integer_value 430)
 	(name "owl_build"))
 
 ([PAL_FORM_WIDGET] of  Widget
@@ -5801,8 +5798,8 @@
 		[Instance_581]
 		[KB_764103_Instance_545]
 		[KB_713803_Instance_390]
-		[KB_938545_Instance_329]
 		[aws_proj2_ProjectKB_Instance_59]
+		[KB_938545_Instance_329]
 		[Instance_443]
 		[PAL_FORM_WIDGET]
 		[KB_465546_Instance_567]
@@ -5890,7 +5887,6 @@
 		"xsd:nonNegativeInteger"
 		"rdf:Statement"
 		":FROM"
-		"rdfs:Literal"
 		"owl:disjointWith"
 		"xsd:anySimpleType"
 		"owl:minCardinality"
