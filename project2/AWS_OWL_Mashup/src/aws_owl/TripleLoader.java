@@ -18,6 +18,8 @@ import org.mindswap.pellet.jena.PelletReasoner;
 import org.mindswap.pellet.jena.PelletReasonerFactory;
 import org.w3c.dom.*;
 
+import com.hp.hpl.jena.datatypes.RDFDatatype;
+import com.hp.hpl.jena.datatypes.TypeMapper;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.ProfileRegistry;
@@ -27,6 +29,7 @@ import org.mindswap.pellet.owlapi.Reasoner;
 import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.reasoner.ValidityReport;
 import com.hp.hpl.jena.util.FileManager;
+import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.vocabulary.*;
 
 import org.xml.sax.SAXException;
@@ -42,16 +45,14 @@ public class TripleLoader {
 	Property isPerformerIn;
 	Property isAuthorOf;
 	Property hasTitle;
-	Model model;
+	OntModel model;
+	Resource Author;
+	Resource Artist;
 	
 	public TripleLoader()
 	{
-		model = ModelFactory.createDefaultModel();
-		isWrittenBy = model.createProperty(aws, "isWrittenBy");
-		isPerformedBy = model.createProperty(aws, "isPerformedBy");
-		isPerformerIn = model.createProperty(aws, "isPerformerIn");
-		isAuthorOf = model.createProperty(aws,"isAuthorOf");
-		hasTitle = model.createProperty(aws,"hasTitle");
+		model = ModelFactory.createOntologyModel( PelletReasonerFactory.THE_SPEC );
+		LoadOntology();
 	}
 	
 	public void Load(Document xml)
@@ -87,7 +88,7 @@ public class TripleLoader {
 		switch(type)
 		{
 		case AwsHandler.BOOK:
-			productCategory = "book";
+			productCategory = "Book";
 			agentCategory = "Author";
 			p = isAuthorOf;
 			break;
@@ -103,13 +104,16 @@ public class TripleLoader {
 			break;
 		}
 		
-		model.add(product, RDF.type, model.createResource(aws+productCategory));
-        model.add(product, hasTitle, model.createLiteral(aws+Utility.forURL(title)));
+		//System.out.println(lit.getDatatype());
+		//model.add(product, RDF.type, model.getResource(aws+productCategory));
+		Literal lit =  model.createLiteral(Utility.forURL(title));
+        model.add(product, hasTitle, lit);
         //model.add(product, hasTitle, model.createResource(aws+Utility.forURL(title)));
         for(int i=0; i<subjects.length; i++)
         {
                 model.add(subjects[i], p, product);
-                model.add(subjects[i], RDF.type, model.createResource(aws+agentCategory));
+                System.out.println(subjects[i]);
+                //model.add(subjects[i], RDF.type, model.getResource(aws+agentCategory));
         }
 	}
 	
@@ -129,7 +133,7 @@ public class TripleLoader {
 		index = (Element)itemAttributes.getFirstChild();
 		for(int i=0; i<count; i++)
 		{
-			subjects[i] = model.createResource(aws+"Agent:"+index.getTextContent());
+			subjects[i] = model.createResource(aws+"Agent "+index.getTextContent());
 			index = (Element)index.getNextSibling();
 		}
 		return subjects;
@@ -138,8 +142,8 @@ public class TripleLoader {
 	private void writeToFile()
 	{
 		try{
-			OutputStream out = new FileOutputStream("out.n3");
-			RDFWriter writer = model.getWriter("N3");
+			OutputStream out = new FileOutputStream("out.xml");
+			RDFWriter writer = model.getWriter("RDF/XML");
 			writer.setProperty("showXmlDeclaration","true");
 		    writer.setProperty("tab","8");
 		    writer.setProperty("relativeURIs","same-document,relative");
@@ -149,19 +153,30 @@ public class TripleLoader {
 			catch(Exception e){}
 	}
 	
-	private void Inferencer()
+	private void LoadOntology()
 	{
 		Model schema = FileManager.get().loadModel("file:../aws_proj2.owl");
-	    Model data = FileManager.get().loadModel("file:out.n3");
-
-	    // create an empty ontology model using Pellet spec
-        OntModel model = ModelFactory.createOntologyModel( PelletReasonerFactory.THE_SPEC );
-	    
-        model.add(schema);
-        model.add(data);
-        
+		model.add(schema);
+		isWrittenBy = model.getProperty(aws, "isWrittenBy");
+		isPerformedBy = model.getProperty(aws, "isPerformedBy");
+		isPerformerIn = model.getProperty(aws, "isPerformerIn");
+		isAuthorOf = model.getProperty(aws,"isAuthorOf");
+		hasTitle = model.getProperty(aws,"hasTitle");
+	}
+	
+	private void Inferencer()
+	{
 	    ValidityReport report = model.validate();
         printIterator( report.getReports(), "Validation Results" );	
+        /*
+        ExtendedIterator iterator = model.listIndividuals();
+        while(iterator.hasNext())
+        {
+        	System.out.println(iterator.next());
+        }
+        Resource cd = model.getOntResource(aws+"CD");
+        System.out.println(cd);
+        */
 	}
 	
 	public static void printIterator(Iterator i, String header) {
