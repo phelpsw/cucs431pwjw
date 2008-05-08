@@ -23,6 +23,11 @@ import com.hp.hpl.jena.datatypes.TypeMapper;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.ProfileRegistry;
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.*;
 //import com.hp.hpl.jena.reasoner.Reasoner;
 import org.mindswap.pellet.owlapi.Reasoner;
@@ -73,6 +78,7 @@ public class TripleLoader {
 		
 		writeToFile();
 		Inferencer();
+		RunQuery();
 	}
 	
 	private void nodeToTriple(Element item, Element itemAttributes, Element Title)
@@ -87,21 +93,21 @@ public class TripleLoader {
 		
 		switch(type)
 		{
-		case AwsHandler.BOOK:
-			productCategory = "Book";
-			agentCategory = "Author";
-			p = isAuthorOf;
-			break;
-		case AwsHandler.DVD:
-			productCategory = "DVD";
-			agentCategory = "Actor";
-			p = isPerformerIn;
-			break;
-		case AwsHandler.MUSIC:
-			productCategory = "CD";
-			agentCategory = "Artist";
-			p = isPerformerIn;
-			break;
+			case AwsHandler.BOOK:
+				productCategory = "Book";
+				agentCategory = "Author";
+				p = isAuthorOf;
+				break;
+			case AwsHandler.DVD:
+				productCategory = "DVD";
+				agentCategory = "Actor";
+				p = isPerformerIn;
+				break;
+			case AwsHandler.MUSIC:
+				productCategory = "CD";
+				agentCategory = "Artist";
+				p = isPerformerIn;
+				break;
 		}
 		
 		//System.out.println(lit.getDatatype());
@@ -112,7 +118,6 @@ public class TripleLoader {
         for(int i=0; i<subjects.length; i++)
         {
                 model.add(subjects[i], p, product);
-                System.out.println(subjects[i]);
                 //model.add(subjects[i], RDF.type, model.getResource(aws+agentCategory));
         }
 	}
@@ -194,5 +199,28 @@ public class TripleLoader {
         
         System.out.println();
     }
+	
+	public void RunQuery()
+	{
+		//		 Create a new query
+		String queryString = 
+			"PREFIX aws: <"+aws+"> " +
+			"SELECT ?x " +
+			"WHERE {" +
+			"      ?x aws:hasTitle \"Wisegirls\" . " +
+			"      }";
+
+		Query query = QueryFactory.create(queryString);
+
+		//		 Execute the query and obtain results
+		QueryExecution qe = QueryExecutionFactory.create(query, model);
+		//ResultSet result = (ResultSet)qe.execSelect();
+		
+		//		 Output query results	
+		ResultSetFormatter.out(System.out, qe.execSelect(), query);
+
+		//		 Important - free up resources used running the query
+		qe.close();
+	}
 	
 }

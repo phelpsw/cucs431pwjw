@@ -1,58 +1,203 @@
-; Mon May 05 20:10:12 EDT 2008
+; Thu May 08 18:04:26 EDT 2008
 ; 
 ;+ (version "3.3.1")
 ;+ (build "Build 430")
 
-([aws_proj2_ProjectKB_Instance_10070] of  String
+([aws_proj2_ProjectKB_Instance_10131] of  Widget
 
-	(name "Actor")
-	(string_value "rdfs%3Alabel"))
+	(is_hidden FALSE)
+	(name "Agent")
+	(property_list [aws_proj2_ProjectKB_Instance_10134])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget"))
 
-([aws_proj2_ProjectKB_Instance_10071] of  String
+([aws_proj2_ProjectKB_Instance_10134] of  Property_List
 
-	(name "Artist")
-	(string_value "isPerformedBy"))
+	(properties
+		[aws_proj2_ProjectKB_Instance_10135]
+		[aws_proj2_ProjectKB_Instance_10138]
+		[aws_proj2_ProjectKB_Instance_10141]
+		[aws_proj2_ProjectKB_Instance_10144]
+		[aws_proj2_ProjectKB_Instance_10146]
+		[aws_proj2_ProjectKB_Instance_10148]
+		[aws_proj2_ProjectKB_Instance_10150]
+		[aws_proj2_ProjectKB_Instance_10152]
+		[aws_proj2_ProjectKB_Instance_10154]))
 
-([aws_proj2_ProjectKB_Instance_10072] of  String
+([aws_proj2_ProjectKB_Instance_10135] of  Widget
+
+	(height 0)
+	(is_hidden FALSE)
+	(label "Name")
+	(name ":NAME")
+	(property_list [aws_proj2_ProjectKB_Instance_10136])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([aws_proj2_ProjectKB_Instance_10136] of  Property_List
+
+	(properties [aws_proj2_ProjectKB_Instance_10137]))
+
+([aws_proj2_ProjectKB_Instance_10137] of  Boolean
+
+	(boolean_value TRUE)
+	(name "DisabledByUser"))
+
+([aws_proj2_ProjectKB_Instance_10138] of  Property_List
+
+	(name "layout properties")
+	(properties
+		[aws_proj2_ProjectKB_Instance_10139]
+		[aws_proj2_ProjectKB_Instance_10140]))
+
+([aws_proj2_ProjectKB_Instance_10139] of  String
+
+	(name "horizontal_stretcher")
+	(string_value "<<all>>"))
+
+([aws_proj2_ProjectKB_Instance_10140] of  String
+
+	(name "vertical_stretcher")
+	(string_value "<<none>>"))
+
+([aws_proj2_ProjectKB_Instance_10141] of  Widget
+
+	(height 180)
+	(is_hidden FALSE)
+	(name "protege:inferredType")
+	(property_list [aws_proj2_ProjectKB_Instance_10142])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.HeaderWidget")
+	(width 550)
+	(x 0)
+	(y 0))
+
+([aws_proj2_ProjectKB_Instance_10142] of  Property_List
+
+	(properties [aws_proj2_ProjectKB_Instance_10143]))
+
+([aws_proj2_ProjectKB_Instance_10143] of  Boolean
+
+	(boolean_value FALSE)
+	(name "DisabledByUser"))
+
+([aws_proj2_ProjectKB_Instance_10144] of  Widget
+
+	(is_hidden FALSE)
+	(name "owl:versionInfo")
+	(property_list [aws_proj2_ProjectKB_Instance_10145]))
+
+([aws_proj2_ProjectKB_Instance_10145] of  Property_List
+)
+
+([aws_proj2_ProjectKB_Instance_10146] of  Widget
+
+	(is_hidden FALSE)
+	(name "rdfs:isDefinedBy")
+	(property_list [aws_proj2_ProjectKB_Instance_10147]))
+
+([aws_proj2_ProjectKB_Instance_10147] of  Property_List
+)
+
+([aws_proj2_ProjectKB_Instance_10148] of  Widget
+
+	(is_hidden FALSE)
+	(name "rdfs:comment")
+	(property_list [aws_proj2_ProjectKB_Instance_10149]))
+
+([aws_proj2_ProjectKB_Instance_10149] of  Property_List
+)
+
+([aws_proj2_ProjectKB_Instance_10150] of  Widget
+
+	(is_hidden FALSE)
+	(name "rdfs:seeAlso")
+	(property_list [aws_proj2_ProjectKB_Instance_10151]))
+
+([aws_proj2_ProjectKB_Instance_10151] of  Property_List
+)
+
+([aws_proj2_ProjectKB_Instance_10152] of  Widget
+
+	(is_hidden FALSE)
+	(name "rdfs:label")
+	(property_list [aws_proj2_ProjectKB_Instance_10153]))
+
+([aws_proj2_ProjectKB_Instance_10153] of  Property_List
+)
+
+([aws_proj2_ProjectKB_Instance_10154] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "isProducerOf")
+	(property_list [aws_proj2_ProjectKB_Instance_10155])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.MultiResourceWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([aws_proj2_ProjectKB_Instance_10155] of  Property_List
+)
+
+([aws_proj2_ProjectKB_Instance_10524] of  Widget
+
+	(is_hidden FALSE)
+	(name "isAuthorOf")
+	(property_list [aws_proj2_ProjectKB_Instance_10525]))
+
+([aws_proj2_ProjectKB_Instance_10525] of  Property_List
+)
+
+([aws_proj2_ProjectKB_Instance_40] of  String
 
 	(name "owl:Class")
 	(string_value "%3ANAME"))
 
-([aws_proj2_ProjectKB_Instance_10073] of  String
+([aws_proj2_ProjectKB_Instance_41] of  String
+
+	(name "Actor")
+	(string_value "rdfs%3Alabel"))
+
+([aws_proj2_ProjectKB_Instance_42] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([aws_proj2_ProjectKB_Instance_10074] of  String
+([aws_proj2_ProjectKB_Instance_43] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([aws_proj2_ProjectKB_Instance_10075] of  String
+([aws_proj2_ProjectKB_Instance_44] of  String
+
+	(name "Artist")
+	(string_value "isPerformedBy"))
+
+([aws_proj2_ProjectKB_Instance_45] of  String
 
 	(name "owl:Thing")
 	(string_value "%3ANAME"))
 
-([aws_proj2_ProjectKB_Instance_10076] of  String
+([aws_proj2_ProjectKB_Instance_46] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([aws_proj2_ProjectKB_Instance_10077] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_47] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([aws_proj2_ProjectKB_Instance_10078] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_48] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([aws_proj2_ProjectKB_Instance_10079] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_49] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
@@ -79,7 +224,8 @@
 		[aws_proj2_ProjectKB_Instance_80]
 		[aws_proj2_ProjectKB_Instance_82]
 		[aws_proj2_ProjectKB_Instance_84]
-		[aws_proj2_ProjectKB_Instance_86]))
+		[aws_proj2_ProjectKB_Instance_86]
+		[aws_proj2_ProjectKB_Instance_10524]))
 
 ([aws_proj2_ProjectKB_Instance_63] of  Widget
 
@@ -228,13 +374,13 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[aws_proj2_ProjectKB_Instance_10070]
-		[aws_proj2_ProjectKB_Instance_10071]
-		[aws_proj2_ProjectKB_Instance_10072]
-		[aws_proj2_ProjectKB_Instance_10073]
-		[aws_proj2_ProjectKB_Instance_10074]
-		[aws_proj2_ProjectKB_Instance_10075]
-		[aws_proj2_ProjectKB_Instance_10076]))
+		[aws_proj2_ProjectKB_Instance_40]
+		[aws_proj2_ProjectKB_Instance_41]
+		[aws_proj2_ProjectKB_Instance_42]
+		[aws_proj2_ProjectKB_Instance_43]
+		[aws_proj2_ProjectKB_Instance_44]
+		[aws_proj2_ProjectKB_Instance_45]
+		[aws_proj2_ProjectKB_Instance_46]))
 
 ([CLSES_TAB] of  Widget
 
@@ -484,15 +630,15 @@
 
 ([KB_100699_Instance_0] of  Widget
 
-	(height 360)
+	(height 367)
 	(is_hidden FALSE)
 	(label "Class Annotations")
 	(name "owl:equivalentClass")
 	(property_list [KB_100699_Instance_1])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
-	(width 650)
+	(width 660)
 	(x 0)
-	(y 130))
+	(y 133))
 
 ([KB_100699_Instance_1] of  Property_List
 
@@ -518,13 +664,13 @@
 
 ([KB_100699_Instance_2] of  Widget
 
-	(height 360)
+	(height 367)
 	(is_hidden FALSE)
 	(label "Logic View")
 	(name ":DIRECT-TEMPLATE-SLOTS")
 	(property_list [KB_100699_Instance_3])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
-	(width 650)
+	(width 660)
 	(x 0)
 	(y 0))
 
@@ -536,37 +682,37 @@
 
 ([KB_100699_Instance_4] of  Widget
 
-	(height 211)
+	(height 213)
 	(is_hidden FALSE)
 	(label "Conditions")
 	(name ":DIRECT-SUPERCLASSES")
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
-	(width 640)
+	(width 650)
 	(x 5)
 	(y 5))
 
 ([KB_100699_Instance_5] of  Widget
 
-	(height 137)
+	(height 142)
 	(is_hidden FALSE)
 	(label "Disjoints")
 	(name "owl:disjointWith")
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
-	(width 650)
+	(width 660)
 	(x 0)
-	(y 223))
+	(y 225))
 
 ([KB_100699_Instance_6] of  Widget
 
-	(height -36)
+	(height -28)
 	(is_hidden FALSE)
 	(label "Properties View")
 	(name ":DIRECT-SUPERCLASSES")
 	(property_list [KB_100699_Instance_7])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
-	(width -14)
-	(x 7)
-	(y 28))
+	(width -5)
+	(x 2)
+	(y 25))
 
 ([KB_100699_Instance_7] of  Property_List
 
@@ -962,9 +1108,9 @@
 ([KB_435622_Instance_0] of  Map
 
 	(entries
-		[aws_proj2_ProjectKB_Instance_10077]
-		[aws_proj2_ProjectKB_Instance_10078]
-		[aws_proj2_ProjectKB_Instance_10079]))
+		[aws_proj2_ProjectKB_Instance_47]
+		[aws_proj2_ProjectKB_Instance_48]
+		[aws_proj2_ProjectKB_Instance_49]))
 
 ([KB_435622_Instance_10] of  Widget
 
@@ -5789,6 +5935,7 @@
 	(customized_instance_widgets
 		[STANDARD_SLOT_FORM_WIDGET]
 		[KB_713803_Instance_693]
+		[aws_proj2_ProjectKB_Instance_59]
 		[KB_313796_Instance_943]
 		[STANDARD_CLASS_FORM_WIDGET]
 		[KB_713803_Instance_303]
@@ -5798,7 +5945,6 @@
 		[Instance_581]
 		[KB_764103_Instance_545]
 		[KB_713803_Instance_390]
-		[aws_proj2_ProjectKB_Instance_59]
 		[KB_938545_Instance_329]
 		[Instance_443]
 		[PAL_FORM_WIDGET]
@@ -5808,6 +5954,7 @@
 		[KB_713803_Instance_477]
 		[KB_691299_Instance_398]
 		[STANDARD_FACET_FORM_WIDGET]
+		[aws_proj2_ProjectKB_Instance_10131]
 		[KB_301165_Instance_856]
 		[KB_938545_Instance_661]
 		[KB_691299_Instance_537]
@@ -5836,15 +5983,14 @@
 		"rdfs:member"
 		"protege:inferredSuperclassOf"
 		"xsd:base64Binary"
-		"owl:Class"
 		"rdfs:Container"
 		"owl:Ontology"
 		":TO"
 		"xsd:gMonthDay"
 		"owl:DataRange"
 		"xsd:NMTOKEN"
-		"xsd:QName"
 		"xsd:unsignedInt"
+		"xsd:QName"
 		"owl:FunctionalProperty"
 		"xsd:long"
 		"owl:onProperty"
@@ -5863,14 +6009,13 @@
 		"xsd:unsignedLong"
 		"xsd:unsignedByte"
 		"protege:inferredSubclassOf"
-		"rdfs:Class"
 		"rdf:first"
 		"xsd:short"
 		"rdf:List"
 		"rdf:predicate"
 		"owl:hasValue"
-		"xsd:double"
 		"rdf:rest"
+		"xsd:double"
 		"xsd:decimal"
 		"rdf:subject"
 		"owl:sameAs"

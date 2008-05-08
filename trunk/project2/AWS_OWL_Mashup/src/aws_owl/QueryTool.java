@@ -13,7 +13,7 @@ public class QueryTool {
 		AwsHandler ah = new AwsHandler();
 		
 		TripleLoader t = new TripleLoader();
-		Document doc = ah.query("mariah carey", AwsHandler.DVD);
+		Document doc = ah.query("mariah carey", AwsHandler.BOOK);
 		t.Load(doc);
 		
 	}
