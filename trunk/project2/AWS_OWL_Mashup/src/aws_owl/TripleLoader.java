@@ -50,6 +50,7 @@ public class TripleLoader {
 	Property isPerformerIn;
 	Property isAuthorOf;
 	Property hasTitle;
+	Property isConnectedTo;
 	OntModel model;
 	Resource Author;
 	Resource Artist;
@@ -118,6 +119,7 @@ public class TripleLoader {
         for(int i=0; i<subjects.length; i++)
         {
                 model.add(subjects[i], p, product);
+                if(i != 0) model.add(subjects[0], isConnectedTo, subjects[i]);
                 //model.add(subjects[i], RDF.type, model.getResource(aws+agentCategory));
         }
 	}
@@ -167,6 +169,7 @@ public class TripleLoader {
 		isPerformerIn = model.getProperty(aws, "isPerformerIn");
 		isAuthorOf = model.getProperty(aws,"isAuthorOf");
 		hasTitle = model.getProperty(aws,"hasTitle");
+		isConnectedTo = model.getProperty(aws,"isConntectedTo");
 	}
 	
 	private void Inferencer()
