@@ -9,7 +9,10 @@ package aws_owl;
 import com.hp.hpl.jena.query.QueryParseException;
 import java.awt.FileDialog;
 import javax.swing.JOptionPane;
+import javax.swing.text.Caret;
 import org.w3c.dom.*;
+import java.util.ArrayList;
+import javax.swing.text.BadLocationException;
 
 /**
  *
@@ -19,7 +22,8 @@ public class UserInterface extends javax.swing.JFrame {
     
     AwsHandler awsHandler = new AwsHandler();		
     TripleLoader tripleLoader = new TripleLoader();
-        
+    boolean adding = true;
+    
     /** Creates new form UserInterface */
     public UserInterface() {
         initComponents();
@@ -27,6 +31,14 @@ public class UserInterface extends javax.swing.JFrame {
         awsSearchType.addItem(new AWSSearchType(AWSSearchType.DVD));
         awsSearchType.addItem(new AWSSearchType(AWSSearchType.MUSIC));
         awsSearchTypeLabel.setText(((AWSSearchType)awsSearchType.getSelectedItem()).getSearchSubject());
+        awsPropertyList.removeAllItems();
+        awsPropertyList.addItem("aws:hasName");
+        awsPropertyList.addItem("aws:hasTitle");
+        awsPropertyList.addItem("aws:isAuthorOf");
+        awsPropertyList.addItem("aws:isPerformerIn");
+        awsPropertyList.addItem("aws:isWrittenBy");
+        awsPropertyList.addItem("aws:isPerformedBy");
+        awsPropertyList.addItem("aws:isConnectedTo");
     }
     
     /** This method is called from within the constructor to
@@ -42,9 +54,12 @@ public class UserInterface extends javax.swing.JFrame {
         awsAddButton = new javax.swing.JButton();
         awsSearchTypeLabel = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        SPARQLQueryButton = new javax.swing.JButton();
+        awsAgentList = new javax.swing.JComboBox();
+        awsProductList = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         SPARQLQueryTextArea = new javax.swing.JTextArea();
-        SPARQLQueryButton = new javax.swing.JButton();
+        awsPropertyList = new javax.swing.JComboBox();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         outputTextArea = new javax.swing.JTextArea();
@@ -57,7 +72,7 @@ public class UserInterface extends javax.swing.JFrame {
         modelClearMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Justin Wruz & Phelps Williams CS431 Project 2");
+        setTitle("Justin Choi & Phelps Williams CS431 Project 2");
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("AWS Query"));
         awsSearchType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,14 +97,14 @@ public class UserInterface extends javax.swing.JFrame {
                 .addContainerGap()
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel1Layout.createSequentialGroup()
-                        .add(awsSearchTextBox, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
+                        .add(awsSearchTextBox, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(awsSearchType, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(awsAddButton)
                         .addContainerGap())
                     .add(jPanel1Layout.createSequentialGroup()
-                        .add(awsSearchTypeLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                        .add(awsSearchTypeLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
                         .add(422, 422, 422))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -105,11 +120,6 @@ public class UserInterface extends javax.swing.JFrame {
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("SPARQL Query"));
-        SPARQLQueryTextArea.setColumns(20);
-        SPARQLQueryTextArea.setRows(5);
-        SPARQLQueryTextArea.setText("PREFIX aws: <http://www.owl-ontologies.com/Ontology1209425965.owl#>\nSELECT DISTINCT ?x \nWHERE {?x aws:hasName 'Sid Haig'.}");
-        jScrollPane1.setViewportView(SPARQLQueryTextArea);
-
         SPARQLQueryButton.setText("Query");
         SPARQLQueryButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,23 +127,64 @@ public class UserInterface extends javax.swing.JFrame {
             }
         });
 
+        awsAgentList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                awsAgentListActionPerformed(evt);
+            }
+        });
+
+        awsProductList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                awsProductListActionPerformed(evt);
+            }
+        });
+
+        SPARQLQueryTextArea.setColumns(20);
+        SPARQLQueryTextArea.setRows(5);
+        SPARQLQueryTextArea.setText("PREFIX aws: <http://www.owl-ontologies.com/Ontology1209425965.owl#>\nSELECT DISTINCT ?x \nWHERE {?x aws:hasName 'Sid Haig'.}");
+        jScrollPane1.setViewportView(SPARQLQueryTextArea);
+
+        awsPropertyList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                awsPropertyListActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
-                    .add(SPARQLQueryButton))
+            .add(jPanel2Layout.createSequentialGroup()
+                .add(17, 17, 17)
+                .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                        .add(SPARQLQueryButton)
+                        .add(jPanel2Layout.createSequentialGroup()
+                            .add(awsAgentList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 146, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(21, 21, 21)
+                            .add(awsPropertyList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 178, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(24, 24, 24)
+                            .add(awsProductList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 173, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 569, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
+
+        jPanel2Layout.linkSize(new java.awt.Component[] {awsAgentList, awsProductList}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
+
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel2Layout.createSequentialGroup()
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .addContainerGap(169, Short.MAX_VALUE)
                 .add(SPARQLQueryButton))
+            .add(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(20, 20, 20)
+                .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(awsAgentList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(awsProductList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(awsPropertyList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -145,11 +196,11 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
+            .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 607, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
+            .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
         );
 
         fileMenu.setText("File");
@@ -203,9 +254,9 @@ public class UserInterface extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 623, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -215,13 +266,44 @@ public class UserInterface extends javax.swing.JFrame {
                 .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(23, 23, 23)
                 .add(jPanel3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(20, 20, 20))
+                .addContainerGap())
         );
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void awsPropertyListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_awsPropertyListActionPerformed
+// TODO add your handling code here:
+        try{
+        Caret pos = SPARQLQueryTextArea.getCaret();
+        if(!adding)
+            SPARQLQueryTextArea.getDocument().insertString(pos.getDot(), (String)awsPropertyList.getSelectedItem(), null);
+        }
+        catch(BadLocationException e) {}
+    }//GEN-LAST:event_awsPropertyListActionPerformed
+
+    private void awsProductListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_awsProductListActionPerformed
+// TODO add your handling code here:
+        try{
+        Caret pos = SPARQLQueryTextArea.getCaret();
+        if(!adding)
+            SPARQLQueryTextArea.getDocument().insertString(pos.getDot(), "<"+TripleLoader.aws + Utility.forURL((String)awsProductList.getSelectedItem()) + ">", null);
+        }
+        catch(BadLocationException e) {}
+    }//GEN-LAST:event_awsProductListActionPerformed
+
+    private void awsAgentListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_awsAgentListActionPerformed
+        try{
+        Caret pos = SPARQLQueryTextArea.getCaret();
+        if(!adding)
+            SPARQLQueryTextArea.getDocument().insertString(pos.getDot(), "<"+TripleLoader.aws + Utility.forURL((String)awsAgentList.getSelectedItem()) + ">", null);
+        }
+        catch(BadLocationException e) {}
+    }//GEN-LAST:event_awsAgentListActionPerformed
+
+
+    
     private void modelClearMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelClearMenuItemActionPerformed
         tripleLoader.initializeModel();
     }//GEN-LAST:event_modelClearMenuItemActionPerformed
@@ -284,6 +366,27 @@ public class UserInterface extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(null, "Error in AWS response");
         }
+        
+        // Populate the dropdowns
+        ArrayList<String> agents = tripleLoader.populate("agent");
+        ArrayList<String> products = tripleLoader.populate("product");
+        int i;
+        adding = true;
+        awsAgentList.removeAllItems();
+        awsProductList.removeAllItems();
+        
+        for(i = 0; i < Math.max(agents.size(), products.size()); i++)
+        {
+            if(i < agents.size()) {
+                awsAgentList.addItem(agents.get(i));
+                System.out.println("Agent "+agents.get(i));
+            }
+            if(i < products.size()) {
+                awsProductList.addItem(products.get(i));
+                System.out.println("Product "+products.get(i));
+            }
+        }
+        adding = false;
     }//GEN-LAST:event_awsAddButtonActionPerformed
 
     private void fileMenuExitItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileMenuExitItemActionPerformed
@@ -314,6 +417,9 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JButton SPARQLQueryButton;
     private javax.swing.JTextArea SPARQLQueryTextArea;
     private javax.swing.JButton awsAddButton;
+    private javax.swing.JComboBox awsAgentList;
+    private javax.swing.JComboBox awsProductList;
+    private javax.swing.JComboBox awsPropertyList;
     private javax.swing.JTextField awsSearchTextBox;
     private javax.swing.JComboBox awsSearchType;
     private javax.swing.JLabel awsSearchTypeLabel;

@@ -38,11 +38,11 @@ public class AWSSearchType
     public String getSearchSubject()
     {
         if(type == BOOK)
-            return "Author";
+            return "Authors or Books";
         else if(type == DVD)
-            return "Actor";
+            return "Actors or DVDs";
         else if(type == MUSIC)
-            return "Artist";
+            return "Artists or CDs";
         else
             return "Unknown";
     }

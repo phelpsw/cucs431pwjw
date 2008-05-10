@@ -55,7 +55,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Justin Wruz &amp; Phelps Williams CS431 Project 2"/>
+    <Property name="title" type="java.lang.String" value="Justin Choi &amp; Phelps Williams CS431 Project 2"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
@@ -75,9 +75,9 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
                   <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel2" alignment="0" pref="623" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -90,9 +90,9 @@
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Component id="jPanel3" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -114,7 +114,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="awsSearchTextBox" pref="307" max="32767" attributes="0"/>
+                          <Component id="awsSearchTextBox" pref="422" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="awsSearchType" min="-2" pref="102" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -122,7 +122,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="awsSearchTypeLabel" pref="92" max="32767" attributes="0"/>
+                          <Component id="awsSearchTypeLabel" pref="175" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="422" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -184,11 +184,20 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jScrollPane1" alignment="0" pref="494" max="32767" attributes="0"/>
-                      <Component id="SPARQLQueryButton" alignment="1" min="-2" max="-2" attributes="0"/>
+              <Group type="102" max="-2" attributes="0">
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="SPARQLQueryButton" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="awsAgentList" linkSize="2" min="-2" pref="146" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="awsPropertyList" min="-2" pref="178" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <Component id="awsProductList" linkSize="2" min="-2" pref="173" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="jScrollPane1" alignment="1" min="-2" pref="569" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -197,14 +206,52 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="jScrollPane1" pref="101" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace pref="169" max="32767" attributes="0"/>
                   <Component id="SPARQLQueryButton" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="awsAgentList" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="awsProductList" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="awsPropertyList" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="47" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
+        <Component class="javax.swing.JButton" name="SPARQLQueryButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Query"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SPARQLQueryButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="awsAgentList">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="awsAgentListActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="awsProductList">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="awsProductListActionPerformed"/>
+          </Events>
+        </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -221,12 +268,14 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="SPARQLQueryButton">
+        <Component class="javax.swing.JComboBox" name="awsPropertyList">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Query"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SPARQLQueryButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="awsPropertyListActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -243,12 +292,12 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jScrollPane2" alignment="0" pref="534" max="32767" attributes="0"/>
+              <Component id="jScrollPane2" alignment="0" pref="607" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jScrollPane2" alignment="0" pref="181" max="32767" attributes="0"/>
+              <Component id="jScrollPane2" alignment="0" pref="195" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
