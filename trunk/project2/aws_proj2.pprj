@@ -1,7 +1,12 @@
-; Fri May 09 19:15:41 EDT 2008
+; Fri May 09 20:12:26 EDT 2008
 ; 
 ;+ (version "3.4")
 ;+ (build "Build 130")
+
+([aws_proj2_ProjectKB_Instance_10] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
 
 ([aws_proj2_ProjectKB_Instance_10131] of  Widget
 
@@ -148,61 +153,36 @@
 ([aws_proj2_ProjectKB_Instance_10525] of  Property_List
 )
 
-([aws_proj2_ProjectKB_Instance_35] of  String
-
-	(name "Actor")
-	(string_value "rdfs%3Alabel"))
-
-([aws_proj2_ProjectKB_Instance_36] of  String
-
-	(name "Artist")
-	(string_value "isPerformedBy"))
-
-([aws_proj2_ProjectKB_Instance_37] of  String
-
-	(name "owl:Class")
-	(string_value "%3ANAME"))
-
-([aws_proj2_ProjectKB_Instance_38] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([aws_proj2_ProjectKB_Instance_39] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([aws_proj2_ProjectKB_Instance_40] of  String
-
-	(name "owl:Thing")
-	(string_value "%3ANAME"))
-
-([aws_proj2_ProjectKB_Instance_41] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([aws_proj2_ProjectKB_Instance_42] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_11] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([aws_proj2_ProjectKB_Instance_43] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_12] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([aws_proj2_ProjectKB_Instance_44] of  Map_Entry
+([aws_proj2_ProjectKB_Instance_13] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
+
+([aws_proj2_ProjectKB_Instance_4] of  String
+
+	(name "Actor")
+	(string_value "rdfs%3Alabel"))
+
+([aws_proj2_ProjectKB_Instance_5] of  String
+
+	(name "owl:Class")
+	(string_value "%3ANAME"))
 
 ([aws_proj2_ProjectKB_Instance_59] of  Widget
 
@@ -210,6 +190,11 @@
 	(name "Artist")
 	(property_list [aws_proj2_ProjectKB_Instance_62])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget"))
+
+([aws_proj2_ProjectKB_Instance_6] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
 
 ([aws_proj2_ProjectKB_Instance_62] of  Property_List
 
@@ -275,6 +260,11 @@
 	(x 0)
 	(y 0))
 
+([aws_proj2_ProjectKB_Instance_7] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
 ([aws_proj2_ProjectKB_Instance_70] of  Property_List
 
 	(properties [aws_proj2_ProjectKB_Instance_71]))
@@ -319,6 +309,11 @@
 
 ([aws_proj2_ProjectKB_Instance_79] of  Property_List
 )
+
+([aws_proj2_ProjectKB_Instance_8] of  String
+
+	(name "Artist")
+	(string_value "isPerformedBy"))
 
 ([aws_proj2_ProjectKB_Instance_80] of  Widget
 
@@ -371,16 +366,21 @@
 ([aws_proj2_ProjectKB_Instance_87] of  Property_List
 )
 
+([aws_proj2_ProjectKB_Instance_9] of  String
+
+	(name "owl:Thing")
+	(string_value "%3ANAME"))
+
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[aws_proj2_ProjectKB_Instance_35]
-		[aws_proj2_ProjectKB_Instance_36]
-		[aws_proj2_ProjectKB_Instance_37]
-		[aws_proj2_ProjectKB_Instance_38]
-		[aws_proj2_ProjectKB_Instance_39]
-		[aws_proj2_ProjectKB_Instance_40]
-		[aws_proj2_ProjectKB_Instance_41]))
+		[aws_proj2_ProjectKB_Instance_4]
+		[aws_proj2_ProjectKB_Instance_5]
+		[aws_proj2_ProjectKB_Instance_6]
+		[aws_proj2_ProjectKB_Instance_7]
+		[aws_proj2_ProjectKB_Instance_8]
+		[aws_proj2_ProjectKB_Instance_9]
+		[aws_proj2_ProjectKB_Instance_10]))
 
 ([CLSES_TAB] of  Widget
 
@@ -1108,9 +1108,9 @@
 ([KB_435622_Instance_0] of  Map
 
 	(entries
-		[aws_proj2_ProjectKB_Instance_42]
-		[aws_proj2_ProjectKB_Instance_43]
-		[aws_proj2_ProjectKB_Instance_44]))
+		[aws_proj2_ProjectKB_Instance_11]
+		[aws_proj2_ProjectKB_Instance_12]
+		[aws_proj2_ProjectKB_Instance_13]))
 
 ([KB_435622_Instance_10] of  Widget
 
@@ -3596,6 +3596,9 @@
 ([KB_713803_Instance_981] of  Property_List
 )
 
+([KB_734710_Instance_3] of  Map
+)
+
 ([KB_764103_Instance_545] of  Widget
 
 	(is_hidden FALSE)
@@ -3646,9 +3649,6 @@
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormsTab"))
 
 ([KB_865583_Instance_9] of  Property_List
-)
-
-([KB_867343_Instance_3] of  Map
 )
 
 ([KB_868747_Instance_76] of  Widget
@@ -5937,21 +5937,21 @@
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
 		[STANDARD_SLOT_FORM_WIDGET]
+		[aws_proj2_ProjectKB_Instance_10131]
 		[KB_713803_Instance_693]
 		[KB_313796_Instance_943]
-		[KB_713803_Instance_303]
 		[STANDARD_CLASS_FORM_WIDGET]
+		[KB_713803_Instance_303]
 		[KB_313796_Instance_852]
 		[Instance_1005]
-		[Instance_581]
 		[KB_301165_Instance_1013]
+		[Instance_581]
 		[KB_764103_Instance_545]
 		[KB_713803_Instance_390]
-		[aws_proj2_ProjectKB_Instance_59]
 		[KB_938545_Instance_329]
-		[aws_proj2_ProjectKB_Instance_10131]
 		[Instance_443]
 		[PAL_FORM_WIDGET]
+		[aws_proj2_ProjectKB_Instance_59]
 		[KB_465546_Instance_567]
 		[KB_303942_Instance_68]
 		[KB_713803_Instance_780]
@@ -5988,12 +5988,12 @@
 		"xsd:base64Binary"
 		"rdfs:Container"
 		"owl:Ontology"
-		"owl:DataRange"
-		"xsd:gMonthDay"
 		":TO"
+		"xsd:gMonthDay"
+		"owl:DataRange"
 		"xsd:NMTOKEN"
-		"xsd:QName"
 		"xsd:unsignedInt"
+		"xsd:QName"
 		"owl:FunctionalProperty"
 		"xsd:long"
 		"owl:onProperty"
@@ -6021,40 +6021,40 @@
 		"xsd:double"
 		"xsd:decimal"
 		"rdf:subject"
-		"owl:SymmetricProperty"
-		"rdf:value"
-		"xsd:Name"
 		"owl:sameAs"
+		"xsd:Name"
+		"rdf:value"
+		"owl:SymmetricProperty"
 		"xsd:byte"
-		"owl:AllDifferent"
 		"owl:differentFrom"
-		"owl:Nothing"
+		"owl:AllDifferent"
 		"rdf:Property"
-		"owl:InverseFunctionalProperty"
+		"owl:Nothing"
 		"owl:cardinality"
+		"owl:InverseFunctionalProperty"
 		"xsd:nonNegativeInteger"
 		"rdf:Statement"
 		":FROM"
-		"xsd:anySimpleType"
 		"owl:disjointWith"
+		"xsd:anySimpleType"
 		"owl:minCardinality"
 		"xsd:ID"
 		"xsd:gDay"
 		"xsd:gYearMonth"
-		"owl:distinctMembers"
 		"xsd:NCName"
+		"owl:distinctMembers"
 		"xsd:nonPositiveInteger"
 		"rdfs:Datatype"
-		"owl:TransitiveProperty"
-		"xsd:token"
 		":DIRECTED-BINARY-RELATION"
-		"xsd:normalizedString"
-		"xsd:ENTITY"
+		"xsd:token"
+		"owl:TransitiveProperty"
 		"xsd:IDREF"
+		"xsd:ENTITY"
+		"xsd:normalizedString"
 		"xsd:gMonth"
-		"owl:maxCardinality"
-		"owl:oneOf"
 		"rdf:type"
+		"owl:oneOf"
+		"owl:maxCardinality"
 		"rdf:object")
 	(journaling_enabled FALSE)
 	(next_frame_number 0)
