@@ -44,7 +44,7 @@ import org.xml.sax.SAXException;
 public class TripleLoader 
 {
     static String aws = "http://www.owl-ontologies.com/Ontology1209425965.owl#";
-    Resource subj;
+    OntModel model;
     Property isWrittenBy;
     Property isPerformedBy;
     Property isPerformerIn;
@@ -52,12 +52,16 @@ public class TripleLoader
     Property hasTitle;
     Property isConnectedTo;
     Property hasName;
-    OntModel model;
     Resource Author;
     Resource Artist;
     Resource DVD;
 
     public TripleLoader()
+    {
+        initializeModel();
+    }
+    
+    public void initializeModel()
     {
         model = ModelFactory.createOntologyModel(PelletReasonerFactory.THE_SPEC);
         loadOntology();
@@ -149,7 +153,7 @@ public class TripleLoader
         return subjects;
     }
 
-    private void writeToFile(Model model, String filename)
+    public void writeToFile(String filename)
     {
         try{
             OutputStream out = new FileOutputStream(filename);
@@ -184,10 +188,19 @@ public class TripleLoader
         hasName = model.getProperty(aws,"hasName");
     }
 
-    private void validateOntology()
+    public String validateOntology()
     {
         ValidityReport report = model.validate();
-        printIterator( report.getReports(), "Validation Results" );	
+        
+        if(report.isClean() && report.isValid())
+        {
+            return "Ontology is Clean and Valid\n";
+        } else {
+            String header = "Validation Error Information\n";
+            header += "Clean: " + report.isClean() + " Valid: " + report.isValid();
+            return stringFormatIterator(report.getReports(), header);
+        }
+        //printIterator( report.getReports(), "Validation Results" );	
         /*
         ExtendedIterator iterator = model.listIndividuals();
         while(iterator.hasNext())
@@ -199,21 +212,24 @@ public class TripleLoader
         */
     }
 
-    public static void printIterator(Iterator i, String header) 
+    public String stringFormatIterator(Iterator i, String header) 
     {
-        System.out.println(header);
+        String output="";
+        output += header + "\n";
         for(int c = 0; c < header.length(); c++)
-            System.out.print("=");
-        System.out.println();
+            output += "=";
+        output += "\n";
 
-        if(i.hasNext()) {
-                while (i.hasNext()) 
-                    System.out.println( i.next() );
-        }       
+        if(i.hasNext()) 
+        {
+            while (i.hasNext())
+                output += i.next() + "\n";
+        }
         else
-            System.out.println("<EMPTY>");
-
-        System.out.println();
+            output += "<EMPTY>\n";
+        output += "\n";
+        
+        return output;
     }
 
     public String runQuery(String queryString)
