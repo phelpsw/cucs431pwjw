@@ -112,6 +112,9 @@
               <StringArray count="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="awsSearchTypeActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="awsSearchTextBox">
         </Component>
@@ -174,6 +177,7 @@
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="PREFIX aws: &lt;http://www.owl-ontologies.com/Ontology1209425965.owl#&gt;&#xa;SELECT DISTINCT ?x &#xa;WHERE {?x aws:hasName &apos;Sid Haig&apos;.}"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -182,6 +186,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Query"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SPARQLQueryButtonActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

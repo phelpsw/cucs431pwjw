@@ -35,6 +35,18 @@ public class AWSSearchType
         return type;
     }
     
+    public String getSearchSubject()
+    {
+        if(type == BOOK)
+            return "Author";
+        else if(type == DVD)
+            return "Actor";
+        else if(type == MUSIC)
+            return "Artist";
+        else
+            return "Unknown";
+    }
+    
     public String toString()
     {
         if(type == BOOK)
