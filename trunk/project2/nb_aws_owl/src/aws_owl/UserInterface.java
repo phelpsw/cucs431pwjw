@@ -71,6 +71,7 @@ public class UserInterface extends javax.swing.JFrame {
         fileMenuExitItem = new javax.swing.JMenuItem();
         modelMenu = new javax.swing.JMenu();
         modelValidateMenuItem = new javax.swing.JMenuItem();
+        modelLoadMenuItem = new javax.swing.JMenuItem();
         modelSaveMenuItem = new javax.swing.JMenuItem();
         modelClearMenuItem = new javax.swing.JMenuItem();
 
@@ -107,7 +108,7 @@ public class UserInterface extends javax.swing.JFrame {
                         .add(awsAddButton)
                         .addContainerGap())
                     .add(jPanel1Layout.createSequentialGroup()
-                        .add(awsSearchTypeLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                        .add(awsSearchTypeLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
                         .add(422, 422, 422))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -192,7 +193,7 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(175, Short.MAX_VALUE)
+                .addContainerGap(192, Short.MAX_VALUE)
                 .add(SPARQLQueryButton))
             .add(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
@@ -207,7 +208,7 @@ public class UserInterface extends javax.swing.JFrame {
                     .add(awsAgentList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(awsProductList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(awsPropertyList, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -219,7 +220,7 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 607, Short.MAX_VALUE)
+            .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -247,6 +248,15 @@ public class UserInterface extends javax.swing.JFrame {
         });
 
         modelMenu.add(modelValidateMenuItem);
+
+        modelLoadMenuItem.setText("Load");
+        modelLoadMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modelLoadMenuItemActionPerformed(evt);
+            }
+        });
+
+        modelMenu.add(modelLoadMenuItem);
 
         modelSaveMenuItem.setText("Save");
         modelSaveMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -279,7 +289,7 @@ public class UserInterface extends javax.swing.JFrame {
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 623, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -296,8 +306,14 @@ public class UserInterface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void modelLoadMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelLoadMenuItemActionPerformed
+        String filename = getFileLocation(FileDialog.LOAD);
+        if(filename == null)
+            return;
+        tripleLoader.readFromFile(filename);
+    }//GEN-LAST:event_modelLoadMenuItemActionPerformed
+
     private void awsPropertyListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_awsPropertyListActionPerformed
-// TODO add your handling code here:
         try{
         Caret pos = SPARQLQueryTextArea.getCaret();
         if(!adding)
@@ -307,7 +323,6 @@ public class UserInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_awsPropertyListActionPerformed
 
     private void awsProductListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_awsProductListActionPerformed
-// TODO add your handling code here:
         try{
         Caret pos = SPARQLQueryTextArea.getCaret();
         if(!adding)
@@ -332,7 +347,7 @@ public class UserInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_modelClearMenuItemActionPerformed
 
     private void modelSaveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelSaveMenuItemActionPerformed
-        String filename = getSaveFileLocation();
+        String filename = getFileLocation(FileDialog.SAVE);
         if(filename == null)
             return;
         tripleLoader.writeToFile(filename);
@@ -416,9 +431,9 @@ public class UserInterface extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_fileMenuExitItemActionPerformed
     
-    private String getSaveFileLocation()
+    private String getFileLocation(int type)
     {
-        FileDialog fd = new FileDialog(new javax.swing.JFrame(), "Save Model Location", FileDialog.SAVE);
+        FileDialog fd = new FileDialog(new javax.swing.JFrame(), "Save Model Location", type);
         fd.setFile("out.xml");
         fd.setDirectory(System.getProperty("user.dir"));
         fd.setVisible(true);
@@ -458,6 +473,7 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JMenuItem modelClearMenuItem;
+    private javax.swing.JMenuItem modelLoadMenuItem;
     private javax.swing.JMenu modelMenu;
     private javax.swing.JMenuItem modelSaveMenuItem;
     private javax.swing.JMenuItem modelValidateMenuItem;

@@ -155,6 +155,12 @@ public class TripleLoader
             ioe.printStackTrace();
         }
     }
+    
+    public void readFromFile(String filename)
+    {
+        Model in = FileManager.get().loadModel(filename);
+        model.add(in);
+    }
 
     private void loadOntology()
     {
