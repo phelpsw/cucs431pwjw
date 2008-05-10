@@ -6,6 +6,8 @@
 
 package aws_owl;
 
+import com.hp.hpl.jena.query.QueryParseException;
+import javax.swing.JOptionPane;
 import org.w3c.dom.*;
 
 /**
@@ -23,6 +25,7 @@ public class UserInterface extends javax.swing.JFrame {
         awsSearchType.addItem(new AWSSearchType(AWSSearchType.BOOK));
         awsSearchType.addItem(new AWSSearchType(AWSSearchType.DVD));
         awsSearchType.addItem(new AWSSearchType(AWSSearchType.MUSIC));
+        awsSearchTypeLabel.setText(((AWSSearchType)awsSearchType.getSelectedItem()).getSearchSubject());
     }
     
     /** This method is called from within the constructor to
@@ -50,6 +53,11 @@ public class UserInterface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("AWS Query"));
+        awsSearchType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                awsSearchTypeActionPerformed(evt);
+            }
+        });
 
         awsSearchTypeLabel.setText(" ");
 
@@ -89,9 +97,15 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("SPARQL Query"));
         SPARQLQueryTextArea.setColumns(20);
         SPARQLQueryTextArea.setRows(5);
+        SPARQLQueryTextArea.setText("PREFIX aws: <http://www.owl-ontologies.com/Ontology1209425965.owl#>\nSELECT DISTINCT ?x \nWHERE {?x aws:hasName 'Sid Haig'.}");
         jScrollPane1.setViewportView(SPARQLQueryTextArea);
 
         SPARQLQueryButton.setText("Query");
+        SPARQLQueryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SPARQLQueryButtonActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -173,12 +187,53 @@ public class UserInterface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void awsSearchTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_awsSearchTypeActionPerformed
+        awsSearchTypeLabel.setText(((AWSSearchType)awsSearchType.getSelectedItem()).getSearchSubject());
+    }//GEN-LAST:event_awsSearchTypeActionPerformed
+
+    private void SPARQLQueryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SPARQLQueryButtonActionPerformed
+        String result;
+        if(SPARQLQueryTextArea.getText() == null)
+            return;
+        try
+        {
+            result = tripleLoader.runQuery(SPARQLQueryTextArea.getText());
+        } 
+        catch (QueryParseException qpe)
+        {
+            result = "Query Parse Exception: The syntax of your search string has errors.\n"+qpe.getMessage();
+            
+        }
+        SPARQLResultTextArea.setText(result);
+    }//GEN-LAST:event_SPARQLQueryButtonActionPerformed
+
     private void awsAddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_awsAddButtonActionPerformed
+        Document doc = null;
         
-        Document doc = awsHandler.query(
-                awsSearchTextBox.getText(), 
-                ((AWSSearchType)awsSearchType.getSelectedItem()).getType());
-        tripleLoader.Load(doc);
+        try {
+            doc = awsHandler.query(
+                    awsSearchTextBox.getText(), 
+                    (AWSSearchType)awsSearchType.getSelectedItem());
+        } 
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "Error in AWS query");
+        }
+        
+        if(doc == null)
+        {
+            JOptionPane.showMessageDialog(null, "Error in AWS query");
+            return;
+        }
+        
+        try
+        {
+            tripleLoader.load(doc, (AWSSearchType)awsSearchType.getSelectedItem());
+        } 
+        catch (TripleLoader.InvalidAWSResponseException e)
+        {
+            JOptionPane.showMessageDialog(null, "Error in AWS response");
+        }
     }//GEN-LAST:event_awsAddButtonActionPerformed
 
     private void fileMenuExitItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileMenuExitItemActionPerformed
