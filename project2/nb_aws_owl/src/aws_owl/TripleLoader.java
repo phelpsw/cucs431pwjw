@@ -1,49 +1,27 @@
 package aws_owl;
 
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.Iterator;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.mindswap.pellet.jena.PelletReasoner;
 import org.mindswap.pellet.jena.PelletReasonerFactory;
 import org.w3c.dom.*;
-
-import com.hp.hpl.jena.datatypes.RDFDatatype;
-import com.hp.hpl.jena.datatypes.TypeMapper;
 import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.ontology.ProfileRegistry;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.*;
-//import com.hp.hpl.jena.reasoner.Reasoner;
-import org.mindswap.pellet.owlapi.Reasoner;
-import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.reasoner.ValidityReport;
 import com.hp.hpl.jena.util.FileManager;
-import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.vocabulary.*;
-
-import org.xml.sax.SAXException;
+import java.util.ArrayList;
 
 public class TripleLoader 
 {
-    static String aws = "http://www.owl-ontologies.com/Ontology1209425965.owl#";
+    public static String aws = "http://www.owl-ontologies.com/Ontology1209425965.owl#";
     OntModel model;
     Property isWrittenBy;
     Property isPerformedBy;
@@ -55,6 +33,8 @@ public class TripleLoader
     Resource Author;
     Resource Artist;
     Resource DVD;
+    Resource BOOK;
+    Resource CD;
 
     public TripleLoader()
     {
@@ -102,6 +82,7 @@ public class TripleLoader
             case AWSSearchType.BOOK:
                 productCategory = "Book";
                 agentCategory = "Author";
+                model.add(product, RDF.type, BOOK);
                 p = isAuthorOf;
                 break;
             case AWSSearchType.DVD:
@@ -113,6 +94,7 @@ public class TripleLoader
             case AWSSearchType.MUSIC:
                 productCategory = "CD";
                 agentCategory = "Artist";
+                model.add(product, RDF.type, CD);
                 p = isPerformerIn;
                 break;
         }
@@ -184,8 +166,10 @@ public class TripleLoader
         isAuthorOf = model.getProperty(aws,"isAuthorOf");
         hasTitle = model.getProperty(aws,"hasTitle");
         isConnectedTo = model.getProperty(aws,"isConnectedTo");
-        DVD = model.getResource(aws+"DVD");
         hasName = model.getProperty(aws,"hasName");
+        DVD = model.getResource(aws+"DVD");
+        BOOK = model.getResource(aws+"Book");
+        CD = model.getResource(aws+"CD");
     }
 
     public String validateOntology()
@@ -254,5 +238,19 @@ public class TripleLoader
         {
         }
     }
-	
+    public ArrayList<String> populate(String type)
+    {
+        Property p = null;
+        if(type.equals("agent")) p = hasName;
+        else if (type.equals("product")) p = hasTitle;
+        NodeIterator iterator = model.listObjectsOfProperty(p);
+        ArrayList<String> list = new ArrayList<String>();
+        while(iterator.hasNext())
+        {
+            RDFNode n = iterator.nextNode();
+            list.add(n.toString());
+        }
+        return list;
+    }
+
 }
