@@ -7,6 +7,7 @@
 package aws_owl;
 
 import com.hp.hpl.jena.query.QueryParseException;
+import java.awt.FileDialog;
 import javax.swing.JOptionPane;
 import org.w3c.dom.*;
 
@@ -38,28 +39,31 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         awsSearchType = new javax.swing.JComboBox();
         awsSearchTextBox = new javax.swing.JTextField();
-        awsSearchTypeLabel = new javax.swing.JLabel();
         awsAddButton = new javax.swing.JButton();
+        awsSearchTypeLabel = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         SPARQLQueryTextArea = new javax.swing.JTextArea();
         SPARQLQueryButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        SPARQLResultTextArea = new javax.swing.JTextArea();
+        outputTextArea = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         fileMenuExitItem = new javax.swing.JMenuItem();
+        modelMenu = new javax.swing.JMenu();
+        modelValidateMenuItem = new javax.swing.JMenuItem();
+        modelSaveMenuItem = new javax.swing.JMenuItem();
+        modelClearMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Justin Wruz & Phelps Williams CS431 Project 2");
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("AWS Query"));
         awsSearchType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 awsSearchTypeActionPerformed(evt);
             }
         });
-
-        awsSearchTypeLabel.setText(" ");
 
         awsAddButton.setText("Add");
         awsAddButton.addActionListener(new java.awt.event.ActionListener() {
@@ -68,30 +72,36 @@ public class UserInterface extends javax.swing.JFrame {
             }
         });
 
+        awsSearchTypeLabel.setText(" ");
+
         org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .add(awsSearchTypeLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(awsSearchTextBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 205, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(awsSearchType, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(awsAddButton)
-                .addContainerGap())
+                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanel1Layout.createSequentialGroup()
+                        .add(awsSearchTextBox, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(awsSearchType, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(awsAddButton)
+                        .addContainerGap())
+                    .add(jPanel1Layout.createSequentialGroup()
+                        .add(awsSearchTypeLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                        .add(422, 422, 422))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel1Layout.createSequentialGroup()
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
+                .add(awsSearchTypeLabel)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 10, Short.MAX_VALUE)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(awsSearchTypeLabel)
-                    .add(awsSearchTextBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(awsAddButton)
-                    .add(awsSearchType, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .add(awsSearchType, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(awsSearchTextBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("SPARQL Query"));
@@ -114,7 +124,7 @@ public class UserInterface extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
                     .add(SPARQLQueryButton))
                 .addContainerGap())
         );
@@ -126,25 +136,20 @@ public class UserInterface extends javax.swing.JFrame {
                 .add(SPARQLQueryButton))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("SPARQL Query Result"));
-        SPARQLResultTextArea.setColumns(20);
-        SPARQLResultTextArea.setRows(5);
-        jScrollPane2.setViewportView(SPARQLResultTextArea);
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        outputTextArea.setColumns(20);
+        outputTextArea.setRows(5);
+        jScrollPane2.setViewportView(outputTextArea);
 
         org.jdesktop.layout.GroupLayout jPanel3Layout = new org.jdesktop.layout.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE)
-                .addContainerGap())
+            .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel3Layout.createSequentialGroup()
-                .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
-                .addContainerGap())
+            .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
         );
 
         fileMenu.setText("File");
@@ -158,6 +163,36 @@ public class UserInterface extends javax.swing.JFrame {
         fileMenu.add(fileMenuExitItem);
 
         jMenuBar1.add(fileMenu);
+
+        modelMenu.setText("Model");
+        modelValidateMenuItem.setLabel("Validate");
+        modelValidateMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modelValidateMenuItemActionPerformed(evt);
+            }
+        });
+
+        modelMenu.add(modelValidateMenuItem);
+
+        modelSaveMenuItem.setText("Save");
+        modelSaveMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modelSaveMenuItemActionPerformed(evt);
+            }
+        });
+
+        modelMenu.add(modelSaveMenuItem);
+
+        modelClearMenuItem.setText("Clear");
+        modelClearMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modelClearMenuItemActionPerformed(evt);
+            }
+        });
+
+        modelMenu.add(modelClearMenuItem);
+
+        jMenuBar1.add(modelMenu);
 
         setJMenuBar(jMenuBar1);
 
@@ -182,10 +217,25 @@ public class UserInterface extends javax.swing.JFrame {
                 .add(jPanel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanel3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .add(20, 20, 20))
         );
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void modelClearMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelClearMenuItemActionPerformed
+        tripleLoader.initializeModel();
+    }//GEN-LAST:event_modelClearMenuItemActionPerformed
+
+    private void modelSaveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelSaveMenuItemActionPerformed
+        String filename = getSaveFileLocation();
+        if(filename == null)
+            return;
+        tripleLoader.writeToFile(filename);
+    }//GEN-LAST:event_modelSaveMenuItemActionPerformed
+
+    private void modelValidateMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelValidateMenuItemActionPerformed
+        outputTextArea.setText(tripleLoader.validateOntology());
+    }//GEN-LAST:event_modelValidateMenuItemActionPerformed
 
     private void awsSearchTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_awsSearchTypeActionPerformed
         awsSearchTypeLabel.setText(((AWSSearchType)awsSearchType.getSelectedItem()).getSearchSubject());
@@ -204,7 +254,7 @@ public class UserInterface extends javax.swing.JFrame {
             result = "Query Parse Exception: The syntax of your search string has errors.\n"+qpe.getMessage();
             
         }
-        SPARQLResultTextArea.setText(result);
+        outputTextArea.setText(result);
     }//GEN-LAST:event_SPARQLQueryButtonActionPerformed
 
     private void awsAddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_awsAddButtonActionPerformed
@@ -240,6 +290,15 @@ public class UserInterface extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_fileMenuExitItemActionPerformed
     
+    private String getSaveFileLocation()
+    {
+        FileDialog fd = new FileDialog(new javax.swing.JFrame(), "Save Model Location", FileDialog.SAVE);
+        fd.setFile("out.xml");
+        fd.setDirectory(System.getProperty("user.dir"));
+        fd.setVisible(true);
+        return fd.getFile();
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -254,7 +313,6 @@ public class UserInterface extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton SPARQLQueryButton;
     private javax.swing.JTextArea SPARQLQueryTextArea;
-    private javax.swing.JTextArea SPARQLResultTextArea;
     private javax.swing.JButton awsAddButton;
     private javax.swing.JTextField awsSearchTextBox;
     private javax.swing.JComboBox awsSearchType;
@@ -267,6 +325,11 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JMenuItem modelClearMenuItem;
+    private javax.swing.JMenu modelMenu;
+    private javax.swing.JMenuItem modelSaveMenuItem;
+    private javax.swing.JMenuItem modelValidateMenuItem;
+    private javax.swing.JTextArea outputTextArea;
     // End of variables declaration//GEN-END:variables
     
 }
