@@ -51,9 +51,11 @@ public class TripleLoader {
 	Property isAuthorOf;
 	Property hasTitle;
 	Property isConnectedTo;
+	Property hasName;
 	OntModel model;
 	Resource Author;
 	Resource Artist;
+	Resource DVD;
 	
 	public TripleLoader()
 	{
@@ -102,6 +104,7 @@ public class TripleLoader {
 			case AwsHandler.DVD:
 				productCategory = "DVD";
 				agentCategory = "Actor";
+				model.add(product, RDF.type, DVD);
 				p = isPerformerIn;
 				break;
 			case AwsHandler.MUSIC:
@@ -113,7 +116,7 @@ public class TripleLoader {
 		
 		//System.out.println(lit.getDatatype());
 		//model.add(product, RDF.type, model.getResource(aws+productCategory));
-		Literal lit =  model.createLiteral(Utility.forURL(title));
+		Literal lit =  model.createLiteral(title);
         model.add(product, hasTitle, lit);
         //model.add(product, hasTitle, model.createResource(aws+Utility.forURL(title)));
         for(int i=0; i<subjects.length; i++)
@@ -140,7 +143,8 @@ public class TripleLoader {
 		index = (Element)itemAttributes.getFirstChild();
 		for(int i=0; i<count; i++)
 		{
-			subjects[i] = model.createResource(aws+"Agent "+index.getTextContent());
+			subjects[i] = model.createResource(aws+Utility.forURL(index.getTextContent()));
+			model.add(subjects[i], hasName, index.getTextContent());
 			index = (Element)index.getNextSibling();
 		}
 		return subjects;
@@ -169,7 +173,9 @@ public class TripleLoader {
 		isPerformerIn = model.getProperty(aws, "isPerformerIn");
 		isAuthorOf = model.getProperty(aws,"isAuthorOf");
 		hasTitle = model.getProperty(aws,"hasTitle");
-		isConnectedTo = model.getProperty(aws,"isConntectedTo");
+		isConnectedTo = model.getProperty(aws,"isConnectedTo");
+		DVD = model.getResource(aws+"DVD");
+		hasName = model.getProperty(aws,"hasName");
 	}
 	
 	private void Inferencer()
@@ -210,7 +216,7 @@ public class TripleLoader {
 			"PREFIX aws: <"+aws+"> " +
 			"SELECT ?x " +
 			"WHERE {" +
-			"      ?x aws:hasTitle \"Wisegirls\" . " +
+			"      ?x aws:hasTitle \'Cats+-+The+Musical+%28Commemorative+Edition%29\'"+". " +
 			"      }";
 
 		Query query = QueryFactory.create(queryString);

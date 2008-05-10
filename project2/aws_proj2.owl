@@ -8,6 +8,9 @@
   xml:base="http://www.owl-ontologies.com/Ontology1209425965.owl">
   <owl:Ontology rdf:about=""/>
   <owl:Class rdf:ID="Book">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Product"/>
+    </rdfs:subClassOf>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
@@ -29,21 +32,21 @@
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Product"/>
-    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="CD">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Product"/>
+    </rdfs:subClassOf>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
-            <owl:someValuesFrom>
-              <owl:Class rdf:ID="Artist"/>
-            </owl:someValuesFrom>
             <owl:onProperty>
               <owl:ObjectProperty rdf:ID="isPerformedBy"/>
             </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Artist"/>
+            </owl:someValuesFrom>
           </owl:Restriction>
           <owl:Restriction>
             <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -55,9 +58,6 @@
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Product"/>
-    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="#Artist">
     <rdfs:subClassOf>
@@ -65,10 +65,10 @@
     </rdfs:subClassOf>
     <owl:equivalentClass>
       <owl:Restriction>
-        <owl:someValuesFrom rdf:resource="#CD"/>
         <owl:onProperty>
           <owl:ObjectProperty rdf:ID="isPerformerIn"/>
         </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#CD"/>
       </owl:Restriction>
     </owl:equivalentClass>
   </owl:Class>
@@ -76,10 +76,10 @@
   <owl:Class rdf:about="#Author">
     <owl:equivalentClass>
       <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Book"/>
         <owl:onProperty>
           <owl:ObjectProperty rdf:ID="isAuthorOf"/>
         </owl:onProperty>
-        <owl:someValuesFrom rdf:resource="#Book"/>
       </owl:Restriction>
     </owl:equivalentClass>
     <rdfs:subClassOf>
@@ -106,19 +106,19 @@
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
-            <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#isPerformedBy"/>
-            </owl:onProperty>
             <owl:someValuesFrom>
               <owl:Class rdf:ID="Actor"/>
             </owl:someValuesFrom>
-          </owl:Restriction>
-          <owl:Restriction>
-            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-            >1</owl:minCardinality>
             <owl:onProperty>
               <owl:ObjectProperty rdf:about="#isPerformedBy"/>
             </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#isPerformedBy"/>
+            </owl:onProperty>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:minCardinality>
           </owl:Restriction>
         </owl:intersectionOf>
       </owl:Class>
@@ -129,26 +129,23 @@
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Agent"/>
             <owl:onProperty>
               <owl:ObjectProperty rdf:ID="isProducedBy"/>
             </owl:onProperty>
-            <owl:someValuesFrom rdf:resource="#Agent"/>
           </owl:Restriction>
           <owl:Restriction>
-            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-            >1</owl:minCardinality>
             <owl:onProperty>
               <owl:ObjectProperty rdf:about="#isProducedBy"/>
             </owl:onProperty>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:minCardinality>
           </owl:Restriction>
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
   </owl:Class>
   <owl:Class rdf:about="#Actor">
-    <rdfs:subClassOf rdf:resource="#Agent"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    ></rdfs:label>
     <owl:equivalentClass>
       <owl:Restriction>
         <owl:onProperty>
@@ -157,15 +154,18 @@
         <owl:someValuesFrom rdf:resource="#DVD"/>
       </owl:Restriction>
     </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Agent"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:label>
   </owl:Class>
   <owl:ObjectProperty rdf:about="#isWrittenBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#isAuthorOf"/>
+    </owl:inverseOf>
     <rdfs:domain rdf:resource="#Book"/>
     <rdfs:subPropertyOf>
       <owl:ObjectProperty rdf:about="#isProducedBy"/>
     </rdfs:subPropertyOf>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="#isAuthorOf"/>
-    </owl:inverseOf>
     <rdfs:range rdf:resource="#Author"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="#isProducerOf">
@@ -173,41 +173,32 @@
     <rdfs:range rdf:resource="#Product"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="#isProducedBy">
-    <rdfs:range rdf:resource="#Agent"/>
     <rdfs:domain rdf:resource="#Product"/>
+    <rdfs:range rdf:resource="#Agent"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="#isPerformerIn">
-    <rdfs:range>
-      <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="#CD"/>
-          <owl:Class rdf:about="#DVD"/>
-        </owl:unionOf>
-      </owl:Class>
-    </rdfs:range>
-    <rdfs:domain>
-      <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="#Artist"/>
-          <owl:Class rdf:about="#Actor"/>
-        </owl:unionOf>
-      </owl:Class>
-    </rdfs:domain>
     <rdfs:subPropertyOf rdf:resource="#isProducerOf"/>
     <owl:inverseOf>
       <owl:ObjectProperty rdf:about="#isPerformedBy"/>
     </owl:inverseOf>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="#isPerformedBy">
-    <rdfs:range>
+    <rdfs:domain>
       <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
           <owl:Class rdf:about="#Artist"/>
           <owl:Class rdf:about="#Actor"/>
         </owl:unionOf>
       </owl:Class>
+    </rdfs:domain>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#CD"/>
+          <owl:Class rdf:about="#DVD"/>
+        </owl:unionOf>
+      </owl:Class>
     </rdfs:range>
-    <rdfs:subPropertyOf rdf:resource="#isProducedBy"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isPerformedBy">
     <rdfs:domain>
       <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
@@ -216,27 +207,40 @@
         </owl:unionOf>
       </owl:Class>
     </rdfs:domain>
+    <rdfs:subPropertyOf rdf:resource="#isProducedBy"/>
     <owl:inverseOf rdf:resource="#isPerformerIn"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Artist"/>
+          <owl:Class rdf:about="#Actor"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="#isAuthorOf">
     <rdfs:range rdf:resource="#Book"/>
-    <owl:inverseOf rdf:resource="#isWrittenBy"/>
-    <rdfs:domain rdf:resource="#Author"/>
     <rdfs:subPropertyOf rdf:resource="#isProducerOf"/>
+    <rdfs:domain rdf:resource="#Author"/>
+    <owl:inverseOf rdf:resource="#isWrittenBy"/>
   </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:ID="hasProduct">
     <rdfs:domain rdf:resource="#List"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="hasTitle">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="#Product"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasName">
+    <rdfs:domain rdf:resource="#Agent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:TransitiveProperty rdf:ID="isConnectedTo">
-    <owl:inverseOf rdf:resource="#isConnectedTo"/>
-    <rdfs:range rdf:resource="#Actor"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="#isConnectedTo"/>
     <rdfs:domain rdf:resource="#Actor"/>
+    <rdfs:range rdf:resource="#Actor"/>
   </owl:TransitiveProperty>
 </rdf:RDF>
 
