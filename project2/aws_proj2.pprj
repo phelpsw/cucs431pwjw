@@ -1,4 +1,4 @@
-; Fri May 09 20:12:26 EDT 2008
+; Sat May 10 20:56:49 EDT 2008
 ; 
 ;+ (version "3.4")
 ;+ (build "Build 130")
@@ -181,8 +181,8 @@
 
 ([aws_proj2_ProjectKB_Instance_5] of  String
 
-	(name "owl:Class")
-	(string_value "%3ANAME"))
+	(name "Artist")
+	(string_value "isPerformedBy"))
 
 ([aws_proj2_ProjectKB_Instance_59] of  Widget
 
@@ -193,8 +193,8 @@
 
 ([aws_proj2_ProjectKB_Instance_6] of  String
 
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
+	(name "owl:Class")
+	(string_value "%3ANAME"))
 
 ([aws_proj2_ProjectKB_Instance_62] of  Property_List
 
@@ -262,8 +262,8 @@
 
 ([aws_proj2_ProjectKB_Instance_7] of  String
 
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
 
 ([aws_proj2_ProjectKB_Instance_70] of  Property_List
 
@@ -312,8 +312,8 @@
 
 ([aws_proj2_ProjectKB_Instance_8] of  String
 
-	(name "Artist")
-	(string_value "isPerformedBy"))
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
 
 ([aws_proj2_ProjectKB_Instance_80] of  Widget
 
@@ -3596,15 +3596,15 @@
 ([KB_713803_Instance_981] of  Property_List
 )
 
-([KB_734710_Instance_3] of  Map
-)
-
 ([KB_764103_Instance_545] of  Widget
 
 	(is_hidden FALSE)
 	(name "owl:Ontology")
 	(property_list [XY_Instance_195])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget"))
+
+([KB_827794_Instance_3] of  Map
+)
 
 ([KB_865583_Instance_10] of  Widget
 
@@ -5937,21 +5937,21 @@
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
 		[STANDARD_SLOT_FORM_WIDGET]
-		[aws_proj2_ProjectKB_Instance_10131]
 		[KB_713803_Instance_693]
 		[KB_313796_Instance_943]
 		[STANDARD_CLASS_FORM_WIDGET]
 		[KB_713803_Instance_303]
 		[KB_313796_Instance_852]
 		[Instance_1005]
+		[aws_proj2_ProjectKB_Instance_10131]
 		[KB_301165_Instance_1013]
 		[Instance_581]
 		[KB_764103_Instance_545]
+		[aws_proj2_ProjectKB_Instance_59]
 		[KB_713803_Instance_390]
 		[KB_938545_Instance_329]
 		[Instance_443]
 		[PAL_FORM_WIDGET]
-		[aws_proj2_ProjectKB_Instance_59]
 		[KB_465546_Instance_567]
 		[KB_303942_Instance_68]
 		[KB_713803_Instance_780]

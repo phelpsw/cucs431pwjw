@@ -30,6 +30,9 @@ public class TripleLoader
     Property hasTitle;
     Property isConnectedTo;
     Property hasName;
+    Property isInList;
+    Property hasProduct;
+    Property hasListName;
     Resource Author;
     Resource Artist;
     Resource DVD;
@@ -56,18 +59,20 @@ public class TripleLoader
         {
             NodeList itemList = xml.getElementsByTagName("Item");
             NodeList itemAttributesList = xml.getElementsByTagName("ItemAttributes");
+            NodeList listmania = xml.getElementsByTagName("ListmaniaLists");
             NodeList Titles = xml.getElementsByTagName("Title");
             for(int i=0; i<itemList.getLength(); i++)
                 nodeToTriple((Element)itemList.item(i),
                         (Element)itemAttributesList.item(i),
-                        (Element)Titles.item(i),
+                        (Element)Titles.item(i), (Element)listmania.item(i),
                         type);
         }
         else 
             throw new InvalidAWSResponseException();
+        //writeToFile("out.xml");
     }
 
-    private void nodeToTriple(Element item, Element itemAttributes, Element Title, AWSSearchType type)
+    private void nodeToTriple(Element item, Element itemAttributes, Element Title,Element listmaniaLists, AWSSearchType type)
     {
         String ASIN = item.getFirstChild().getTextContent();
         Resource[] subjects = addAgents(itemAttributes, ASIN);
@@ -76,7 +81,16 @@ public class TripleLoader
         String productCategory = "";
         String agentCategory = "";
         Property p = null;
-
+        NodeList listmania = null;
+        if(listmaniaLists != null) listmania = listmaniaLists.getElementsByTagName("ListmaniaList");
+        if(listmania != null)
+            for(int i=0; i< listmania.getLength(); i++)
+            {
+                Node n = listmania.item(i);
+                Resource list = model.createResource(aws+n.getFirstChild().getTextContent());
+                model.add(product, isInList, list);
+                model.add(list, hasListName, (String)n.getLastChild().getTextContent());
+            }
         switch(type.getType())
         {
             case AWSSearchType.BOOK:
@@ -173,6 +187,9 @@ public class TripleLoader
         hasTitle = model.getProperty(aws,"hasTitle");
         isConnectedTo = model.getProperty(aws,"isConnectedTo");
         hasName = model.getProperty(aws,"hasName");
+        hasListName = model.getProperty(aws, "hasListName");
+        hasProduct = model.getProperty(aws, "hasProduct");
+        isInList = model.getProperty(aws, "isInList");
         DVD = model.getResource(aws+"DVD");
         BOOK = model.getResource(aws+"Book");
         CD = model.getResource(aws+"CD");
@@ -244,17 +261,20 @@ public class TripleLoader
         {
         }
     }
-    public ArrayList<String> populate(String type)
+    public ArrayList<Statement> populate(String type)
     {
         Property p = null;
+        
         if(type.equals("agent")) p = hasName;
         else if (type.equals("product")) p = hasTitle;
-        NodeIterator iterator = model.listObjectsOfProperty(p);
-        ArrayList<String> list = new ArrayList<String>();
+        else if (type.equals("list")) p = hasListName;
+        //NodeIterator iterator = model.listObjectsOfProperty(p);
+        StmtIterator iterator = model.listStatements(new SimpleSelector(null, p, (String)null));
+        ArrayList<Statement> list = new ArrayList<Statement>();
         while(iterator.hasNext())
         {
-            RDFNode n = iterator.nextNode();
-            list.add(n.toString());
+            Statement n = iterator.nextStatement();
+            list.add(n);
         }
         return list;
     }
