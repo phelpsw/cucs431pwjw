@@ -30,7 +30,7 @@ results are parsed.
 
 The Agent URI, Properties, Product URI, and List URI lists below the SPARQL Query box
 will automatically be populated by each AWS Query.  For example, delete the default 
-value of WHERE clause in the SPARQL Query box.  Now assuming the search above was 
+value of the WHERE clause in the SPARQL Query box.  Now assuming the search above was 
 performed for Lawrence Lessig, click on his name in the Agent URI's list box. 
 His URI should appear.
 
