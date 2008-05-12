@@ -19,6 +19,15 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#James+Dugan+%28II%29"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A0">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R228HZXHR51VD7">
                 <j.0:hasListName>History Mysteries</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#0345402871"/>
@@ -42,6 +51,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RRV1D4VSE8UYA"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A1">
+                <rdf:first rdf:nodeID="A2"/>
+                <rdf:rest rdf:nodeID="A3"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1IA99QZ3ER4YD">
                 <j.0:hasListName>My Favorite Movies</j.0:hasListName>
@@ -71,10 +84,6 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RZ8Y7V2KXTNTF"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A0">
-                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
-                <rdf:rest rdf:nodeID="A1"/>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RKY9J898LM9UL">
                 <j.0:hasListName>Woman with a water jug : Scarlett Johansson on DVD</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000VKL6T8"/>
@@ -99,9 +108,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -137,24 +146,9 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RQU3NCY7WL5FE"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A2">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:intersectionOf rdf:nodeID="A3"/>
-        </rdf:Description>
         <rdf:Description rdf:nodeID="A4">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Author"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Author"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isAuthorOf"/>
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R20T8SXSBNCQ9C">
                 <j.0:hasListName>Movies I've Seen In 2007 - List I</j.0:hasListName>
@@ -163,23 +157,33 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R20T8SXSBNCQ9C"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A5">
-                <rdf:first rdf:nodeID="A6"/>
-                <rdf:rest rdf:nodeID="A7"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A8">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:unionOf rdf:nodeID="A9"/>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R2IIRFYB020V6E">
                 <j.0:hasListName>best films of 2005</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000EQHXNW"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2IIRFYB020V6E"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A5">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isProducerOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A6">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RN26BWYWG2DF7">
                 <j.0:hasListName>CG Movie Mania!</j.0:hasListName>
@@ -188,12 +192,12 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RN26BWYWG2DF7"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A10">
+        <rdf:Description rdf:nodeID="A7">
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
                 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:unionOf rdf:nodeID="A11"/>
+                <owl:unionOf rdf:nodeID="A8"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3AKV0X9WR73PT">
                 <j.0:hasListName>Kids/Family DVDS I Own PART 2</j.0:hasListName>
@@ -291,9 +295,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -335,6 +339,16 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R39JI5CXQ8M305"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A9">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isProducedBy"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Lewis+Payton+Jr.">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000VKL6T8"/>
@@ -418,7 +432,8 @@
                 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
                 <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:equivalentClass rdf:nodeID="A2"/>
+                <owl:equivalentClass rdf:nodeID="A10"/>
+                <owl:equivalentClass rdf:nodeID="A11"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RL9W2NT6TA9FV">
                 <j.0:hasListName>Top 10 Films of 2006</j.0:hasListName>
@@ -426,6 +441,15 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RL9W2NT6TA9FV"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A12">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:intersectionOf rdf:nodeID="A13"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Sean+Bean">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000BO0LH2"/>
@@ -463,9 +487,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -486,17 +510,6 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Meg+Ryan"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A12">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isWrittenBy"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle">
                 <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#hasTitle"/>
@@ -546,6 +559,10 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3R470LXJTC9QU"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A14">
+                <rdf:first rdf:nodeID="A15"/>
+                <rdf:rest rdf:nodeID="A16"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RVCGA6YJ41L7Q">
                 <j.0:hasListName>Amazon Customers Predict the 2007 Primetime Emmy(R) Winners</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000ION27Q"/>
@@ -568,13 +585,13 @@
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2X37ULNIW25KN"/>
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R39ENFS1IQ7YOX"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Hugh+Jackman"/>
-                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Piper+Perabo"/>
+                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rebecca+Hall"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Michael+Caine"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Hugh+Jackman"/>
-                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Piper+Perabo"/>
+                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rebecca+Hall"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Michael+Caine"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
@@ -589,6 +606,21 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3J8XD3RQOA8EZ"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A17">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <rdf:rest rdf:nodeID="A18"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A19">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isWrittenBy"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
                 <owl:equivalentClass rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -602,6 +634,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R32H995KHPQWI3"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A20">
+                <rdf:first rdf:nodeID="A0"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Bosworth">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#6305128952"/>
@@ -624,8 +660,10 @@
                 <owl:equivalentProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-                <rdfs:domain rdf:nodeID="A8"/>
-                <rdfs:range rdf:nodeID="A13"/>
+                <rdfs:range rdf:nodeID="A21"/>
+                <rdfs:range rdf:nodeID="A22"/>
+                <rdfs:domain rdf:nodeID="A23"/>
+                <rdfs:domain rdf:nodeID="A24"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3O2QBXPLI203L">
                 <j.0:hasListName>Movies I really should see</j.0:hasListName>
@@ -634,8 +672,8 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3O2QBXPLI203L"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A14">
-                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+        <rdf:Description rdf:nodeID="A25">
+                <rdf:first rdf:nodeID="A19"/>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RRNSRINHU9MHZ">
@@ -684,6 +722,10 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RKXMB1ZIH6G06"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A26">
+                <rdf:first rdf:nodeID="A27"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1DKNNGSSE19UJ">
                 <j.0:hasListName>Got Vampire?</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000E1ZK50"/>
@@ -703,9 +745,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -758,9 +800,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -958,9 +1000,16 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3QLIEGTJPPHXI"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A9">
-                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
-                <rdf:rest rdf:nodeID="A15"/>
+        <rdf:Description rdf:nodeID="A28">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#2ZYSAHWU162GA">
                 <j.0:hasListName>"Books not to be missed"</j.0:hasListName>
@@ -990,6 +1039,17 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R20QJUG6855MF0"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A29">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Nothing">
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -1086,16 +1146,26 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3EUG0AUK5DP1U"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A16">
-                <rdf:first rdf:nodeID="A17"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1SSZ747IWHF1">
                 <j.0:hasListName>DVDs Totally Worth Having - Part 3</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000BO0LH2"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1SSZ747IWHF1"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A30">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:unionOf rdf:nodeID="A31"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A22">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:unionOf rdf:nodeID="A32"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3IA5D0UK1NDPO">
                 <j.0:hasListName>Greatest Science Fiction Movies</j.0:hasListName>
@@ -1132,8 +1202,14 @@
                 <owl:equivalentProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn"/>
                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-                <rdfs:range rdf:nodeID="A18"/>
-                <rdfs:domain rdf:nodeID="A10"/>
+                <rdfs:range rdf:nodeID="A33"/>
+                <rdfs:domain rdf:nodeID="A30"/>
+                <rdfs:domain rdf:nodeID="A7"/>
+                <rdfs:range rdf:nodeID="A34"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A32">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
+                <rdf:rest rdf:nodeID="A35"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R14IX87MDDQMRU">
                 <j.0:hasListName>Best Surprise Endings for Films (Non-Spoiling List)</j.0:hasListName>
@@ -1148,6 +1224,14 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RITWWY8CQBFJO"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A11">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:intersectionOf rdf:nodeID="A36"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1FIGY76ZCWOQ">
                 <j.0:hasListName>Schools, Teachers, and Students on Celluloid</j.0:hasListName>
@@ -1168,9 +1252,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -1277,10 +1361,6 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3PJ86KDG66TFT"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A19">
-                <rdf:first rdf:nodeID="A20"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RQ3XIDCVA61Z8">
                 <j.0:hasListName>Favorite Movies on DVD</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#6305128952"/>
@@ -1309,13 +1389,13 @@
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1IYBZ2OJP6U37"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Bill+Murray"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Akiko+Takeshita"/>
-                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kazuyoshi+Minamimagoe"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Scarlett+Johansson"/>
+                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kazuyoshi+Minamimagoe"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kazuko+Shibata"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Bill+Murray"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Akiko+Takeshita"/>
-                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kazuyoshi+Minamimagoe"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Scarlett+Johansson"/>
+                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kazuyoshi+Minamimagoe"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kazuko+Shibata"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -1343,16 +1423,16 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2BO3EC8P5NRD7"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A37">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1H94EO5E9XWA4">
                 <j.0:hasListName>Best Action Movies of All Time (According to Me)</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000HEVZ9E"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1H94EO5E9XWA4"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A11">
-                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
-                <rdf:rest rdf:nodeID="A21"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#James+Marsden">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000HEVZ9E"/>
@@ -1412,9 +1492,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -1463,9 +1543,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -1499,9 +1579,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -1542,13 +1622,13 @@
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3JP29HS9OCRJO"/>
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R36FBC77NET1Z2"/>
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2ZV8F6H4DRCMC"/>
-                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mary+Jo+Catlett"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Bill+Fagerbakke"/>
+                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mary+Jo+Catlett"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Alec+Baldwin"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Clancy+Brown"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rodger+Bumpass"/>
-                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mary+Jo+Catlett"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Bill+Fagerbakke"/>
+                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mary+Jo+Catlett"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Alec+Baldwin"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Clancy+Brown"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rodger+Bumpass"/>
@@ -1657,10 +1737,6 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Scarlett+Johansson"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A22">
-                <rdf:first rdf:nodeID="A23"/>
-                <rdf:rest rdf:nodeID="A24"/>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3C49YU78VW4QY">
                 <j.0:hasListName>My Movie Collection</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JMJ4"/>
@@ -1680,9 +1756,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -1710,6 +1786,25 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RI1TIOK21J3R5"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A38">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isProducerOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A39">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3UTWRADYROYX0">
                 <j.0:hasListName>Great New Kids Movies That You Can Watch Without Yaking</j.0:hasListName>
@@ -1752,7 +1847,8 @@
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
                 <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:equivalentClass rdf:nodeID="A25"/>
+                <owl:equivalentClass rdf:nodeID="A29"/>
+                <owl:equivalentClass rdf:nodeID="A40"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1NOFID6WNBDOJ">
                 <j.0:hasListName>Scarlett Johansson Movies</j.0:hasListName>
@@ -1776,12 +1872,27 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1ZOUZUGZZWHJX"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A41">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3LSH3FN60LMNH">
                 <j.0:hasListName>The Complete Meg Ryan Movie Collection [From Earliest to Latest]</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B0000640VN"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3LSH3FN60LMNH"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A42">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R17K5HJ38OSUNC">
                 <j.0:hasListName>Pagan Wiccan Movie Basket Collection I</j.0:hasListName>
@@ -1840,6 +1951,13 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3IB568JHSQA4X"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A33">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:unionOf rdf:nodeID="A43"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RN0XYEWUNSYYF">
                 <j.0:hasListName>Kickstart your next-gen PS3 experience</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000L212HC"/>
@@ -1883,6 +2001,15 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2GL7CO5PWDOQX"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A44">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:intersectionOf rdf:nodeID="A45"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3W1HHGRLANLXL">
                 <j.0:hasListName>HUNKS IN COSTUME</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B0001US61O"/>
@@ -1924,12 +2051,32 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kazuyoshi+Minamimagoe"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A46">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1FYYP0Z3L3FYZ">
                 <j.0:hasListName>Lindomar's HD List</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000L212HC"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1FYYP0Z3L3FYZ"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A47">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A34">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:unionOf rdf:nodeID="A48"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Beckinsale">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000E1ZK50"/>
@@ -1943,9 +2090,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -1981,14 +2128,9 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3CGT6T68V3GOV"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A26">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:intersectionOf rdf:nodeID="A5"/>
+        <rdf:Description rdf:nodeID="A49">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1ISYU5MQ4UGGY">
                 <j.0:hasListName>Best Of The Best part 1 (to be continued)</j.0:hasListName>
@@ -2004,6 +2146,10 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#ROSPE3A0QLM1H"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A50">
+                <rdf:first rdf:nodeID="A51"/>
+                <rdf:rest rdf:nodeID="A52"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R9APJ0BO8GQFW">
                 <j.0:hasListName>STOP MOTION ANIMATION</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000M343BC"/>
@@ -2017,6 +2163,13 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3F6FZNWPJ57EO"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A21">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:unionOf rdf:nodeID="A53"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000HEVZ9E"/>
@@ -2091,16 +2244,6 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RN316EX7ETC0H"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A20">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isProducedBy"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R2ZXT1B5TEIQ09">
                 <j.0:hasListName>The Movies I Own: The S's---Part II</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JN55"/>
@@ -2123,6 +2266,17 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R17N5NRFJEUZVX"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A54">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R31MYPGZJQY9MH">
                 <j.0:hasListName>Great "Spoofs"!</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#0792844890"/>
@@ -2137,23 +2291,12 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2BINH0MTM4RC4"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A18">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:unionOf rdf:nodeID="A27"/>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3SSGN3GP0H8HY">
                 <j.0:hasListName>My Favorite Movies</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JPAR"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3SSGN3GP0H8HY"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A15">
-                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R2D1HDR9272FQW">
                 <j.0:hasListName>Everything Horse Racing</j.0:hasListName>
@@ -2197,6 +2340,20 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Griffin+Cork"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A27">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isProducedBy"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A35">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R341XKMQPDEX4O">
                 <j.0:hasListName>Books and Movies I love</j.0:hasListName>
@@ -2302,8 +2459,8 @@
                 <j.0:isPerformerIn rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JN55"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Bill+Fagerbakke"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mary+Jo+Catlett"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Clancy+Brown"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Alec+Baldwin"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Clancy+Brown"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rodger+Bumpass"/>
                 <j.0:hasName>Clancy Brown</j.0:hasName>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -2321,9 +2478,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -2385,10 +2542,6 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Akiko+Takeshita"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A7">
-                <rdf:first rdf:nodeID="A28"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R2DU9X9PS4DQP0">
                 <j.0:hasListName>My Favorite Historical/Period Films</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B0001US61O"/>
@@ -2416,28 +2569,6 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R39WILKELUTP4Y"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A29">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:intersectionOf rdf:nodeID="A30"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A21">
-                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A17">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1RSDJC3YT9D22">
                 <j.0:hasListName>Environmental Disaster Epics</j.0:hasListName>
@@ -2469,6 +2600,15 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1ETSGL644RB5"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A55">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:intersectionOf rdf:nodeID="A1"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#B000M343BC">
                 <j.0:hasTitle>Alexander, Revisited - The Final Cut [Blu-ray]</j.0:hasTitle>
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2UU46ERUSFOP5"/>
@@ -2495,6 +2635,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000M343BC"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A31">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
+                <rdf:rest rdf:nodeID="A42"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#B000BO0LH2">
                 <j.0:hasTitle>Hollywoodland (Widescreen Edition)</j.0:hasTitle>
@@ -2537,7 +2681,8 @@
                 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
                 <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:equivalentClass rdf:nodeID="A29"/>
+                <owl:equivalentClass rdf:nodeID="A44"/>
+                <owl:equivalentClass rdf:nodeID="A56"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RGF34K9DDOSH8">
                 <j.0:hasListName>For thriller junkies</j.0:hasListName>
@@ -2545,15 +2690,6 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RGF34K9DDOSH8"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A28">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R8IQ5L9Z1V0P">
                 <j.0:hasListName>Read Something Besides Michael Crichton</j.0:hasListName>
@@ -2590,13 +2726,13 @@
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RL9W2NT6TA9FV"/>
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RN0XYEWUNSYYF"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Hugh+Jackman"/>
-                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Piper+Perabo"/>
+                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rebecca+Hall"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Michael+Caine"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Hugh+Jackman"/>
-                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Piper+Perabo"/>
+                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rebecca+Hall"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Michael+Caine"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
@@ -2722,6 +2858,10 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B0001US61O"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A16">
+                <rdf:first rdf:nodeID="A57"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1B0HLMVJYJJF8">
                 <j.0:hasListName>MOVIE MARVELS: THE BEST COMIC BOOK BASED MOVIES.</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000HCO83Q"/>
@@ -2793,7 +2933,8 @@
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Author"/>
                 <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:equivalentClass rdf:nodeID="A4"/>
+                <owl:equivalentClass rdf:nodeID="A58"/>
+                <owl:equivalentClass rdf:nodeID="A59"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Breckin+Meyer">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B0000640VN"/>
@@ -2805,9 +2946,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -2835,6 +2976,17 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3UW9JSW92MCFB"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A60">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isWrittenBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Author"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1Z7SOERAM2EF8">
                 <j.0:hasListName>MY IMPACT BOOKS!</j.0:hasListName>
@@ -2896,8 +3048,8 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -2919,19 +3071,9 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A31">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isProducerOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A27">
+        <rdf:Description rdf:nodeID="A43">
                 <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
-                <rdf:rest rdf:nodeID="A14"/>
+                <rdf:rest rdf:nodeID="A49"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1FMQ4NKAB8776">
                 <j.0:hasListName>25 Best Movies of the 2000s So Far</j.0:hasListName>
@@ -2946,6 +3088,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2Y8B67L9HZLZU"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A61">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <rdf:rest rdf:nodeID="A62"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RR6F9HA1BCM6K">
                 <j.0:hasListName>Put it down to go to bed...FORGET IT!  You'll be reading all night</j.0:hasListName>
@@ -2964,9 +3110,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -2995,6 +3141,10 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R744L91VGEWGF"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A3">
+                <rdf:first rdf:nodeID="A46"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Book">
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
                 <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
@@ -3002,7 +3152,8 @@
                 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
                 <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:equivalentClass rdf:nodeID="A32"/>
+                <owl:equivalentClass rdf:nodeID="A12"/>
+                <owl:equivalentClass rdf:nodeID="A63"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1RBML3GMNVY18">
                 <j.0:hasListName>Book Club possibilities</j.0:hasListName>
@@ -3063,9 +3214,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -3103,6 +3254,19 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1J774BDK6HHO8"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A45">
+                <rdf:first rdf:nodeID="A41"/>
+                <rdf:rest rdf:nodeID="A64"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A63">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:intersectionOf rdf:nodeID="A50"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3J3XDR2QW74CS">
                 <j.0:hasListName>Some newies but some goodies</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JMJ4"/>
@@ -3124,6 +3288,10 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#William+%27Buddy%27+Byrd"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A52">
+                <rdf:first rdf:nodeID="A65"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Judith+Buchan">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000ION27Q"/>
                 <j.0:isPerformerIn rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000ION27Q"/>
@@ -3144,6 +3312,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1G8DWQK8NTMFY"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A66">
+                <rdf:first rdf:nodeID="A54"/>
+                <rdf:rest rdf:nodeID="A20"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R2Y2M8B4M2K97L">
                 <j.0:hasListName>Movie DVDs Owned, Part 6</j.0:hasListName>
@@ -3171,8 +3343,8 @@
                 <j.0:isPerformerIn rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JN55"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Bill+Fagerbakke"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mary+Jo+Catlett"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Clancy+Brown"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Alec+Baldwin"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Clancy+Brown"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rodger+Bumpass"/>
                 <j.0:hasName>Mary Jo Catlett</j.0:hasName>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -3216,9 +3388,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -3247,6 +3419,15 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2CM3Y7BA802N1"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A57">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Jean+Reno">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000M343BC"/>
                 <j.0:isPerformerIn rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000M343BC"/>
@@ -3257,9 +3438,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -3281,6 +3462,15 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Jean+Reno"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A56">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:intersectionOf rdf:nodeID="A14"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Jerry+Callaghan">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000ION27Q"/>
                 <j.0:isPerformerIn rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000ION27Q"/>
@@ -3295,6 +3485,17 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Jerry+Callaghan"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A51">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isWrittenBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Author"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RUU982YOT5JEY">
                 <j.0:hasListName>My Blu-Rays</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000L212HC"/>
@@ -3308,7 +3509,8 @@
                 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:equivalentClass rdf:nodeID="A31"/>
+                <owl:equivalentClass rdf:nodeID="A38"/>
+                <owl:equivalentClass rdf:nodeID="A5"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1NK4DGCS8LC33">
                 <j.0:hasListName>My Favorite Movies of all Time.</j.0:hasListName>
@@ -3316,10 +3518,6 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1NK4DGCS8LC33"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A3">
-                <rdf:first rdf:nodeID="A33"/>
-                <rdf:rest rdf:nodeID="A19"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Donna+Murphy">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000VKL6T8"/>
@@ -3389,7 +3587,8 @@
                 <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
                 <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:equivalentClass rdf:nodeID="A26"/>
+                <owl:equivalentClass rdf:nodeID="A67"/>
+                <owl:equivalentClass rdf:nodeID="A55"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3OAZFSLFHWA2P">
                 <j.0:hasListName>Looking for Wolf or Werewolf movies?</j.0:hasListName>
@@ -3397,6 +3596,25 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3OAZFSLFHWA2P"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A36">
+                <rdf:first rdf:nodeID="A68"/>
+                <rdf:rest rdf:nodeID="A26"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A48">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <rdf:rest rdf:nodeID="A37"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A58">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Author"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Author"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isAuthorOf"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1Z18HVR6VR09H">
                 <j.0:hasListName>what i'm reading and watching -- july 2006</j.0:hasListName>
@@ -3417,8 +3635,8 @@
                 <j.0:isPerformerIn rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JN55"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Bill+Fagerbakke"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mary+Jo+Catlett"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Clancy+Brown"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Alec+Baldwin"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Clancy+Brown"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rodger+Bumpass"/>
                 <j.0:hasName>Bill Fagerbakke</j.0:hasName>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -3481,6 +3699,10 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Alicia+Keys"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A64">
+                <rdf:first rdf:nodeID="A39"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1GL4LQW5S03DM">
                 <j.0:hasListName>Most Redemptive Thriller/Sci-Fi Films</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000HCO83Q"/>
@@ -3509,6 +3731,17 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3A7PYP72KPYOL"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A59">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Author"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Author"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isAuthorOf"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3H277OK9S8TF4">
                 <j.0:hasListName>Even more books written by guys named Michael</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#0060873167"/>
@@ -3530,6 +3763,26 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3I6CW5HQWTJOJ"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A40">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A67">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:intersectionOf rdf:nodeID="A66"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R10RAFGWGHLTU8">
                 <j.0:hasListName>2007 Top Movie Viewings</j.0:hasListName>
@@ -3583,13 +3836,13 @@
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R58IS6J5X92RI"/>
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R17K5HJ38OSUNC"/>
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2RUMSDBL3Q8V"/>
-                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Beckinsale"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Hugh+Jackman"/>
+                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Beckinsale"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Richard+Roxburgh"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Shuler+Hensley"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#David+Wenham"/>
-                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Beckinsale"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Hugh+Jackman"/>
+                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Beckinsale"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Richard+Roxburgh"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Shuler+Hensley"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#David+Wenham"/>
@@ -3598,13 +3851,24 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B0002KVUKM"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A2">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Rodger+Bumpass">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JN55"/>
                 <j.0:isPerformerIn rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JN55"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Bill+Fagerbakke"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mary+Jo+Catlett"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Clancy+Brown"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Alec+Baldwin"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Clancy+Brown"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rodger+Bumpass"/>
                 <j.0:hasName>Rodger Bumpass</j.0:hasName>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -3680,6 +3944,20 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2ZV8F6H4DRCMC"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A69">
+                <rdf:first rdf:nodeID="A70"/>
+                <rdf:rest rdf:nodeID="A71"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A68">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isProducedBy"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Matthew+Goode">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000EQHXNW"/>
                 <j.0:isPerformerIn rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000EQHXNW"/>
@@ -3711,12 +3989,24 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R4KBU6T4HR65L"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A8">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
+                <rdf:rest rdf:nodeID="A47"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3OEMCIVPCYQSH">
                 <j.0:hasListName>What I like to see and to hear</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B0001US61O"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3OEMCIVPCYQSH"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A10">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:intersectionOf rdf:nodeID="A69"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R16SQQZHENCDK5">
                 <j.0:hasListName>A Few Books/Authors I Like (In no Order Whatsoever)</j.0:hasListName>
@@ -3751,6 +4041,16 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Colin+Firth"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A70">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isProducedBy"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3UWSB5GUYXHVB">
                 <j.0:hasListName>Doesn't get any more exciting than this!</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#034540288X"/>
@@ -3758,20 +4058,12 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3UWSB5GUYXHVB"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A30">
-                <rdf:first rdf:nodeID="A34"/>
-                <rdf:rest rdf:nodeID="A16"/>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3552QLX843PZS">
                 <j.0:hasListName>Thrilling Fiction</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#0061015725"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3552QLX843PZS"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A1">
-                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JPAR">
                 <j.0:hasTitle>The Fountain (Widescreen Edition)</j.0:hasTitle>
@@ -3785,13 +4077,13 @@
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1JFFSHYN1ENBF"/>
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1S9HE1KCNQOC6"/>
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2OCF1RH0PPP7T"/>
-                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Hugh+Jackman"/>
+                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ellen+Burstyn"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rachel+Weisz"/>
-                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Hugh+Jackman"/>
+                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ellen+Burstyn"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Rachel+Weisz"/>
@@ -3817,9 +4109,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -3841,6 +4133,10 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A53">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
+                <rdf:rest rdf:nodeID="A4"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Elisabeth+Shue">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005QTAV"/>
                 <j.0:isPerformerIn rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005QTAV"/>
@@ -3857,8 +4153,8 @@
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3HJ85AO64NMFE">
                 <j.0:hasListName>Stuff a Dinosaur lover cannot be without!</j.0:hasListName>
-                <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#034540288X"/>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#0345370775"/>
+                <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#034540288X"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3HJ85AO64NMFE"/>
@@ -3877,17 +4173,6 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2THXE7U3QKOTB"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A6">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
-                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Ellen+Burstyn">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JPAR"/>
                 <j.0:isPerformerIn rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JPAR"/>
@@ -3898,9 +4183,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -3921,17 +4206,6 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ellen+Burstyn"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A25">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Artist"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Kazuko+Shibata">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JMJ4"/>
@@ -3980,16 +4254,6 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R32Q56RNW13RC3"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A33">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isProducedBy"/>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R1ZHWTHMSAIO0H">
                 <j.0:hasListName>a molecular biology &amp; biotechnology reading list</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#0060873167"/>
@@ -4003,17 +4267,6 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R28Y8HTLPCTW2F"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A23">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isWrittenBy"/>
-                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Author"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RF3KOP6KEY2RC">
                 <j.0:hasListName>Movies from my College Classes and Other Movies for the Mind</j.0:hasListName>
@@ -4043,6 +4296,10 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1LICNGGTMR1P1"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A71">
+                <rdf:first rdf:nodeID="A9"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R2QOSCZ78NDXO4">
                 <j.0:hasListName>Dinosaurs And Other Thrillers</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#034540288X"/>
@@ -4065,13 +4322,13 @@
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R1DKNNGSSE19UJ"/>
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R744L91VGEWGF"/>
                 <j.0:isInList rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2THXE7U3QKOTB"/>
-                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Beckinsale"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Hugh+Jackman"/>
+                <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Beckinsale"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Richard+Roxburgh"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Shuler+Hensley"/>
                 <j.0:isProducedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#David+Wenham"/>
-                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Beckinsale"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Hugh+Jackman"/>
+                <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Beckinsale"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Richard+Roxburgh"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Shuler+Hensley"/>
                 <j.0:isPerformedBy rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#David+Wenham"/>
@@ -4105,6 +4362,10 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#0345402871"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A62">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R2G4ANDQ4N90FD">
                 <j.0:hasListName>Book to Movie: Chick Lit Adaptations</j.0:hasListName>
@@ -4156,7 +4417,8 @@
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
                 <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:equivalentClass rdf:nodeID="A35"/>
+                <owl:equivalentClass rdf:nodeID="A6"/>
+                <owl:equivalentClass rdf:nodeID="A28"/>
                 <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R56KU219HYTA5">
@@ -4172,15 +4434,6 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2NXQFM6RRDB5B"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A32">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:intersectionOf rdf:nodeID="A22"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#B000ION27Q">
                 <j.0:hasTitle>The Lookout</j.0:hasTitle>
@@ -4223,6 +4476,10 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3FWP8JC095M24"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A18">
+                <rdf:first rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#CD"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R2R16DV1F01SG4">
                 <j.0:hasListName>great films by women directors</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B00005JMJ4"/>
@@ -4237,12 +4494,37 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RKP236ZVKGTS6"/>
         </rdf:Description>
+        <rdf:Description rdf:nodeID="A23">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:unionOf rdf:nodeID="A61"/>
+        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3P49A94MZP15V">
                 <j.0:hasListName>Must have, top quality Blu-ray movies</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000L212HC"/>
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R3P49A94MZP15V"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A24">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <owl:unionOf rdf:nodeID="A17"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A65">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Book"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isWrittenBy"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R2220TQK7YQ30G">
                 <j.0:hasListName>Freshmen Year Top 25</j.0:hasListName>
@@ -4252,11 +4534,8 @@
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R2220TQK7YQ30G"/>
         </rdf:Description>
         <rdf:Description rdf:nodeID="A13">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <owl:unionOf rdf:nodeID="A0"/>
+                <rdf:first rdf:nodeID="A60"/>
+                <rdf:rest rdf:nodeID="A25"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RS2IHCMMYN2MB">
                 <j.0:hasListName>Movies for atheists, secular humanists, non church goers.</j.0:hasListName>
@@ -4271,17 +4550,6 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R36FBC77NET1Z2"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A35">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformerIn"/>
-                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#Djimon+Hounsou">
                 <j.0:isProducerOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#B000BO0LH2"/>
@@ -4391,10 +4659,6 @@
                 <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#R28IVRYJN6A3P9"/>
-        </rdf:Description>
-        <rdf:Description rdf:nodeID="A24">
-                <rdf:first rdf:nodeID="A12"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R2CSSDQ276OB8V">
                 <j.0:hasListName>More Favorite Films</j.0:hasListName>
@@ -4511,17 +4775,6 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#List"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#RI3Y9SNDOLOD5"/>
         </rdf:Description>
-        <rdf:Description rdf:nodeID="A34">
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
-                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
-                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
-                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
-        </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#R3GY44HVOCPI7M">
                 <j.0:hasListName>For Readers of Michael Crichton</j.0:hasListName>
                 <j.0:hasProduct rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#0345402871"/>
@@ -4567,9 +4820,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -4693,9 +4946,9 @@
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Patrick+Stewart"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Ian+McKellen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Natasha+Lyonne"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
-                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Kate+Winslet"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Famke+Janssen"/>
+                <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Halle+Berry"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Stephen+McHattie"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Mark+Margolis"/>
                 <j.0:isConnectedTo rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Christian+Bale"/>
@@ -4716,6 +4969,17 @@
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
                 <rdf:type rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Agent"/>
                 <owl:sameAs rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Michael+Caine"/>
+        </rdf:Description>
+        <rdf:Description rdf:nodeID="A15">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Product"/>
+                <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#DVD"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#Actor"/>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1209425965.owl#isPerformedBy"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209425965.owl#RCM9W119HGLZZ">
                 <j.0:hasListName>film with substance</j.0:hasListName>

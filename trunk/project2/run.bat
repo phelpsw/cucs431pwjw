@@ -1,0 +1,1 @@
+java.exe -classpath lib/aterm-java-1.6.jar;lib/commons-logging-1.1.1.jar;lib/jena.jar;lib/log4j-1.2.12.jar;lib/pellet.jar;lib/arq.jar;lib/xercesImpl.jar;lib/iri.jar;lib/icu4j_3_4.jar;lib/relaxngDatatype.jar;lib/xsdlib.jar;lib/concurrent.jar;lib/xml-apis.jar -jar dist/nb_aws_owl.jar
