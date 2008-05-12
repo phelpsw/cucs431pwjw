@@ -178,7 +178,7 @@ public class TripleLoader
 
     private void loadOntology()
     {
-        Model schema = FileManager.get().loadModel("file:../aws_proj2.owl");
+        Model schema = FileManager.get().loadModel("file:aws_proj2.owl");
         model.add(schema);
         isWrittenBy = model.getProperty(aws, "isWrittenBy");
         isPerformedBy = model.getProperty(aws, "isPerformedBy");
