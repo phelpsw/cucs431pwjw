@@ -69,7 +69,7 @@ public class TripleLoader
         }
         else 
             throw new InvalidAWSResponseException();
-        //writeToFile("out.xml");
+        writeToFile("out.xml");
     }
 
     private void nodeToTriple(Element item, Element itemAttributes, Element Title,Element listmaniaLists, AWSSearchType type)
